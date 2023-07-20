@@ -73,6 +73,7 @@
     "sorbit": "^0.1.0",
     "storybook": "^7.1.0",
     "typescript": "^5.0.2",
-    "vite": "^4.4.0"
+    "vite": "^4.4.0",
+    "vite-plugin-css-injected-by-js": "^3.2.1"
   }
 }
