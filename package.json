@@ -1,0 +1,78 @@
+{
+  "name": "react-sorbit",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/react-sorbit.umd.js",
+  "module": "./dist/react-sorbit.js",
+  "types": "./dist/types/react-sorbit.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "prebuild": "rimraf dist",
+    "build": "tsc && vite build",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaminorse/react-sorbit.git"
+  },
+  "keywords": [
+    "sorbit",
+    "css",
+    "react"
+  ],
+  "author": "kaminorse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kaminorse/react-sorbit/issues"
+  },
+  "homepage": "https://github.com/kaminorse/react-sorbit#readme",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/types/react-sorbit.d.ts",
+      "import": "./dist/react-sorbit.js",
+      "require": "./dist/react-sorbit.umd.js"
+    }
+  },
+  "peerDependencies": {
+    "react": ">= 16.8.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.1.0",
+    "@storybook/addon-interactions": "^7.1.0",
+    "@storybook/addon-links": "^7.1.0",
+    "@storybook/blocks": "^7.1.0",
+    "@storybook/react": "^7.1.0",
+    "@storybook/react-vite": "^7.1.0",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "eslint": "^8.44.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.1",
+    "eslint-plugin-storybook": "^0.6.12",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^5.0.1",
+    "sass": "^1.63.6",
+    "sorbit": "^0.1.0",
+    "storybook": "^7.1.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.0"
+  }
+}
