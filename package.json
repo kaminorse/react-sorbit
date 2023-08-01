@@ -41,7 +41,8 @@
     }
   },
   "peerDependencies": {
-    "react": ">= 16.8.0"
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0"
   },
   "peerDependenciesMeta": {
     "@types/react": {
@@ -70,7 +71,7 @@
     "react-dom": "^18.2.0",
     "rimraf": "^5.0.1",
     "sass": "^1.63.6",
-    "sorbit": "^0.1.0",
+    "sorbit": "^0.1.1",
     "storybook": "^7.1.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.0",
