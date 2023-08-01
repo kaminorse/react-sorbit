@@ -23,3 +23,9 @@ export * from "./components/Hamburger";
 
 export { default as Message } from "./components/Message";
 export * from "./components/Message";
+
+export { default as Columns } from "./layouts/Columns";
+export * from "./layouts/Columns";
+
+export { default as Container } from "./layouts/Container";
+export * from "./layouts/Container";
