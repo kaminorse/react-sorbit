@@ -1,20 +1,30 @@
 import ButtonProps from "./ButtonProps";
 import classNames from "./Button.module.scss";
+import classNameUtility from "../../utilities/classNameUtility";
 
 export default function Button(props: ButtonProps): JSX.Element {
   const assignedProps = { ...props };
-  delete assignedProps["colorType"];
+  delete assignedProps["colorName"];
+  //#region BaseComponentProps
+  delete assignedProps["foreColor"];
+  delete assignedProps["backColor"];
+  delete assignedProps["highlighter"];
+  delete assignedProps["spacing"];
+  //#endregion BaseComponentProps
 
-  const className = [
-    classNames["button"],
-    props.colorType ? classNames[`is-${props.colorType}`] : "",
-    props.className ? props.className : "",
-  ].join(" ");
+  const assignedClassNames =
+    classNameUtility.assignBaseComponentPropsClassNames(
+      props,
+      [classNames["button"]],
+      classNames
+    );
+  props.colorName && assignedClassNames.push(classNames[`is-${props.colorName}`]);
+  props.className && assignedClassNames.push(props.className);
 
   return (
     <button
-      {...props}
-      className={className}
+      {...assignedProps}
+      className={assignedClassNames.join(" ")}
     />
   );
 }

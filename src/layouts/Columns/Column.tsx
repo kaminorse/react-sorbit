@@ -1,3 +1,4 @@
+import classNameUtility from "../../utilities/classNameUtility";
 import ColumnProps from "./ColumnProps";
 import classNames from "./Columns.module.scss";
 
@@ -18,32 +19,40 @@ export default function Column(props: ColumnProps): JSX.Element {
   delete assignedProps["sizeWidescreenOrMore"];
   delete assignedProps["sizeFullhdOrLess"];
   delete assignedProps["sizeFullhd"];
+  //#region BaseComponentProps
+  delete assignedProps["foreColor"];
+  delete assignedProps["backColor"];
+  delete assignedProps["highlighter"];
+  delete assignedProps["spacing"];
+  //#endregion BaseComponentProps
 
-  const classNameList = [
-    classNames["column"],
-  ];
-  props.isFull && classNameList.push(classNames["is-full"]);
-  props.size && classNameList.push(classNames[`column-${props.size}`]);
-  props.sizeMobile && classNameList.push(classNames[`is-mobile-${props.sizeMobile}`]);
-  props.sizeMobileOrMore && classNameList.push(classNames[`is-mobile-or-more-${props.sizeMobileOrMore}`]);
-  props.sizeTabletOrLess && classNameList.push(classNames[`is-mobile-or-less-${props.sizeTabletOrLess}`]);
-  props.sizeTabletOrLess && classNames[`is-tablet-or-less-${props.sizeTabletOrLess}`];
-  props.sizeTablet && classNames[`is-tablet-${props.sizeTablet}`];
-  props.sizeTabletOrMore && classNames[`is-tablet-or-more-${props.sizeTabletOrMore}`];
-  props.sizeDesktopOrLess && classNames[`is-desktop-or-less-${props.sizeDesktopOrLess}`];
-  props.sizeDesktop && classNames[`is-desktop-${props.sizeDesktop}`];
-  props.sizeDesktopOrMore && classNames[`is-desktop-or-more-${props.sizeDesktopOrMore}`];
-  props.sizeWidescreenOrLess && classNames[`is-widescreen-or-less-${props.sizeWidescreenOrLess}`];
-  props.sizeWidescreen && classNames[`is-widescreen-${props.sizeWidescreen}`];
-  props.sizeWidescreenOrMore && classNames[`is-widescreen-or-more-${props.sizeWidescreenOrMore}`];
-  props.sizeFullhdOrLess && classNames[`is-fullhd-or-less-${props.sizeFullhdOrLess}`];
-  props.sizeFullhd && classNames[`is-fullhd-${props.sizeFullhd}`];
-  props.className && classNameList.push(props.className);
+  const assignedClassNames =
+    classNameUtility.assignBaseComponentPropsClassNames(
+      props,
+      [classNames["column"]],
+      classNames
+    );
+  props.isFull && assignedClassNames.push(classNames["is-full"]);
+  props.size && assignedClassNames.push(classNames[`column-${props.size}`]);
+  props.sizeMobile && assignedClassNames.push(classNames[`is-mobile-${props.sizeMobile}`]);
+  props.sizeMobileOrMore && assignedClassNames.push(classNames[`is-mobile-or-more-${props.sizeMobileOrMore}`]);
+  props.sizeTabletOrLess && assignedClassNames.push(classNames[`is-tablet-or-less-${props.sizeTabletOrLess}`]);
+  props.sizeTablet && assignedClassNames.push(classNames[`is-tablet-${props.sizeTablet}`]);
+  props.sizeTabletOrMore && assignedClassNames.push(classNames[`is-tablet-or-more-${props.sizeTabletOrMore}`]);
+  props.sizeDesktopOrLess && assignedClassNames.push(classNames[`is-desktop-or-less-${props.sizeDesktopOrLess}`]);
+  props.sizeDesktop && assignedClassNames.push(classNames[`is-desktop-${props.sizeDesktop}`]);
+  props.sizeDesktopOrMore && assignedClassNames.push(classNames[`is-desktop-or-more-${props.sizeDesktopOrMore}`]);
+  props.sizeWidescreenOrLess && assignedClassNames.push(classNames[`is-widescreen-or-less-${props.sizeWidescreenOrLess}`]);
+  props.sizeWidescreen && assignedClassNames.push(classNames[`is-widescreen-${props.sizeWidescreen}`]);
+  props.sizeWidescreenOrMore && assignedClassNames.push(classNames[`is-widescreen-or-more-${props.sizeWidescreenOrMore}`]);
+  props.sizeFullhdOrLess && assignedClassNames.push(classNames[`is-fullhd-or-less-${props.sizeFullhdOrLess}`]);
+  props.sizeFullhd && assignedClassNames.push(classNames[`is-fullhd-${props.sizeFullhd}`]);
+  props.className && assignedClassNames.push(props.className);
 
   return (
     <div
       {...assignedProps}
-      className={classNameList.join(" ")}
+      className={assignedClassNames.join(" ")}
     />
   );
 }

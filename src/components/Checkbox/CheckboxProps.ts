@@ -1,11 +1,11 @@
-import ColorType from "../../common/ColorType";
+import ColorName from "../../common/ColorName";
+import BaseComponentProps from "../../common/models/BaseComponentProps";
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export default interface CheckboxProps
   extends React.DetailedHTMLProps<
     React.InputHTMLAttributes<HTMLInputElement>,
     HTMLInputElement
-  > {
-  colorType?: ColorType;
+  >, BaseComponentProps {
+  colorName?: ColorName;
   text?: string | JSX.Element;
 }

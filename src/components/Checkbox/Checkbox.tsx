@@ -1,19 +1,29 @@
 import CheckboxProps from "./CheckboxProps";
 import classNames from "./Checkbox.module.scss";
+import classNameUtility from "../../utilities/classNameUtility";
 
 export default function Checkbox(props: CheckboxProps): JSX.Element {
   const assignedProps = { ...props };
-  delete assignedProps["colorType"];
+  delete assignedProps["colorName"];
   delete assignedProps["text"];
+  //#region BaseComponentProps
+  delete assignedProps["foreColor"];
+  delete assignedProps["backColor"];
+  delete assignedProps["highlighter"];
+  delete assignedProps["spacing"];
+  //#endregion BaseComponentProps
 
-  const className = [
-    classNames["checkbox"],
-    props.colorType ? classNames[`is-${props.colorType}`] : "",
-    props.className ? props.className : "",
-  ].join(" ");
+  const assignedClassNames =
+    classNameUtility.assignBaseComponentPropsClassNames(
+      props,
+      [classNames["checkbox"]],
+      classNames
+    );
+  props.colorName && assignedClassNames.push(classNames[`is-${props.colorName}`]);
+  props.className && assignedClassNames.push(props.className);
 
   return (
-    <span id={props.id} className={className}>
+    <span id={props.id} className={assignedClassNames.join(" ")}>
       <input
         {...assignedProps}
         id={`${props.id ? props.id : ""}-input`}
