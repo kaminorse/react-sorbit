@@ -10,6 +10,16 @@ export * from "./base/Tabula";
 
 //#endregion base
 
+//#region backgrounds
+
+export { default as Gingham } from "./backgrounds/Gingham";
+export * from "./backgrounds/Gingham";
+
+export { default as Stripe } from "./backgrounds/Stripe";
+export * from "./backgrounds/Stripe";
+
+//#endregion backgrounds
+
 //#region components
 
 export { default as Badge } from "./components/Badge";
