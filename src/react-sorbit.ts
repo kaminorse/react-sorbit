@@ -12,11 +12,11 @@ export * from "./base/Tabula";
 
 //#region backgrounds
 
-export { default as Gingham } from "./backgrounds/Gingham";
-export * from "./backgrounds/Gingham";
+// export { default as Gingham } from "./backgrounds/Gingham";
+// export * from "./backgrounds/Gingham";
 
-export { default as Stripe } from "./backgrounds/Stripe";
-export * from "./backgrounds/Stripe";
+// export { default as Stripe } from "./backgrounds/Stripe";
+// export * from "./backgrounds/Stripe";
 
 //#endregion backgrounds
 
