@@ -4,6 +4,12 @@ import classNameUtility from "../../utilities/classNameUtility";
 
 export default function Span(props: SpanProps): JSX.Element {
   const assignedProps = { ...props };
+  //#region BaseComponentProps
+  delete assignedProps["foreColor"];
+  delete assignedProps["backColor"];
+  delete assignedProps["highlighter"];
+  delete assignedProps["spacing"];
+  //#endregion BaseComponentProps
 
   const assignedClassNames =
     classNameUtility.assignBaseComponentPropsClassNames(
