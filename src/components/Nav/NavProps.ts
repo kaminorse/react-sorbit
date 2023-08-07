@@ -1,5 +1,6 @@
 import React from "react";
 import BaseComponentProps from "../../common/models/BaseComponentProps";
+import ColorName from "../../common/ColorName";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export default interface NavProps
@@ -7,4 +8,6 @@ export default interface NavProps
       React.HTMLAttributes<HTMLElement>,
       HTMLElement
     >,
-    BaseComponentProps {}
+    BaseComponentProps {
+  colorName?: ColorName;
+}

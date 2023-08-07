@@ -17,6 +17,7 @@ export default function Nav(props: NavProps): JSX.Element {
       [classNames["nav"]],
       classNames
     );
+  props.colorName && assignedClassNames.push(classNames[`is-${props.colorName}`]);
   props.className && assignedClassNames.push(props.className);
 
   return <nav {...assignedProps} className={assignedClassNames.join(" ")} />;
