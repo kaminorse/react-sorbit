@@ -1180,78 +1180,78 @@ export default function Sorbit(props: SorbitProps) {
                 );
               }
             }
-            if (color.light.default.hovered) {
-              if (color.light.default.hovered.fore) {
+            if (color.light.default.hover) {
+              if (color.light.default.hover.fore) {
                 nextLightSchemeStyles.push(
-                  `--color-default-hovered-fore: ${
-                    color.light.default.hovered.fore.startsWith("--")
-                      ? `var(${color.light.default.hovered.fore});`
-                      : `${color.light.default.hovered.fore};`
+                  `--color-default-hover-fore: ${
+                    color.light.default.hover.fore.startsWith("--")
+                      ? `var(${color.light.default.hover.fore});`
+                      : `${color.light.default.hover.fore};`
                   }`
                 );
               }
-              if (color.light.default.hovered.back) {
+              if (color.light.default.hover.back) {
                 nextLightSchemeStyles.push(
-                  `--color-default-hovered-back: ${
-                    color.light.default.hovered.back.startsWith("--")
-                      ? `var(${color.light.default.hovered.back});`
-                      : `${color.light.default.hovered.back};`
+                  `--color-default-hover-back: ${
+                    color.light.default.hover.back.startsWith("--")
+                      ? `var(${color.light.default.hover.back});`
+                      : `${color.light.default.hover.back};`
                   }`
                 );
               }
-              if (color.light.default.hovered.border) {
+              if (color.light.default.hover.border) {
                 nextLightSchemeStyles.push(
-                  `--color-default-hovered-border: ${
-                    color.light.default.hovered.border.startsWith("--")
-                      ? `var(${color.light.default.hovered.border});`
-                      : `${color.light.default.hovered.border};`
+                  `--color-default-hover-border: ${
+                    color.light.default.hover.border.startsWith("--")
+                      ? `var(${color.light.default.hover.border});`
+                      : `${color.light.default.hover.border};`
                   }`
                 );
               }
-              if (color.light.default.hovered.shadow) {
+              if (color.light.default.hover.shadow) {
                 nextLightSchemeStyles.push(
-                  `--color-default-hovered-back: ${
-                    color.light.default.hovered.shadow.startsWith("--")
-                      ? `var(${color.light.default.hovered.shadow});`
-                      : `${color.light.default.hovered.shadow};`
+                  `--color-default-hover-back: ${
+                    color.light.default.hover.shadow.startsWith("--")
+                      ? `var(${color.light.default.hover.shadow});`
+                      : `${color.light.default.hover.shadow};`
                   }`
                 );
               }
             }
-            if (color.light.default.focused) {
-              if (color.light.default.focused.fore) {
+            if (color.light.default.focus) {
+              if (color.light.default.focus.fore) {
                 nextLightSchemeStyles.push(
-                  `--color-default-focused-fore: ${
-                    color.light.default.focused.fore.startsWith("--")
-                      ? `var(${color.light.default.focused.fore});`
-                      : `${color.light.default.focused.fore};`
+                  `--color-default-focus-fore: ${
+                    color.light.default.focus.fore.startsWith("--")
+                      ? `var(${color.light.default.focus.fore});`
+                      : `${color.light.default.focus.fore};`
                   }`
                 );
               }
-              if (color.light.default.focused.back) {
+              if (color.light.default.focus.back) {
                 nextLightSchemeStyles.push(
-                  `--color-default-focused-back: ${
-                    color.light.default.focused.back.startsWith("--")
-                      ? `var(${color.light.default.focused.back});`
-                      : `${color.light.default.focused.back};`
+                  `--color-default-focus-back: ${
+                    color.light.default.focus.back.startsWith("--")
+                      ? `var(${color.light.default.focus.back});`
+                      : `${color.light.default.focus.back};`
                   }`
                 );
               }
-              if (color.light.default.focused.border) {
+              if (color.light.default.focus.border) {
                 nextLightSchemeStyles.push(
-                  `--color-default-focused-border: ${
-                    color.light.default.focused.border.startsWith("--")
-                      ? `var(${color.light.default.focused.border});`
-                      : `${color.light.default.focused.border};`
+                  `--color-default-focus-border: ${
+                    color.light.default.focus.border.startsWith("--")
+                      ? `var(${color.light.default.focus.border});`
+                      : `${color.light.default.focus.border};`
                   }`
                 );
               }
-              if (color.light.default.focused.shadow) {
+              if (color.light.default.focus.shadow) {
                 nextLightSchemeStyles.push(
-                  `--color-default-focused-back: ${
-                    color.light.default.focused.shadow.startsWith("--")
-                      ? `var(${color.light.default.focused.shadow});`
-                      : `${color.light.default.focused.shadow};`
+                  `--color-default-focus-back: ${
+                    color.light.default.focus.shadow.startsWith("--")
+                      ? `var(${color.light.default.focus.shadow});`
+                      : `${color.light.default.focus.shadow};`
                   }`
                 );
               }
@@ -1372,78 +1372,78 @@ export default function Sorbit(props: SorbitProps) {
                 );
               }
             }
-            if (color.light.gray.hovered) {
-              if (color.light.gray.hovered.fore) {
+            if (color.light.gray.hover) {
+              if (color.light.gray.hover.fore) {
                 nextLightSchemeStyles.push(
-                  `--color-gray-hovered-fore: ${
-                    color.light.gray.hovered.fore.startsWith("--")
-                      ? `var(${color.light.gray.hovered.fore});`
-                      : `${color.light.gray.hovered.fore};`
+                  `--color-gray-hover-fore: ${
+                    color.light.gray.hover.fore.startsWith("--")
+                      ? `var(${color.light.gray.hover.fore});`
+                      : `${color.light.gray.hover.fore};`
                   }`
                 );
               }
-              if (color.light.gray.hovered.back) {
+              if (color.light.gray.hover.back) {
                 nextLightSchemeStyles.push(
-                  `--color-gray-hovered-back: ${
-                    color.light.gray.hovered.back.startsWith("--")
-                      ? `var(${color.light.gray.hovered.back});`
-                      : `${color.light.gray.hovered.back};`
+                  `--color-gray-hover-back: ${
+                    color.light.gray.hover.back.startsWith("--")
+                      ? `var(${color.light.gray.hover.back});`
+                      : `${color.light.gray.hover.back};`
                   }`
                 );
               }
-              if (color.light.gray.hovered.border) {
+              if (color.light.gray.hover.border) {
                 nextLightSchemeStyles.push(
-                  `--color-gray-hovered-border: ${
-                    color.light.gray.hovered.border.startsWith("--")
-                      ? `var(${color.light.gray.hovered.border});`
-                      : `${color.light.gray.hovered.border};`
+                  `--color-gray-hover-border: ${
+                    color.light.gray.hover.border.startsWith("--")
+                      ? `var(${color.light.gray.hover.border});`
+                      : `${color.light.gray.hover.border};`
                   }`
                 );
               }
-              if (color.light.gray.hovered.shadow) {
+              if (color.light.gray.hover.shadow) {
                 nextLightSchemeStyles.push(
-                  `--color-gray-hovered-back: ${
-                    color.light.gray.hovered.shadow.startsWith("--")
-                      ? `var(${color.light.gray.hovered.shadow});`
-                      : `${color.light.gray.hovered.shadow};`
+                  `--color-gray-hover-back: ${
+                    color.light.gray.hover.shadow.startsWith("--")
+                      ? `var(${color.light.gray.hover.shadow});`
+                      : `${color.light.gray.hover.shadow};`
                   }`
                 );
               }
             }
-            if (color.light.gray.focused) {
-              if (color.light.gray.focused.fore) {
+            if (color.light.gray.focus) {
+              if (color.light.gray.focus.fore) {
                 nextLightSchemeStyles.push(
-                  `--color-gray-focused-fore: ${
-                    color.light.gray.focused.fore.startsWith("--")
-                      ? `var(${color.light.gray.focused.fore});`
-                      : `${color.light.gray.focused.fore};`
+                  `--color-gray-focus-fore: ${
+                    color.light.gray.focus.fore.startsWith("--")
+                      ? `var(${color.light.gray.focus.fore});`
+                      : `${color.light.gray.focus.fore};`
                   }`
                 );
               }
-              if (color.light.gray.focused.back) {
+              if (color.light.gray.focus.back) {
                 nextLightSchemeStyles.push(
-                  `--color-gray-focused-back: ${
-                    color.light.gray.focused.back.startsWith("--")
-                      ? `var(${color.light.gray.focused.back});`
-                      : `${color.light.gray.focused.back};`
+                  `--color-gray-focus-back: ${
+                    color.light.gray.focus.back.startsWith("--")
+                      ? `var(${color.light.gray.focus.back});`
+                      : `${color.light.gray.focus.back};`
                   }`
                 );
               }
-              if (color.light.gray.focused.border) {
+              if (color.light.gray.focus.border) {
                 nextLightSchemeStyles.push(
-                  `--color-gray-focused-border: ${
-                    color.light.gray.focused.border.startsWith("--")
-                      ? `var(${color.light.gray.focused.border});`
-                      : `${color.light.gray.focused.border};`
+                  `--color-gray-focus-border: ${
+                    color.light.gray.focus.border.startsWith("--")
+                      ? `var(${color.light.gray.focus.border});`
+                      : `${color.light.gray.focus.border};`
                   }`
                 );
               }
-              if (color.light.gray.focused.shadow) {
+              if (color.light.gray.focus.shadow) {
                 nextLightSchemeStyles.push(
-                  `--color-gray-focused-back: ${
-                    color.light.gray.focused.shadow.startsWith("--")
-                      ? `var(${color.light.gray.focused.shadow});`
-                      : `${color.light.gray.focused.shadow};`
+                  `--color-gray-focus-back: ${
+                    color.light.gray.focus.shadow.startsWith("--")
+                      ? `var(${color.light.gray.focus.shadow});`
+                      : `${color.light.gray.focus.shadow};`
                   }`
                 );
               }
@@ -1564,78 +1564,78 @@ export default function Sorbit(props: SorbitProps) {
                 );
               }
             }
-            if (color.light.red.hovered) {
-              if (color.light.red.hovered.fore) {
+            if (color.light.red.hover) {
+              if (color.light.red.hover.fore) {
                 nextLightSchemeStyles.push(
-                  `--color-red-hovered-fore: ${
-                    color.light.red.hovered.fore.startsWith("--")
-                      ? `var(${color.light.red.hovered.fore});`
-                      : `${color.light.red.hovered.fore};`
+                  `--color-red-hover-fore: ${
+                    color.light.red.hover.fore.startsWith("--")
+                      ? `var(${color.light.red.hover.fore});`
+                      : `${color.light.red.hover.fore};`
                   }`
                 );
               }
-              if (color.light.red.hovered.back) {
+              if (color.light.red.hover.back) {
                 nextLightSchemeStyles.push(
-                  `--color-red-hovered-back: ${
-                    color.light.red.hovered.back.startsWith("--")
-                      ? `var(${color.light.red.hovered.back});`
-                      : `${color.light.red.hovered.back};`
+                  `--color-red-hover-back: ${
+                    color.light.red.hover.back.startsWith("--")
+                      ? `var(${color.light.red.hover.back});`
+                      : `${color.light.red.hover.back};`
                   }`
                 );
               }
-              if (color.light.red.hovered.border) {
+              if (color.light.red.hover.border) {
                 nextLightSchemeStyles.push(
-                  `--color-red-hovered-border: ${
-                    color.light.red.hovered.border.startsWith("--")
-                      ? `var(${color.light.red.hovered.border});`
-                      : `${color.light.red.hovered.border};`
+                  `--color-red-hover-border: ${
+                    color.light.red.hover.border.startsWith("--")
+                      ? `var(${color.light.red.hover.border});`
+                      : `${color.light.red.hover.border};`
                   }`
                 );
               }
-              if (color.light.red.hovered.shadow) {
+              if (color.light.red.hover.shadow) {
                 nextLightSchemeStyles.push(
-                  `--color-red-hovered-back: ${
-                    color.light.red.hovered.shadow.startsWith("--")
-                      ? `var(${color.light.red.hovered.shadow});`
-                      : `${color.light.red.hovered.shadow};`
+                  `--color-red-hover-back: ${
+                    color.light.red.hover.shadow.startsWith("--")
+                      ? `var(${color.light.red.hover.shadow});`
+                      : `${color.light.red.hover.shadow};`
                   }`
                 );
               }
             }
-            if (color.light.red.focused) {
-              if (color.light.red.focused.fore) {
+            if (color.light.red.focus) {
+              if (color.light.red.focus.fore) {
                 nextLightSchemeStyles.push(
-                  `--color-red-focused-fore: ${
-                    color.light.red.focused.fore.startsWith("--")
-                      ? `var(${color.light.red.focused.fore});`
-                      : `${color.light.red.focused.fore};`
+                  `--color-red-focus-fore: ${
+                    color.light.red.focus.fore.startsWith("--")
+                      ? `var(${color.light.red.focus.fore});`
+                      : `${color.light.red.focus.fore};`
                   }`
                 );
               }
-              if (color.light.red.focused.back) {
+              if (color.light.red.focus.back) {
                 nextLightSchemeStyles.push(
-                  `--color-red-focused-back: ${
-                    color.light.red.focused.back.startsWith("--")
-                      ? `var(${color.light.red.focused.back});`
-                      : `${color.light.red.focused.back};`
+                  `--color-red-focus-back: ${
+                    color.light.red.focus.back.startsWith("--")
+                      ? `var(${color.light.red.focus.back});`
+                      : `${color.light.red.focus.back};`
                   }`
                 );
               }
-              if (color.light.red.focused.border) {
+              if (color.light.red.focus.border) {
                 nextLightSchemeStyles.push(
-                  `--color-red-focused-border: ${
-                    color.light.red.focused.border.startsWith("--")
-                      ? `var(${color.light.red.focused.border});`
-                      : `${color.light.red.focused.border};`
+                  `--color-red-focus-border: ${
+                    color.light.red.focus.border.startsWith("--")
+                      ? `var(${color.light.red.focus.border});`
+                      : `${color.light.red.focus.border};`
                   }`
                 );
               }
-              if (color.light.red.focused.shadow) {
+              if (color.light.red.focus.shadow) {
                 nextLightSchemeStyles.push(
-                  `--color-red-focused-back: ${
-                    color.light.red.focused.shadow.startsWith("--")
-                      ? `var(${color.light.red.focused.shadow});`
-                      : `${color.light.red.focused.shadow};`
+                  `--color-red-focus-back: ${
+                    color.light.red.focus.shadow.startsWith("--")
+                      ? `var(${color.light.red.focus.shadow});`
+                      : `${color.light.red.focus.shadow};`
                   }`
                 );
               }
@@ -1756,78 +1756,78 @@ export default function Sorbit(props: SorbitProps) {
                 );
               }
             }
-            if (color.light.orange.hovered) {
-              if (color.light.orange.hovered.fore) {
+            if (color.light.orange.hover) {
+              if (color.light.orange.hover.fore) {
                 nextLightSchemeStyles.push(
-                  `--color-orange-hovered-fore: ${
-                    color.light.orange.hovered.fore.startsWith("--")
-                      ? `var(${color.light.orange.hovered.fore});`
-                      : `${color.light.orange.hovered.fore};`
+                  `--color-orange-hover-fore: ${
+                    color.light.orange.hover.fore.startsWith("--")
+                      ? `var(${color.light.orange.hover.fore});`
+                      : `${color.light.orange.hover.fore};`
                   }`
                 );
               }
-              if (color.light.orange.hovered.back) {
+              if (color.light.orange.hover.back) {
                 nextLightSchemeStyles.push(
-                  `--color-orange-hovered-back: ${
-                    color.light.orange.hovered.back.startsWith("--")
-                      ? `var(${color.light.orange.hovered.back});`
-                      : `${color.light.orange.hovered.back};`
+                  `--color-orange-hover-back: ${
+                    color.light.orange.hover.back.startsWith("--")
+                      ? `var(${color.light.orange.hover.back});`
+                      : `${color.light.orange.hover.back};`
                   }`
                 );
               }
-              if (color.light.orange.hovered.border) {
+              if (color.light.orange.hover.border) {
                 nextLightSchemeStyles.push(
-                  `--color-orange-hovered-border: ${
-                    color.light.orange.hovered.border.startsWith("--")
-                      ? `var(${color.light.orange.hovered.border});`
-                      : `${color.light.orange.hovered.border};`
+                  `--color-orange-hover-border: ${
+                    color.light.orange.hover.border.startsWith("--")
+                      ? `var(${color.light.orange.hover.border});`
+                      : `${color.light.orange.hover.border};`
                   }`
                 );
               }
-              if (color.light.orange.hovered.shadow) {
+              if (color.light.orange.hover.shadow) {
                 nextLightSchemeStyles.push(
-                  `--color-orange-hovered-back: ${
-                    color.light.orange.hovered.shadow.startsWith("--")
-                      ? `var(${color.light.orange.hovered.shadow});`
-                      : `${color.light.orange.hovered.shadow};`
+                  `--color-orange-hover-back: ${
+                    color.light.orange.hover.shadow.startsWith("--")
+                      ? `var(${color.light.orange.hover.shadow});`
+                      : `${color.light.orange.hover.shadow};`
                   }`
                 );
               }
             }
-            if (color.light.orange.focused) {
-              if (color.light.orange.focused.fore) {
+            if (color.light.orange.focus) {
+              if (color.light.orange.focus.fore) {
                 nextLightSchemeStyles.push(
-                  `--color-orange-focused-fore: ${
-                    color.light.orange.focused.fore.startsWith("--")
-                      ? `var(${color.light.orange.focused.fore});`
-                      : `${color.light.orange.focused.fore};`
+                  `--color-orange-focus-fore: ${
+                    color.light.orange.focus.fore.startsWith("--")
+                      ? `var(${color.light.orange.focus.fore});`
+                      : `${color.light.orange.focus.fore};`
                   }`
                 );
               }
-              if (color.light.orange.focused.back) {
+              if (color.light.orange.focus.back) {
                 nextLightSchemeStyles.push(
-                  `--color-orange-focused-back: ${
-                    color.light.orange.focused.back.startsWith("--")
-                      ? `var(${color.light.orange.focused.back});`
-                      : `${color.light.orange.focused.back};`
+                  `--color-orange-focus-back: ${
+                    color.light.orange.focus.back.startsWith("--")
+                      ? `var(${color.light.orange.focus.back});`
+                      : `${color.light.orange.focus.back};`
                   }`
                 );
               }
-              if (color.light.orange.focused.border) {
+              if (color.light.orange.focus.border) {
                 nextLightSchemeStyles.push(
-                  `--color-orange-focused-border: ${
-                    color.light.orange.focused.border.startsWith("--")
-                      ? `var(${color.light.orange.focused.border});`
-                      : `${color.light.orange.focused.border};`
+                  `--color-orange-focus-border: ${
+                    color.light.orange.focus.border.startsWith("--")
+                      ? `var(${color.light.orange.focus.border});`
+                      : `${color.light.orange.focus.border};`
                   }`
                 );
               }
-              if (color.light.orange.focused.shadow) {
+              if (color.light.orange.focus.shadow) {
                 nextLightSchemeStyles.push(
-                  `--color-orange-focused-back: ${
-                    color.light.orange.focused.shadow.startsWith("--")
-                      ? `var(${color.light.orange.focused.shadow});`
-                      : `${color.light.orange.focused.shadow};`
+                  `--color-orange-focus-back: ${
+                    color.light.orange.focus.shadow.startsWith("--")
+                      ? `var(${color.light.orange.focus.shadow});`
+                      : `${color.light.orange.focus.shadow};`
                   }`
                 );
               }
@@ -1948,78 +1948,78 @@ export default function Sorbit(props: SorbitProps) {
                 );
               }
             }
-            if (color.light.yellow.hovered) {
-              if (color.light.yellow.hovered.fore) {
+            if (color.light.yellow.hover) {
+              if (color.light.yellow.hover.fore) {
                 nextLightSchemeStyles.push(
-                  `--color-yellow-hovered-fore: ${
-                    color.light.yellow.hovered.fore.startsWith("--")
-                      ? `var(${color.light.yellow.hovered.fore});`
-                      : `${color.light.yellow.hovered.fore};`
+                  `--color-yellow-hover-fore: ${
+                    color.light.yellow.hover.fore.startsWith("--")
+                      ? `var(${color.light.yellow.hover.fore});`
+                      : `${color.light.yellow.hover.fore};`
                   }`
                 );
               }
-              if (color.light.yellow.hovered.back) {
+              if (color.light.yellow.hover.back) {
                 nextLightSchemeStyles.push(
-                  `--color-yellow-hovered-back: ${
-                    color.light.yellow.hovered.back.startsWith("--")
-                      ? `var(${color.light.yellow.hovered.back});`
-                      : `${color.light.yellow.hovered.back};`
+                  `--color-yellow-hover-back: ${
+                    color.light.yellow.hover.back.startsWith("--")
+                      ? `var(${color.light.yellow.hover.back});`
+                      : `${color.light.yellow.hover.back};`
                   }`
                 );
               }
-              if (color.light.yellow.hovered.border) {
+              if (color.light.yellow.hover.border) {
                 nextLightSchemeStyles.push(
-                  `--color-yellow-hovered-border: ${
-                    color.light.yellow.hovered.border.startsWith("--")
-                      ? `var(${color.light.yellow.hovered.border});`
-                      : `${color.light.yellow.hovered.border};`
+                  `--color-yellow-hover-border: ${
+                    color.light.yellow.hover.border.startsWith("--")
+                      ? `var(${color.light.yellow.hover.border});`
+                      : `${color.light.yellow.hover.border};`
                   }`
                 );
               }
-              if (color.light.yellow.hovered.shadow) {
+              if (color.light.yellow.hover.shadow) {
                 nextLightSchemeStyles.push(
-                  `--color-yellow-hovered-back: ${
-                    color.light.yellow.hovered.shadow.startsWith("--")
-                      ? `var(${color.light.yellow.hovered.shadow});`
-                      : `${color.light.yellow.hovered.shadow};`
+                  `--color-yellow-hover-back: ${
+                    color.light.yellow.hover.shadow.startsWith("--")
+                      ? `var(${color.light.yellow.hover.shadow});`
+                      : `${color.light.yellow.hover.shadow};`
                   }`
                 );
               }
             }
-            if (color.light.yellow.focused) {
-              if (color.light.yellow.focused.fore) {
+            if (color.light.yellow.focus) {
+              if (color.light.yellow.focus.fore) {
                 nextLightSchemeStyles.push(
-                  `--color-yellow-focused-fore: ${
-                    color.light.yellow.focused.fore.startsWith("--")
-                      ? `var(${color.light.yellow.focused.fore});`
-                      : `${color.light.yellow.focused.fore};`
+                  `--color-yellow-focus-fore: ${
+                    color.light.yellow.focus.fore.startsWith("--")
+                      ? `var(${color.light.yellow.focus.fore});`
+                      : `${color.light.yellow.focus.fore};`
                   }`
                 );
               }
-              if (color.light.yellow.focused.back) {
+              if (color.light.yellow.focus.back) {
                 nextLightSchemeStyles.push(
-                  `--color-yellow-focused-back: ${
-                    color.light.yellow.focused.back.startsWith("--")
-                      ? `var(${color.light.yellow.focused.back});`
-                      : `${color.light.yellow.focused.back};`
+                  `--color-yellow-focus-back: ${
+                    color.light.yellow.focus.back.startsWith("--")
+                      ? `var(${color.light.yellow.focus.back});`
+                      : `${color.light.yellow.focus.back};`
                   }`
                 );
               }
-              if (color.light.yellow.focused.border) {
+              if (color.light.yellow.focus.border) {
                 nextLightSchemeStyles.push(
-                  `--color-yellow-focused-border: ${
-                    color.light.yellow.focused.border.startsWith("--")
-                      ? `var(${color.light.yellow.focused.border});`
-                      : `${color.light.yellow.focused.border};`
+                  `--color-yellow-focus-border: ${
+                    color.light.yellow.focus.border.startsWith("--")
+                      ? `var(${color.light.yellow.focus.border});`
+                      : `${color.light.yellow.focus.border};`
                   }`
                 );
               }
-              if (color.light.yellow.focused.shadow) {
+              if (color.light.yellow.focus.shadow) {
                 nextLightSchemeStyles.push(
-                  `--color-yellow-focused-back: ${
-                    color.light.yellow.focused.shadow.startsWith("--")
-                      ? `var(${color.light.yellow.focused.shadow});`
-                      : `${color.light.yellow.focused.shadow};`
+                  `--color-yellow-focus-back: ${
+                    color.light.yellow.focus.shadow.startsWith("--")
+                      ? `var(${color.light.yellow.focus.shadow});`
+                      : `${color.light.yellow.focus.shadow};`
                   }`
                 );
               }
@@ -2140,78 +2140,78 @@ export default function Sorbit(props: SorbitProps) {
                 );
               }
             }
-            if (color.light.green.hovered) {
-              if (color.light.green.hovered.fore) {
+            if (color.light.green.hover) {
+              if (color.light.green.hover.fore) {
                 nextLightSchemeStyles.push(
-                  `--color-green-hovered-fore: ${
-                    color.light.green.hovered.fore.startsWith("--")
-                      ? `var(${color.light.green.hovered.fore});`
-                      : `${color.light.green.hovered.fore};`
+                  `--color-green-hover-fore: ${
+                    color.light.green.hover.fore.startsWith("--")
+                      ? `var(${color.light.green.hover.fore});`
+                      : `${color.light.green.hover.fore};`
                   }`
                 );
               }
-              if (color.light.green.hovered.back) {
+              if (color.light.green.hover.back) {
                 nextLightSchemeStyles.push(
-                  `--color-green-hovered-back: ${
-                    color.light.green.hovered.back.startsWith("--")
-                      ? `var(${color.light.green.hovered.back});`
-                      : `${color.light.green.hovered.back};`
+                  `--color-green-hover-back: ${
+                    color.light.green.hover.back.startsWith("--")
+                      ? `var(${color.light.green.hover.back});`
+                      : `${color.light.green.hover.back};`
                   }`
                 );
               }
-              if (color.light.green.hovered.border) {
+              if (color.light.green.hover.border) {
                 nextLightSchemeStyles.push(
-                  `--color-green-hovered-border: ${
-                    color.light.green.hovered.border.startsWith("--")
-                      ? `var(${color.light.green.hovered.border});`
-                      : `${color.light.green.hovered.border};`
+                  `--color-green-hover-border: ${
+                    color.light.green.hover.border.startsWith("--")
+                      ? `var(${color.light.green.hover.border});`
+                      : `${color.light.green.hover.border};`
                   }`
                 );
               }
-              if (color.light.green.hovered.shadow) {
+              if (color.light.green.hover.shadow) {
                 nextLightSchemeStyles.push(
-                  `--color-green-hovered-back: ${
-                    color.light.green.hovered.shadow.startsWith("--")
-                      ? `var(${color.light.green.hovered.shadow});`
-                      : `${color.light.green.hovered.shadow};`
+                  `--color-green-hover-back: ${
+                    color.light.green.hover.shadow.startsWith("--")
+                      ? `var(${color.light.green.hover.shadow});`
+                      : `${color.light.green.hover.shadow};`
                   }`
                 );
               }
             }
-            if (color.light.green.focused) {
-              if (color.light.green.focused.fore) {
+            if (color.light.green.focus) {
+              if (color.light.green.focus.fore) {
                 nextLightSchemeStyles.push(
-                  `--color-green-focused-fore: ${
-                    color.light.green.focused.fore.startsWith("--")
-                      ? `var(${color.light.green.focused.fore});`
-                      : `${color.light.green.focused.fore};`
+                  `--color-green-focus-fore: ${
+                    color.light.green.focus.fore.startsWith("--")
+                      ? `var(${color.light.green.focus.fore});`
+                      : `${color.light.green.focus.fore};`
                   }`
                 );
               }
-              if (color.light.green.focused.back) {
+              if (color.light.green.focus.back) {
                 nextLightSchemeStyles.push(
-                  `--color-green-focused-back: ${
-                    color.light.green.focused.back.startsWith("--")
-                      ? `var(${color.light.green.focused.back});`
-                      : `${color.light.green.focused.back};`
+                  `--color-green-focus-back: ${
+                    color.light.green.focus.back.startsWith("--")
+                      ? `var(${color.light.green.focus.back});`
+                      : `${color.light.green.focus.back};`
                   }`
                 );
               }
-              if (color.light.green.focused.border) {
+              if (color.light.green.focus.border) {
                 nextLightSchemeStyles.push(
-                  `--color-green-focused-border: ${
-                    color.light.green.focused.border.startsWith("--")
-                      ? `var(${color.light.green.focused.border});`
-                      : `${color.light.green.focused.border};`
+                  `--color-green-focus-border: ${
+                    color.light.green.focus.border.startsWith("--")
+                      ? `var(${color.light.green.focus.border});`
+                      : `${color.light.green.focus.border};`
                   }`
                 );
               }
-              if (color.light.green.focused.shadow) {
+              if (color.light.green.focus.shadow) {
                 nextLightSchemeStyles.push(
-                  `--color-green-focused-back: ${
-                    color.light.green.focused.shadow.startsWith("--")
-                      ? `var(${color.light.green.focused.shadow});`
-                      : `${color.light.green.focused.shadow};`
+                  `--color-green-focus-back: ${
+                    color.light.green.focus.shadow.startsWith("--")
+                      ? `var(${color.light.green.focus.shadow});`
+                      : `${color.light.green.focus.shadow};`
                   }`
                 );
               }
@@ -2332,78 +2332,78 @@ export default function Sorbit(props: SorbitProps) {
                 );
               }
             }
-            if (color.light.cyan.hovered) {
-              if (color.light.cyan.hovered.fore) {
+            if (color.light.cyan.hover) {
+              if (color.light.cyan.hover.fore) {
                 nextLightSchemeStyles.push(
-                  `--color-cyan-hovered-fore: ${
-                    color.light.cyan.hovered.fore.startsWith("--")
-                      ? `var(${color.light.cyan.hovered.fore});`
-                      : `${color.light.cyan.hovered.fore};`
+                  `--color-cyan-hover-fore: ${
+                    color.light.cyan.hover.fore.startsWith("--")
+                      ? `var(${color.light.cyan.hover.fore});`
+                      : `${color.light.cyan.hover.fore};`
                   }`
                 );
               }
-              if (color.light.cyan.hovered.back) {
+              if (color.light.cyan.hover.back) {
                 nextLightSchemeStyles.push(
-                  `--color-cyan-hovered-back: ${
-                    color.light.cyan.hovered.back.startsWith("--")
-                      ? `var(${color.light.cyan.hovered.back});`
-                      : `${color.light.cyan.hovered.back};`
+                  `--color-cyan-hover-back: ${
+                    color.light.cyan.hover.back.startsWith("--")
+                      ? `var(${color.light.cyan.hover.back});`
+                      : `${color.light.cyan.hover.back};`
                   }`
                 );
               }
-              if (color.light.cyan.hovered.border) {
+              if (color.light.cyan.hover.border) {
                 nextLightSchemeStyles.push(
-                  `--color-cyan-hovered-border: ${
-                    color.light.cyan.hovered.border.startsWith("--")
-                      ? `var(${color.light.cyan.hovered.border});`
-                      : `${color.light.cyan.hovered.border};`
+                  `--color-cyan-hover-border: ${
+                    color.light.cyan.hover.border.startsWith("--")
+                      ? `var(${color.light.cyan.hover.border});`
+                      : `${color.light.cyan.hover.border};`
                   }`
                 );
               }
-              if (color.light.cyan.hovered.shadow) {
+              if (color.light.cyan.hover.shadow) {
                 nextLightSchemeStyles.push(
-                  `--color-cyan-hovered-back: ${
-                    color.light.cyan.hovered.shadow.startsWith("--")
-                      ? `var(${color.light.cyan.hovered.shadow});`
-                      : `${color.light.cyan.hovered.shadow};`
+                  `--color-cyan-hover-back: ${
+                    color.light.cyan.hover.shadow.startsWith("--")
+                      ? `var(${color.light.cyan.hover.shadow});`
+                      : `${color.light.cyan.hover.shadow};`
                   }`
                 );
               }
             }
-            if (color.light.cyan.focused) {
-              if (color.light.cyan.focused.fore) {
+            if (color.light.cyan.focus) {
+              if (color.light.cyan.focus.fore) {
                 nextLightSchemeStyles.push(
-                  `--color-cyan-focused-fore: ${
-                    color.light.cyan.focused.fore.startsWith("--")
-                      ? `var(${color.light.cyan.focused.fore});`
-                      : `${color.light.cyan.focused.fore};`
+                  `--color-cyan-focus-fore: ${
+                    color.light.cyan.focus.fore.startsWith("--")
+                      ? `var(${color.light.cyan.focus.fore});`
+                      : `${color.light.cyan.focus.fore};`
                   }`
                 );
               }
-              if (color.light.cyan.focused.back) {
+              if (color.light.cyan.focus.back) {
                 nextLightSchemeStyles.push(
-                  `--color-cyan-focused-back: ${
-                    color.light.cyan.focused.back.startsWith("--")
-                      ? `var(${color.light.cyan.focused.back});`
-                      : `${color.light.cyan.focused.back};`
+                  `--color-cyan-focus-back: ${
+                    color.light.cyan.focus.back.startsWith("--")
+                      ? `var(${color.light.cyan.focus.back});`
+                      : `${color.light.cyan.focus.back};`
                   }`
                 );
               }
-              if (color.light.cyan.focused.border) {
+              if (color.light.cyan.focus.border) {
                 nextLightSchemeStyles.push(
-                  `--color-cyan-focused-border: ${
-                    color.light.cyan.focused.border.startsWith("--")
-                      ? `var(${color.light.cyan.focused.border});`
-                      : `${color.light.cyan.focused.border};`
+                  `--color-cyan-focus-border: ${
+                    color.light.cyan.focus.border.startsWith("--")
+                      ? `var(${color.light.cyan.focus.border});`
+                      : `${color.light.cyan.focus.border};`
                   }`
                 );
               }
-              if (color.light.cyan.focused.shadow) {
+              if (color.light.cyan.focus.shadow) {
                 nextLightSchemeStyles.push(
-                  `--color-cyan-focused-back: ${
-                    color.light.cyan.focused.shadow.startsWith("--")
-                      ? `var(${color.light.cyan.focused.shadow});`
-                      : `${color.light.cyan.focused.shadow};`
+                  `--color-cyan-focus-back: ${
+                    color.light.cyan.focus.shadow.startsWith("--")
+                      ? `var(${color.light.cyan.focus.shadow});`
+                      : `${color.light.cyan.focus.shadow};`
                   }`
                 );
               }
@@ -2524,78 +2524,78 @@ export default function Sorbit(props: SorbitProps) {
                 );
               }
             }
-            if (color.light.blue.hovered) {
-              if (color.light.blue.hovered.fore) {
+            if (color.light.blue.hover) {
+              if (color.light.blue.hover.fore) {
                 nextLightSchemeStyles.push(
-                  `--color-blue-hovered-fore: ${
-                    color.light.blue.hovered.fore.startsWith("--")
-                      ? `var(${color.light.blue.hovered.fore});`
-                      : `${color.light.blue.hovered.fore};`
+                  `--color-blue-hover-fore: ${
+                    color.light.blue.hover.fore.startsWith("--")
+                      ? `var(${color.light.blue.hover.fore});`
+                      : `${color.light.blue.hover.fore};`
                   }`
                 );
               }
-              if (color.light.blue.hovered.back) {
+              if (color.light.blue.hover.back) {
                 nextLightSchemeStyles.push(
-                  `--color-blue-hovered-back: ${
-                    color.light.blue.hovered.back.startsWith("--")
-                      ? `var(${color.light.blue.hovered.back});`
-                      : `${color.light.blue.hovered.back};`
+                  `--color-blue-hover-back: ${
+                    color.light.blue.hover.back.startsWith("--")
+                      ? `var(${color.light.blue.hover.back});`
+                      : `${color.light.blue.hover.back};`
                   }`
                 );
               }
-              if (color.light.blue.hovered.border) {
+              if (color.light.blue.hover.border) {
                 nextLightSchemeStyles.push(
-                  `--color-blue-hovered-border: ${
-                    color.light.blue.hovered.border.startsWith("--")
-                      ? `var(${color.light.blue.hovered.border});`
-                      : `${color.light.blue.hovered.border};`
+                  `--color-blue-hover-border: ${
+                    color.light.blue.hover.border.startsWith("--")
+                      ? `var(${color.light.blue.hover.border});`
+                      : `${color.light.blue.hover.border};`
                   }`
                 );
               }
-              if (color.light.blue.hovered.shadow) {
+              if (color.light.blue.hover.shadow) {
                 nextLightSchemeStyles.push(
-                  `--color-blue-hovered-back: ${
-                    color.light.blue.hovered.shadow.startsWith("--")
-                      ? `var(${color.light.blue.hovered.shadow});`
-                      : `${color.light.blue.hovered.shadow};`
+                  `--color-blue-hover-back: ${
+                    color.light.blue.hover.shadow.startsWith("--")
+                      ? `var(${color.light.blue.hover.shadow});`
+                      : `${color.light.blue.hover.shadow};`
                   }`
                 );
               }
             }
-            if (color.light.blue.focused) {
-              if (color.light.blue.focused.fore) {
+            if (color.light.blue.focus) {
+              if (color.light.blue.focus.fore) {
                 nextLightSchemeStyles.push(
-                  `--color-blue-focused-fore: ${
-                    color.light.blue.focused.fore.startsWith("--")
-                      ? `var(${color.light.blue.focused.fore});`
-                      : `${color.light.blue.focused.fore};`
+                  `--color-blue-focus-fore: ${
+                    color.light.blue.focus.fore.startsWith("--")
+                      ? `var(${color.light.blue.focus.fore});`
+                      : `${color.light.blue.focus.fore};`
                   }`
                 );
               }
-              if (color.light.blue.focused.back) {
+              if (color.light.blue.focus.back) {
                 nextLightSchemeStyles.push(
-                  `--color-blue-focused-back: ${
-                    color.light.blue.focused.back.startsWith("--")
-                      ? `var(${color.light.blue.focused.back});`
-                      : `${color.light.blue.focused.back};`
+                  `--color-blue-focus-back: ${
+                    color.light.blue.focus.back.startsWith("--")
+                      ? `var(${color.light.blue.focus.back});`
+                      : `${color.light.blue.focus.back};`
                   }`
                 );
               }
-              if (color.light.blue.focused.border) {
+              if (color.light.blue.focus.border) {
                 nextLightSchemeStyles.push(
-                  `--color-blue-focused-border: ${
-                    color.light.blue.focused.border.startsWith("--")
-                      ? `var(${color.light.blue.focused.border});`
-                      : `${color.light.blue.focused.border};`
+                  `--color-blue-focus-border: ${
+                    color.light.blue.focus.border.startsWith("--")
+                      ? `var(${color.light.blue.focus.border});`
+                      : `${color.light.blue.focus.border};`
                   }`
                 );
               }
-              if (color.light.blue.focused.shadow) {
+              if (color.light.blue.focus.shadow) {
                 nextLightSchemeStyles.push(
-                  `--color-blue-focused-back: ${
-                    color.light.blue.focused.shadow.startsWith("--")
-                      ? `var(${color.light.blue.focused.shadow});`
-                      : `${color.light.blue.focused.shadow};`
+                  `--color-blue-focus-back: ${
+                    color.light.blue.focus.shadow.startsWith("--")
+                      ? `var(${color.light.blue.focus.shadow});`
+                      : `${color.light.blue.focus.shadow};`
                   }`
                 );
               }
@@ -2716,78 +2716,78 @@ export default function Sorbit(props: SorbitProps) {
                 );
               }
             }
-            if (color.light.violet.hovered) {
-              if (color.light.violet.hovered.fore) {
+            if (color.light.violet.hover) {
+              if (color.light.violet.hover.fore) {
                 nextLightSchemeStyles.push(
-                  `--color-violet-hovered-fore: ${
-                    color.light.violet.hovered.fore.startsWith("--")
-                      ? `var(${color.light.violet.hovered.fore});`
-                      : `${color.light.violet.hovered.fore};`
+                  `--color-violet-hover-fore: ${
+                    color.light.violet.hover.fore.startsWith("--")
+                      ? `var(${color.light.violet.hover.fore});`
+                      : `${color.light.violet.hover.fore};`
                   }`
                 );
               }
-              if (color.light.violet.hovered.back) {
+              if (color.light.violet.hover.back) {
                 nextLightSchemeStyles.push(
-                  `--color-violet-hovered-back: ${
-                    color.light.violet.hovered.back.startsWith("--")
-                      ? `var(${color.light.violet.hovered.back});`
-                      : `${color.light.violet.hovered.back};`
+                  `--color-violet-hover-back: ${
+                    color.light.violet.hover.back.startsWith("--")
+                      ? `var(${color.light.violet.hover.back});`
+                      : `${color.light.violet.hover.back};`
                   }`
                 );
               }
-              if (color.light.violet.hovered.border) {
+              if (color.light.violet.hover.border) {
                 nextLightSchemeStyles.push(
-                  `--color-violet-hovered-border: ${
-                    color.light.violet.hovered.border.startsWith("--")
-                      ? `var(${color.light.violet.hovered.border});`
-                      : `${color.light.violet.hovered.border};`
+                  `--color-violet-hover-border: ${
+                    color.light.violet.hover.border.startsWith("--")
+                      ? `var(${color.light.violet.hover.border});`
+                      : `${color.light.violet.hover.border};`
                   }`
                 );
               }
-              if (color.light.violet.hovered.shadow) {
+              if (color.light.violet.hover.shadow) {
                 nextLightSchemeStyles.push(
-                  `--color-violet-hovered-back: ${
-                    color.light.violet.hovered.shadow.startsWith("--")
-                      ? `var(${color.light.violet.hovered.shadow});`
-                      : `${color.light.violet.hovered.shadow};`
+                  `--color-violet-hover-back: ${
+                    color.light.violet.hover.shadow.startsWith("--")
+                      ? `var(${color.light.violet.hover.shadow});`
+                      : `${color.light.violet.hover.shadow};`
                   }`
                 );
               }
             }
-            if (color.light.violet.focused) {
-              if (color.light.violet.focused.fore) {
+            if (color.light.violet.focus) {
+              if (color.light.violet.focus.fore) {
                 nextLightSchemeStyles.push(
-                  `--color-violet-focused-fore: ${
-                    color.light.violet.focused.fore.startsWith("--")
-                      ? `var(${color.light.violet.focused.fore});`
-                      : `${color.light.violet.focused.fore};`
+                  `--color-violet-focus-fore: ${
+                    color.light.violet.focus.fore.startsWith("--")
+                      ? `var(${color.light.violet.focus.fore});`
+                      : `${color.light.violet.focus.fore};`
                   }`
                 );
               }
-              if (color.light.violet.focused.back) {
+              if (color.light.violet.focus.back) {
                 nextLightSchemeStyles.push(
-                  `--color-violet-focused-back: ${
-                    color.light.violet.focused.back.startsWith("--")
-                      ? `var(${color.light.violet.focused.back});`
-                      : `${color.light.violet.focused.back};`
+                  `--color-violet-focus-back: ${
+                    color.light.violet.focus.back.startsWith("--")
+                      ? `var(${color.light.violet.focus.back});`
+                      : `${color.light.violet.focus.back};`
                   }`
                 );
               }
-              if (color.light.violet.focused.border) {
+              if (color.light.violet.focus.border) {
                 nextLightSchemeStyles.push(
-                  `--color-violet-focused-border: ${
-                    color.light.violet.focused.border.startsWith("--")
-                      ? `var(${color.light.violet.focused.border});`
-                      : `${color.light.violet.focused.border};`
+                  `--color-violet-focus-border: ${
+                    color.light.violet.focus.border.startsWith("--")
+                      ? `var(${color.light.violet.focus.border});`
+                      : `${color.light.violet.focus.border};`
                   }`
                 );
               }
-              if (color.light.violet.focused.shadow) {
+              if (color.light.violet.focus.shadow) {
                 nextLightSchemeStyles.push(
-                  `--color-violet-focused-back: ${
-                    color.light.violet.focused.shadow.startsWith("--")
-                      ? `var(${color.light.violet.focused.shadow});`
-                      : `${color.light.violet.focused.shadow};`
+                  `--color-violet-focus-back: ${
+                    color.light.violet.focus.shadow.startsWith("--")
+                      ? `var(${color.light.violet.focus.shadow});`
+                      : `${color.light.violet.focus.shadow};`
                   }`
                 );
               }
@@ -2920,78 +2920,78 @@ export default function Sorbit(props: SorbitProps) {
                 );
               }
             }
-            if (color.dark.default.hovered) {
-              if (color.dark.default.hovered.fore) {
+            if (color.dark.default.hover) {
+              if (color.dark.default.hover.fore) {
                 nextDarkSchemeStyles.push(
-                  `--color-default-hovered-fore: ${
-                    color.dark.default.hovered.fore.startsWith("--")
-                      ? `var(${color.dark.default.hovered.fore});`
-                      : `${color.dark.default.hovered.fore};`
+                  `--color-default-hover-fore: ${
+                    color.dark.default.hover.fore.startsWith("--")
+                      ? `var(${color.dark.default.hover.fore});`
+                      : `${color.dark.default.hover.fore};`
                   }`
                 );
               }
-              if (color.dark.default.hovered.back) {
+              if (color.dark.default.hover.back) {
                 nextDarkSchemeStyles.push(
-                  `--color-default-hovered-back: ${
-                    color.dark.default.hovered.back.startsWith("--")
-                      ? `var(${color.dark.default.hovered.back});`
-                      : `${color.dark.default.hovered.back};`
+                  `--color-default-hover-back: ${
+                    color.dark.default.hover.back.startsWith("--")
+                      ? `var(${color.dark.default.hover.back});`
+                      : `${color.dark.default.hover.back};`
                   }`
                 );
               }
-              if (color.dark.default.hovered.border) {
+              if (color.dark.default.hover.border) {
                 nextDarkSchemeStyles.push(
-                  `--color-default-hovered-border: ${
-                    color.dark.default.hovered.border.startsWith("--")
-                      ? `var(${color.dark.default.hovered.border});`
-                      : `${color.dark.default.hovered.border};`
+                  `--color-default-hover-border: ${
+                    color.dark.default.hover.border.startsWith("--")
+                      ? `var(${color.dark.default.hover.border});`
+                      : `${color.dark.default.hover.border};`
                   }`
                 );
               }
-              if (color.dark.default.hovered.shadow) {
+              if (color.dark.default.hover.shadow) {
                 nextDarkSchemeStyles.push(
-                  `--color-default-hovered-back: ${
-                    color.dark.default.hovered.shadow.startsWith("--")
-                      ? `var(${color.dark.default.hovered.shadow});`
-                      : `${color.dark.default.hovered.shadow};`
+                  `--color-default-hover-back: ${
+                    color.dark.default.hover.shadow.startsWith("--")
+                      ? `var(${color.dark.default.hover.shadow});`
+                      : `${color.dark.default.hover.shadow};`
                   }`
                 );
               }
             }
-            if (color.dark.default.focused) {
-              if (color.dark.default.focused.fore) {
+            if (color.dark.default.focus) {
+              if (color.dark.default.focus.fore) {
                 nextDarkSchemeStyles.push(
-                  `--color-default-focused-fore: ${
-                    color.dark.default.focused.fore.startsWith("--")
-                      ? `var(${color.dark.default.focused.fore});`
-                      : `${color.dark.default.focused.fore};`
+                  `--color-default-focus-fore: ${
+                    color.dark.default.focus.fore.startsWith("--")
+                      ? `var(${color.dark.default.focus.fore});`
+                      : `${color.dark.default.focus.fore};`
                   }`
                 );
               }
-              if (color.dark.default.focused.back) {
+              if (color.dark.default.focus.back) {
                 nextDarkSchemeStyles.push(
-                  `--color-default-focused-back: ${
-                    color.dark.default.focused.back.startsWith("--")
-                      ? `var(${color.dark.default.focused.back});`
-                      : `${color.dark.default.focused.back};`
+                  `--color-default-focus-back: ${
+                    color.dark.default.focus.back.startsWith("--")
+                      ? `var(${color.dark.default.focus.back});`
+                      : `${color.dark.default.focus.back};`
                   }`
                 );
               }
-              if (color.dark.default.focused.border) {
+              if (color.dark.default.focus.border) {
                 nextDarkSchemeStyles.push(
-                  `--color-default-focused-border: ${
-                    color.dark.default.focused.border.startsWith("--")
-                      ? `var(${color.dark.default.focused.border});`
-                      : `${color.dark.default.focused.border};`
+                  `--color-default-focus-border: ${
+                    color.dark.default.focus.border.startsWith("--")
+                      ? `var(${color.dark.default.focus.border});`
+                      : `${color.dark.default.focus.border};`
                   }`
                 );
               }
-              if (color.dark.default.focused.shadow) {
+              if (color.dark.default.focus.shadow) {
                 nextDarkSchemeStyles.push(
-                  `--color-default-focused-back: ${
-                    color.dark.default.focused.shadow.startsWith("--")
-                      ? `var(${color.dark.default.focused.shadow});`
-                      : `${color.dark.default.focused.shadow};`
+                  `--color-default-focus-back: ${
+                    color.dark.default.focus.shadow.startsWith("--")
+                      ? `var(${color.dark.default.focus.shadow});`
+                      : `${color.dark.default.focus.shadow};`
                   }`
                 );
               }
@@ -3112,78 +3112,78 @@ export default function Sorbit(props: SorbitProps) {
                 );
               }
             }
-            if (color.dark.gray.hovered) {
-              if (color.dark.gray.hovered.fore) {
+            if (color.dark.gray.hover) {
+              if (color.dark.gray.hover.fore) {
                 nextDarkSchemeStyles.push(
-                  `--color-gray-hovered-fore: ${
-                    color.dark.gray.hovered.fore.startsWith("--")
-                      ? `var(${color.dark.gray.hovered.fore});`
-                      : `${color.dark.gray.hovered.fore};`
+                  `--color-gray-hover-fore: ${
+                    color.dark.gray.hover.fore.startsWith("--")
+                      ? `var(${color.dark.gray.hover.fore});`
+                      : `${color.dark.gray.hover.fore};`
                   }`
                 );
               }
-              if (color.dark.gray.hovered.back) {
+              if (color.dark.gray.hover.back) {
                 nextDarkSchemeStyles.push(
-                  `--color-gray-hovered-back: ${
-                    color.dark.gray.hovered.back.startsWith("--")
-                      ? `var(${color.dark.gray.hovered.back});`
-                      : `${color.dark.gray.hovered.back};`
+                  `--color-gray-hover-back: ${
+                    color.dark.gray.hover.back.startsWith("--")
+                      ? `var(${color.dark.gray.hover.back});`
+                      : `${color.dark.gray.hover.back};`
                   }`
                 );
               }
-              if (color.dark.gray.hovered.border) {
+              if (color.dark.gray.hover.border) {
                 nextDarkSchemeStyles.push(
-                  `--color-gray-hovered-border: ${
-                    color.dark.gray.hovered.border.startsWith("--")
-                      ? `var(${color.dark.gray.hovered.border});`
-                      : `${color.dark.gray.hovered.border};`
+                  `--color-gray-hover-border: ${
+                    color.dark.gray.hover.border.startsWith("--")
+                      ? `var(${color.dark.gray.hover.border});`
+                      : `${color.dark.gray.hover.border};`
                   }`
                 );
               }
-              if (color.dark.gray.hovered.shadow) {
+              if (color.dark.gray.hover.shadow) {
                 nextDarkSchemeStyles.push(
-                  `--color-gray-hovered-back: ${
-                    color.dark.gray.hovered.shadow.startsWith("--")
-                      ? `var(${color.dark.gray.hovered.shadow});`
-                      : `${color.dark.gray.hovered.shadow};`
+                  `--color-gray-hover-back: ${
+                    color.dark.gray.hover.shadow.startsWith("--")
+                      ? `var(${color.dark.gray.hover.shadow});`
+                      : `${color.dark.gray.hover.shadow};`
                   }`
                 );
               }
             }
-            if (color.dark.gray.focused) {
-              if (color.dark.gray.focused.fore) {
+            if (color.dark.gray.focus) {
+              if (color.dark.gray.focus.fore) {
                 nextDarkSchemeStyles.push(
-                  `--color-gray-focused-fore: ${
-                    color.dark.gray.focused.fore.startsWith("--")
-                      ? `var(${color.dark.gray.focused.fore});`
-                      : `${color.dark.gray.focused.fore};`
+                  `--color-gray-focus-fore: ${
+                    color.dark.gray.focus.fore.startsWith("--")
+                      ? `var(${color.dark.gray.focus.fore});`
+                      : `${color.dark.gray.focus.fore};`
                   }`
                 );
               }
-              if (color.dark.gray.focused.back) {
+              if (color.dark.gray.focus.back) {
                 nextDarkSchemeStyles.push(
-                  `--color-gray-focused-back: ${
-                    color.dark.gray.focused.back.startsWith("--")
-                      ? `var(${color.dark.gray.focused.back});`
-                      : `${color.dark.gray.focused.back};`
+                  `--color-gray-focus-back: ${
+                    color.dark.gray.focus.back.startsWith("--")
+                      ? `var(${color.dark.gray.focus.back});`
+                      : `${color.dark.gray.focus.back};`
                   }`
                 );
               }
-              if (color.dark.gray.focused.border) {
+              if (color.dark.gray.focus.border) {
                 nextDarkSchemeStyles.push(
-                  `--color-gray-focused-border: ${
-                    color.dark.gray.focused.border.startsWith("--")
-                      ? `var(${color.dark.gray.focused.border});`
-                      : `${color.dark.gray.focused.border};`
+                  `--color-gray-focus-border: ${
+                    color.dark.gray.focus.border.startsWith("--")
+                      ? `var(${color.dark.gray.focus.border});`
+                      : `${color.dark.gray.focus.border};`
                   }`
                 );
               }
-              if (color.dark.gray.focused.shadow) {
+              if (color.dark.gray.focus.shadow) {
                 nextDarkSchemeStyles.push(
-                  `--color-gray-focused-back: ${
-                    color.dark.gray.focused.shadow.startsWith("--")
-                      ? `var(${color.dark.gray.focused.shadow});`
-                      : `${color.dark.gray.focused.shadow};`
+                  `--color-gray-focus-back: ${
+                    color.dark.gray.focus.shadow.startsWith("--")
+                      ? `var(${color.dark.gray.focus.shadow});`
+                      : `${color.dark.gray.focus.shadow};`
                   }`
                 );
               }
@@ -3304,78 +3304,78 @@ export default function Sorbit(props: SorbitProps) {
                 );
               }
             }
-            if (color.dark.red.hovered) {
-              if (color.dark.red.hovered.fore) {
+            if (color.dark.red.hover) {
+              if (color.dark.red.hover.fore) {
                 nextDarkSchemeStyles.push(
-                  `--color-red-hovered-fore: ${
-                    color.dark.red.hovered.fore.startsWith("--")
-                      ? `var(${color.dark.red.hovered.fore});`
-                      : `${color.dark.red.hovered.fore};`
+                  `--color-red-hover-fore: ${
+                    color.dark.red.hover.fore.startsWith("--")
+                      ? `var(${color.dark.red.hover.fore});`
+                      : `${color.dark.red.hover.fore};`
                   }`
                 );
               }
-              if (color.dark.red.hovered.back) {
+              if (color.dark.red.hover.back) {
                 nextDarkSchemeStyles.push(
-                  `--color-red-hovered-back: ${
-                    color.dark.red.hovered.back.startsWith("--")
-                      ? `var(${color.dark.red.hovered.back});`
-                      : `${color.dark.red.hovered.back};`
+                  `--color-red-hover-back: ${
+                    color.dark.red.hover.back.startsWith("--")
+                      ? `var(${color.dark.red.hover.back});`
+                      : `${color.dark.red.hover.back};`
                   }`
                 );
               }
-              if (color.dark.red.hovered.border) {
+              if (color.dark.red.hover.border) {
                 nextDarkSchemeStyles.push(
-                  `--color-red-hovered-border: ${
-                    color.dark.red.hovered.border.startsWith("--")
-                      ? `var(${color.dark.red.hovered.border});`
-                      : `${color.dark.red.hovered.border};`
+                  `--color-red-hover-border: ${
+                    color.dark.red.hover.border.startsWith("--")
+                      ? `var(${color.dark.red.hover.border});`
+                      : `${color.dark.red.hover.border};`
                   }`
                 );
               }
-              if (color.dark.red.hovered.shadow) {
+              if (color.dark.red.hover.shadow) {
                 nextDarkSchemeStyles.push(
-                  `--color-red-hovered-back: ${
-                    color.dark.red.hovered.shadow.startsWith("--")
-                      ? `var(${color.dark.red.hovered.shadow});`
-                      : `${color.dark.red.hovered.shadow};`
+                  `--color-red-hover-back: ${
+                    color.dark.red.hover.shadow.startsWith("--")
+                      ? `var(${color.dark.red.hover.shadow});`
+                      : `${color.dark.red.hover.shadow};`
                   }`
                 );
               }
             }
-            if (color.dark.red.focused) {
-              if (color.dark.red.focused.fore) {
+            if (color.dark.red.focus) {
+              if (color.dark.red.focus.fore) {
                 nextDarkSchemeStyles.push(
-                  `--color-red-focused-fore: ${
-                    color.dark.red.focused.fore.startsWith("--")
-                      ? `var(${color.dark.red.focused.fore});`
-                      : `${color.dark.red.focused.fore};`
+                  `--color-red-focus-fore: ${
+                    color.dark.red.focus.fore.startsWith("--")
+                      ? `var(${color.dark.red.focus.fore});`
+                      : `${color.dark.red.focus.fore};`
                   }`
                 );
               }
-              if (color.dark.red.focused.back) {
+              if (color.dark.red.focus.back) {
                 nextDarkSchemeStyles.push(
-                  `--color-red-focused-back: ${
-                    color.dark.red.focused.back.startsWith("--")
-                      ? `var(${color.dark.red.focused.back});`
-                      : `${color.dark.red.focused.back};`
+                  `--color-red-focus-back: ${
+                    color.dark.red.focus.back.startsWith("--")
+                      ? `var(${color.dark.red.focus.back});`
+                      : `${color.dark.red.focus.back};`
                   }`
                 );
               }
-              if (color.dark.red.focused.border) {
+              if (color.dark.red.focus.border) {
                 nextDarkSchemeStyles.push(
-                  `--color-red-focused-border: ${
-                    color.dark.red.focused.border.startsWith("--")
-                      ? `var(${color.dark.red.focused.border});`
-                      : `${color.dark.red.focused.border};`
+                  `--color-red-focus-border: ${
+                    color.dark.red.focus.border.startsWith("--")
+                      ? `var(${color.dark.red.focus.border});`
+                      : `${color.dark.red.focus.border};`
                   }`
                 );
               }
-              if (color.dark.red.focused.shadow) {
+              if (color.dark.red.focus.shadow) {
                 nextDarkSchemeStyles.push(
-                  `--color-red-focused-back: ${
-                    color.dark.red.focused.shadow.startsWith("--")
-                      ? `var(${color.dark.red.focused.shadow});`
-                      : `${color.dark.red.focused.shadow};`
+                  `--color-red-focus-back: ${
+                    color.dark.red.focus.shadow.startsWith("--")
+                      ? `var(${color.dark.red.focus.shadow});`
+                      : `${color.dark.red.focus.shadow};`
                   }`
                 );
               }
@@ -3496,78 +3496,78 @@ export default function Sorbit(props: SorbitProps) {
                 );
               }
             }
-            if (color.dark.orange.hovered) {
-              if (color.dark.orange.hovered.fore) {
+            if (color.dark.orange.hover) {
+              if (color.dark.orange.hover.fore) {
                 nextDarkSchemeStyles.push(
-                  `--color-orange-hovered-fore: ${
-                    color.dark.orange.hovered.fore.startsWith("--")
-                      ? `var(${color.dark.orange.hovered.fore});`
-                      : `${color.dark.orange.hovered.fore};`
+                  `--color-orange-hover-fore: ${
+                    color.dark.orange.hover.fore.startsWith("--")
+                      ? `var(${color.dark.orange.hover.fore});`
+                      : `${color.dark.orange.hover.fore};`
                   }`
                 );
               }
-              if (color.dark.orange.hovered.back) {
+              if (color.dark.orange.hover.back) {
                 nextDarkSchemeStyles.push(
-                  `--color-orange-hovered-back: ${
-                    color.dark.orange.hovered.back.startsWith("--")
-                      ? `var(${color.dark.orange.hovered.back});`
-                      : `${color.dark.orange.hovered.back};`
+                  `--color-orange-hover-back: ${
+                    color.dark.orange.hover.back.startsWith("--")
+                      ? `var(${color.dark.orange.hover.back});`
+                      : `${color.dark.orange.hover.back};`
                   }`
                 );
               }
-              if (color.dark.orange.hovered.border) {
+              if (color.dark.orange.hover.border) {
                 nextDarkSchemeStyles.push(
-                  `--color-orange-hovered-border: ${
-                    color.dark.orange.hovered.border.startsWith("--")
-                      ? `var(${color.dark.orange.hovered.border});`
-                      : `${color.dark.orange.hovered.border};`
+                  `--color-orange-hover-border: ${
+                    color.dark.orange.hover.border.startsWith("--")
+                      ? `var(${color.dark.orange.hover.border});`
+                      : `${color.dark.orange.hover.border};`
                   }`
                 );
               }
-              if (color.dark.orange.hovered.shadow) {
+              if (color.dark.orange.hover.shadow) {
                 nextDarkSchemeStyles.push(
-                  `--color-orange-hovered-back: ${
-                    color.dark.orange.hovered.shadow.startsWith("--")
-                      ? `var(${color.dark.orange.hovered.shadow});`
-                      : `${color.dark.orange.hovered.shadow};`
+                  `--color-orange-hover-back: ${
+                    color.dark.orange.hover.shadow.startsWith("--")
+                      ? `var(${color.dark.orange.hover.shadow});`
+                      : `${color.dark.orange.hover.shadow};`
                   }`
                 );
               }
             }
-            if (color.dark.orange.focused) {
-              if (color.dark.orange.focused.fore) {
+            if (color.dark.orange.focus) {
+              if (color.dark.orange.focus.fore) {
                 nextDarkSchemeStyles.push(
-                  `--color-orange-focused-fore: ${
-                    color.dark.orange.focused.fore.startsWith("--")
-                      ? `var(${color.dark.orange.focused.fore});`
-                      : `${color.dark.orange.focused.fore};`
+                  `--color-orange-focus-fore: ${
+                    color.dark.orange.focus.fore.startsWith("--")
+                      ? `var(${color.dark.orange.focus.fore});`
+                      : `${color.dark.orange.focus.fore};`
                   }`
                 );
               }
-              if (color.dark.orange.focused.back) {
+              if (color.dark.orange.focus.back) {
                 nextDarkSchemeStyles.push(
-                  `--color-orange-focused-back: ${
-                    color.dark.orange.focused.back.startsWith("--")
-                      ? `var(${color.dark.orange.focused.back});`
-                      : `${color.dark.orange.focused.back};`
+                  `--color-orange-focus-back: ${
+                    color.dark.orange.focus.back.startsWith("--")
+                      ? `var(${color.dark.orange.focus.back});`
+                      : `${color.dark.orange.focus.back};`
                   }`
                 );
               }
-              if (color.dark.orange.focused.border) {
+              if (color.dark.orange.focus.border) {
                 nextDarkSchemeStyles.push(
-                  `--color-orange-focused-border: ${
-                    color.dark.orange.focused.border.startsWith("--")
-                      ? `var(${color.dark.orange.focused.border});`
-                      : `${color.dark.orange.focused.border};`
+                  `--color-orange-focus-border: ${
+                    color.dark.orange.focus.border.startsWith("--")
+                      ? `var(${color.dark.orange.focus.border});`
+                      : `${color.dark.orange.focus.border};`
                   }`
                 );
               }
-              if (color.dark.orange.focused.shadow) {
+              if (color.dark.orange.focus.shadow) {
                 nextDarkSchemeStyles.push(
-                  `--color-orange-focused-back: ${
-                    color.dark.orange.focused.shadow.startsWith("--")
-                      ? `var(${color.dark.orange.focused.shadow});`
-                      : `${color.dark.orange.focused.shadow};`
+                  `--color-orange-focus-back: ${
+                    color.dark.orange.focus.shadow.startsWith("--")
+                      ? `var(${color.dark.orange.focus.shadow});`
+                      : `${color.dark.orange.focus.shadow};`
                   }`
                 );
               }
@@ -3688,78 +3688,78 @@ export default function Sorbit(props: SorbitProps) {
                 );
               }
             }
-            if (color.dark.yellow.hovered) {
-              if (color.dark.yellow.hovered.fore) {
+            if (color.dark.yellow.hover) {
+              if (color.dark.yellow.hover.fore) {
                 nextDarkSchemeStyles.push(
-                  `--color-yellow-hovered-fore: ${
-                    color.dark.yellow.hovered.fore.startsWith("--")
-                      ? `var(${color.dark.yellow.hovered.fore});`
-                      : `${color.dark.yellow.hovered.fore};`
+                  `--color-yellow-hover-fore: ${
+                    color.dark.yellow.hover.fore.startsWith("--")
+                      ? `var(${color.dark.yellow.hover.fore});`
+                      : `${color.dark.yellow.hover.fore};`
                   }`
                 );
               }
-              if (color.dark.yellow.hovered.back) {
+              if (color.dark.yellow.hover.back) {
                 nextDarkSchemeStyles.push(
-                  `--color-yellow-hovered-back: ${
-                    color.dark.yellow.hovered.back.startsWith("--")
-                      ? `var(${color.dark.yellow.hovered.back});`
-                      : `${color.dark.yellow.hovered.back};`
+                  `--color-yellow-hover-back: ${
+                    color.dark.yellow.hover.back.startsWith("--")
+                      ? `var(${color.dark.yellow.hover.back});`
+                      : `${color.dark.yellow.hover.back};`
                   }`
                 );
               }
-              if (color.dark.yellow.hovered.border) {
+              if (color.dark.yellow.hover.border) {
                 nextDarkSchemeStyles.push(
-                  `--color-yellow-hovered-border: ${
-                    color.dark.yellow.hovered.border.startsWith("--")
-                      ? `var(${color.dark.yellow.hovered.border});`
-                      : `${color.dark.yellow.hovered.border};`
+                  `--color-yellow-hover-border: ${
+                    color.dark.yellow.hover.border.startsWith("--")
+                      ? `var(${color.dark.yellow.hover.border});`
+                      : `${color.dark.yellow.hover.border};`
                   }`
                 );
               }
-              if (color.dark.yellow.hovered.shadow) {
+              if (color.dark.yellow.hover.shadow) {
                 nextDarkSchemeStyles.push(
-                  `--color-yellow-hovered-back: ${
-                    color.dark.yellow.hovered.shadow.startsWith("--")
-                      ? `var(${color.dark.yellow.hovered.shadow});`
-                      : `${color.dark.yellow.hovered.shadow};`
+                  `--color-yellow-hover-back: ${
+                    color.dark.yellow.hover.shadow.startsWith("--")
+                      ? `var(${color.dark.yellow.hover.shadow});`
+                      : `${color.dark.yellow.hover.shadow};`
                   }`
                 );
               }
             }
-            if (color.dark.yellow.focused) {
-              if (color.dark.yellow.focused.fore) {
+            if (color.dark.yellow.focus) {
+              if (color.dark.yellow.focus.fore) {
                 nextDarkSchemeStyles.push(
-                  `--color-yellow-focused-fore: ${
-                    color.dark.yellow.focused.fore.startsWith("--")
-                      ? `var(${color.dark.yellow.focused.fore});`
-                      : `${color.dark.yellow.focused.fore};`
+                  `--color-yellow-focus-fore: ${
+                    color.dark.yellow.focus.fore.startsWith("--")
+                      ? `var(${color.dark.yellow.focus.fore});`
+                      : `${color.dark.yellow.focus.fore};`
                   }`
                 );
               }
-              if (color.dark.yellow.focused.back) {
+              if (color.dark.yellow.focus.back) {
                 nextDarkSchemeStyles.push(
-                  `--color-yellow-focused-back: ${
-                    color.dark.yellow.focused.back.startsWith("--")
-                      ? `var(${color.dark.yellow.focused.back});`
-                      : `${color.dark.yellow.focused.back};`
+                  `--color-yellow-focus-back: ${
+                    color.dark.yellow.focus.back.startsWith("--")
+                      ? `var(${color.dark.yellow.focus.back});`
+                      : `${color.dark.yellow.focus.back};`
                   }`
                 );
               }
-              if (color.dark.yellow.focused.border) {
+              if (color.dark.yellow.focus.border) {
                 nextDarkSchemeStyles.push(
-                  `--color-yellow-focused-border: ${
-                    color.dark.yellow.focused.border.startsWith("--")
-                      ? `var(${color.dark.yellow.focused.border});`
-                      : `${color.dark.yellow.focused.border};`
+                  `--color-yellow-focus-border: ${
+                    color.dark.yellow.focus.border.startsWith("--")
+                      ? `var(${color.dark.yellow.focus.border});`
+                      : `${color.dark.yellow.focus.border};`
                   }`
                 );
               }
-              if (color.dark.yellow.focused.shadow) {
+              if (color.dark.yellow.focus.shadow) {
                 nextDarkSchemeStyles.push(
-                  `--color-yellow-focused-back: ${
-                    color.dark.yellow.focused.shadow.startsWith("--")
-                      ? `var(${color.dark.yellow.focused.shadow});`
-                      : `${color.dark.yellow.focused.shadow};`
+                  `--color-yellow-focus-back: ${
+                    color.dark.yellow.focus.shadow.startsWith("--")
+                      ? `var(${color.dark.yellow.focus.shadow});`
+                      : `${color.dark.yellow.focus.shadow};`
                   }`
                 );
               }
@@ -3880,78 +3880,78 @@ export default function Sorbit(props: SorbitProps) {
                 );
               }
             }
-            if (color.dark.green.hovered) {
-              if (color.dark.green.hovered.fore) {
+            if (color.dark.green.hover) {
+              if (color.dark.green.hover.fore) {
                 nextDarkSchemeStyles.push(
-                  `--color-green-hovered-fore: ${
-                    color.dark.green.hovered.fore.startsWith("--")
-                      ? `var(${color.dark.green.hovered.fore});`
-                      : `${color.dark.green.hovered.fore};`
+                  `--color-green-hover-fore: ${
+                    color.dark.green.hover.fore.startsWith("--")
+                      ? `var(${color.dark.green.hover.fore});`
+                      : `${color.dark.green.hover.fore};`
                   }`
                 );
               }
-              if (color.dark.green.hovered.back) {
+              if (color.dark.green.hover.back) {
                 nextDarkSchemeStyles.push(
-                  `--color-green-hovered-back: ${
-                    color.dark.green.hovered.back.startsWith("--")
-                      ? `var(${color.dark.green.hovered.back});`
-                      : `${color.dark.green.hovered.back};`
+                  `--color-green-hover-back: ${
+                    color.dark.green.hover.back.startsWith("--")
+                      ? `var(${color.dark.green.hover.back});`
+                      : `${color.dark.green.hover.back};`
                   }`
                 );
               }
-              if (color.dark.green.hovered.border) {
+              if (color.dark.green.hover.border) {
                 nextDarkSchemeStyles.push(
-                  `--color-green-hovered-border: ${
-                    color.dark.green.hovered.border.startsWith("--")
-                      ? `var(${color.dark.green.hovered.border});`
-                      : `${color.dark.green.hovered.border};`
+                  `--color-green-hover-border: ${
+                    color.dark.green.hover.border.startsWith("--")
+                      ? `var(${color.dark.green.hover.border});`
+                      : `${color.dark.green.hover.border};`
                   }`
                 );
               }
-              if (color.dark.green.hovered.shadow) {
+              if (color.dark.green.hover.shadow) {
                 nextDarkSchemeStyles.push(
-                  `--color-green-hovered-back: ${
-                    color.dark.green.hovered.shadow.startsWith("--")
-                      ? `var(${color.dark.green.hovered.shadow});`
-                      : `${color.dark.green.hovered.shadow};`
+                  `--color-green-hover-back: ${
+                    color.dark.green.hover.shadow.startsWith("--")
+                      ? `var(${color.dark.green.hover.shadow});`
+                      : `${color.dark.green.hover.shadow};`
                   }`
                 );
               }
             }
-            if (color.dark.green.focused) {
-              if (color.dark.green.focused.fore) {
+            if (color.dark.green.focus) {
+              if (color.dark.green.focus.fore) {
                 nextDarkSchemeStyles.push(
-                  `--color-green-focused-fore: ${
-                    color.dark.green.focused.fore.startsWith("--")
-                      ? `var(${color.dark.green.focused.fore});`
-                      : `${color.dark.green.focused.fore};`
+                  `--color-green-focus-fore: ${
+                    color.dark.green.focus.fore.startsWith("--")
+                      ? `var(${color.dark.green.focus.fore});`
+                      : `${color.dark.green.focus.fore};`
                   }`
                 );
               }
-              if (color.dark.green.focused.back) {
+              if (color.dark.green.focus.back) {
                 nextDarkSchemeStyles.push(
-                  `--color-green-focused-back: ${
-                    color.dark.green.focused.back.startsWith("--")
-                      ? `var(${color.dark.green.focused.back});`
-                      : `${color.dark.green.focused.back};`
+                  `--color-green-focus-back: ${
+                    color.dark.green.focus.back.startsWith("--")
+                      ? `var(${color.dark.green.focus.back});`
+                      : `${color.dark.green.focus.back};`
                   }`
                 );
               }
-              if (color.dark.green.focused.border) {
+              if (color.dark.green.focus.border) {
                 nextDarkSchemeStyles.push(
-                  `--color-green-focused-border: ${
-                    color.dark.green.focused.border.startsWith("--")
-                      ? `var(${color.dark.green.focused.border});`
-                      : `${color.dark.green.focused.border};`
+                  `--color-green-focus-border: ${
+                    color.dark.green.focus.border.startsWith("--")
+                      ? `var(${color.dark.green.focus.border});`
+                      : `${color.dark.green.focus.border};`
                   }`
                 );
               }
-              if (color.dark.green.focused.shadow) {
+              if (color.dark.green.focus.shadow) {
                 nextDarkSchemeStyles.push(
-                  `--color-green-focused-back: ${
-                    color.dark.green.focused.shadow.startsWith("--")
-                      ? `var(${color.dark.green.focused.shadow});`
-                      : `${color.dark.green.focused.shadow};`
+                  `--color-green-focus-back: ${
+                    color.dark.green.focus.shadow.startsWith("--")
+                      ? `var(${color.dark.green.focus.shadow});`
+                      : `${color.dark.green.focus.shadow};`
                   }`
                 );
               }
@@ -4072,78 +4072,78 @@ export default function Sorbit(props: SorbitProps) {
                 );
               }
             }
-            if (color.dark.cyan.hovered) {
-              if (color.dark.cyan.hovered.fore) {
+            if (color.dark.cyan.hover) {
+              if (color.dark.cyan.hover.fore) {
                 nextDarkSchemeStyles.push(
-                  `--color-cyan-hovered-fore: ${
-                    color.dark.cyan.hovered.fore.startsWith("--")
-                      ? `var(${color.dark.cyan.hovered.fore});`
-                      : `${color.dark.cyan.hovered.fore};`
+                  `--color-cyan-hover-fore: ${
+                    color.dark.cyan.hover.fore.startsWith("--")
+                      ? `var(${color.dark.cyan.hover.fore});`
+                      : `${color.dark.cyan.hover.fore};`
                   }`
                 );
               }
-              if (color.dark.cyan.hovered.back) {
+              if (color.dark.cyan.hover.back) {
                 nextDarkSchemeStyles.push(
-                  `--color-cyan-hovered-back: ${
-                    color.dark.cyan.hovered.back.startsWith("--")
-                      ? `var(${color.dark.cyan.hovered.back});`
-                      : `${color.dark.cyan.hovered.back};`
+                  `--color-cyan-hover-back: ${
+                    color.dark.cyan.hover.back.startsWith("--")
+                      ? `var(${color.dark.cyan.hover.back});`
+                      : `${color.dark.cyan.hover.back};`
                   }`
                 );
               }
-              if (color.dark.cyan.hovered.border) {
+              if (color.dark.cyan.hover.border) {
                 nextDarkSchemeStyles.push(
-                  `--color-cyan-hovered-border: ${
-                    color.dark.cyan.hovered.border.startsWith("--")
-                      ? `var(${color.dark.cyan.hovered.border});`
-                      : `${color.dark.cyan.hovered.border};`
+                  `--color-cyan-hover-border: ${
+                    color.dark.cyan.hover.border.startsWith("--")
+                      ? `var(${color.dark.cyan.hover.border});`
+                      : `${color.dark.cyan.hover.border};`
                   }`
                 );
               }
-              if (color.dark.cyan.hovered.shadow) {
+              if (color.dark.cyan.hover.shadow) {
                 nextDarkSchemeStyles.push(
-                  `--color-cyan-hovered-back: ${
-                    color.dark.cyan.hovered.shadow.startsWith("--")
-                      ? `var(${color.dark.cyan.hovered.shadow});`
-                      : `${color.dark.cyan.hovered.shadow};`
+                  `--color-cyan-hover-back: ${
+                    color.dark.cyan.hover.shadow.startsWith("--")
+                      ? `var(${color.dark.cyan.hover.shadow});`
+                      : `${color.dark.cyan.hover.shadow};`
                   }`
                 );
               }
             }
-            if (color.dark.cyan.focused) {
-              if (color.dark.cyan.focused.fore) {
+            if (color.dark.cyan.focus) {
+              if (color.dark.cyan.focus.fore) {
                 nextDarkSchemeStyles.push(
-                  `--color-cyan-focused-fore: ${
-                    color.dark.cyan.focused.fore.startsWith("--")
-                      ? `var(${color.dark.cyan.focused.fore});`
-                      : `${color.dark.cyan.focused.fore};`
+                  `--color-cyan-focus-fore: ${
+                    color.dark.cyan.focus.fore.startsWith("--")
+                      ? `var(${color.dark.cyan.focus.fore});`
+                      : `${color.dark.cyan.focus.fore};`
                   }`
                 );
               }
-              if (color.dark.cyan.focused.back) {
+              if (color.dark.cyan.focus.back) {
                 nextDarkSchemeStyles.push(
-                  `--color-cyan-focused-back: ${
-                    color.dark.cyan.focused.back.startsWith("--")
-                      ? `var(${color.dark.cyan.focused.back});`
-                      : `${color.dark.cyan.focused.back};`
+                  `--color-cyan-focus-back: ${
+                    color.dark.cyan.focus.back.startsWith("--")
+                      ? `var(${color.dark.cyan.focus.back});`
+                      : `${color.dark.cyan.focus.back};`
                   }`
                 );
               }
-              if (color.dark.cyan.focused.border) {
+              if (color.dark.cyan.focus.border) {
                 nextDarkSchemeStyles.push(
-                  `--color-cyan-focused-border: ${
-                    color.dark.cyan.focused.border.startsWith("--")
-                      ? `var(${color.dark.cyan.focused.border});`
-                      : `${color.dark.cyan.focused.border};`
+                  `--color-cyan-focus-border: ${
+                    color.dark.cyan.focus.border.startsWith("--")
+                      ? `var(${color.dark.cyan.focus.border});`
+                      : `${color.dark.cyan.focus.border};`
                   }`
                 );
               }
-              if (color.dark.cyan.focused.shadow) {
+              if (color.dark.cyan.focus.shadow) {
                 nextDarkSchemeStyles.push(
-                  `--color-cyan-focused-back: ${
-                    color.dark.cyan.focused.shadow.startsWith("--")
-                      ? `var(${color.dark.cyan.focused.shadow});`
-                      : `${color.dark.cyan.focused.shadow};`
+                  `--color-cyan-focus-back: ${
+                    color.dark.cyan.focus.shadow.startsWith("--")
+                      ? `var(${color.dark.cyan.focus.shadow});`
+                      : `${color.dark.cyan.focus.shadow};`
                   }`
                 );
               }
@@ -4264,78 +4264,78 @@ export default function Sorbit(props: SorbitProps) {
                 );
               }
             }
-            if (color.dark.blue.hovered) {
-              if (color.dark.blue.hovered.fore) {
+            if (color.dark.blue.hover) {
+              if (color.dark.blue.hover.fore) {
                 nextDarkSchemeStyles.push(
-                  `--color-blue-hovered-fore: ${
-                    color.dark.blue.hovered.fore.startsWith("--")
-                      ? `var(${color.dark.blue.hovered.fore});`
-                      : `${color.dark.blue.hovered.fore};`
+                  `--color-blue-hover-fore: ${
+                    color.dark.blue.hover.fore.startsWith("--")
+                      ? `var(${color.dark.blue.hover.fore});`
+                      : `${color.dark.blue.hover.fore};`
                   }`
                 );
               }
-              if (color.dark.blue.hovered.back) {
+              if (color.dark.blue.hover.back) {
                 nextDarkSchemeStyles.push(
-                  `--color-blue-hovered-back: ${
-                    color.dark.blue.hovered.back.startsWith("--")
-                      ? `var(${color.dark.blue.hovered.back});`
-                      : `${color.dark.blue.hovered.back};`
+                  `--color-blue-hover-back: ${
+                    color.dark.blue.hover.back.startsWith("--")
+                      ? `var(${color.dark.blue.hover.back});`
+                      : `${color.dark.blue.hover.back};`
                   }`
                 );
               }
-              if (color.dark.blue.hovered.border) {
+              if (color.dark.blue.hover.border) {
                 nextDarkSchemeStyles.push(
-                  `--color-blue-hovered-border: ${
-                    color.dark.blue.hovered.border.startsWith("--")
-                      ? `var(${color.dark.blue.hovered.border});`
-                      : `${color.dark.blue.hovered.border};`
+                  `--color-blue-hover-border: ${
+                    color.dark.blue.hover.border.startsWith("--")
+                      ? `var(${color.dark.blue.hover.border});`
+                      : `${color.dark.blue.hover.border};`
                   }`
                 );
               }
-              if (color.dark.blue.hovered.shadow) {
+              if (color.dark.blue.hover.shadow) {
                 nextDarkSchemeStyles.push(
-                  `--color-blue-hovered-back: ${
-                    color.dark.blue.hovered.shadow.startsWith("--")
-                      ? `var(${color.dark.blue.hovered.shadow});`
-                      : `${color.dark.blue.hovered.shadow};`
+                  `--color-blue-hover-back: ${
+                    color.dark.blue.hover.shadow.startsWith("--")
+                      ? `var(${color.dark.blue.hover.shadow});`
+                      : `${color.dark.blue.hover.shadow};`
                   }`
                 );
               }
             }
-            if (color.dark.blue.focused) {
-              if (color.dark.blue.focused.fore) {
+            if (color.dark.blue.focus) {
+              if (color.dark.blue.focus.fore) {
                 nextDarkSchemeStyles.push(
-                  `--color-blue-focused-fore: ${
-                    color.dark.blue.focused.fore.startsWith("--")
-                      ? `var(${color.dark.blue.focused.fore});`
-                      : `${color.dark.blue.focused.fore};`
+                  `--color-blue-focus-fore: ${
+                    color.dark.blue.focus.fore.startsWith("--")
+                      ? `var(${color.dark.blue.focus.fore});`
+                      : `${color.dark.blue.focus.fore};`
                   }`
                 );
               }
-              if (color.dark.blue.focused.back) {
+              if (color.dark.blue.focus.back) {
                 nextDarkSchemeStyles.push(
-                  `--color-blue-focused-back: ${
-                    color.dark.blue.focused.back.startsWith("--")
-                      ? `var(${color.dark.blue.focused.back});`
-                      : `${color.dark.blue.focused.back};`
+                  `--color-blue-focus-back: ${
+                    color.dark.blue.focus.back.startsWith("--")
+                      ? `var(${color.dark.blue.focus.back});`
+                      : `${color.dark.blue.focus.back};`
                   }`
                 );
               }
-              if (color.dark.blue.focused.border) {
+              if (color.dark.blue.focus.border) {
                 nextDarkSchemeStyles.push(
-                  `--color-blue-focused-border: ${
-                    color.dark.blue.focused.border.startsWith("--")
-                      ? `var(${color.dark.blue.focused.border});`
-                      : `${color.dark.blue.focused.border};`
+                  `--color-blue-focus-border: ${
+                    color.dark.blue.focus.border.startsWith("--")
+                      ? `var(${color.dark.blue.focus.border});`
+                      : `${color.dark.blue.focus.border};`
                   }`
                 );
               }
-              if (color.dark.blue.focused.shadow) {
+              if (color.dark.blue.focus.shadow) {
                 nextDarkSchemeStyles.push(
-                  `--color-blue-focused-back: ${
-                    color.dark.blue.focused.shadow.startsWith("--")
-                      ? `var(${color.dark.blue.focused.shadow});`
-                      : `${color.dark.blue.focused.shadow};`
+                  `--color-blue-focus-back: ${
+                    color.dark.blue.focus.shadow.startsWith("--")
+                      ? `var(${color.dark.blue.focus.shadow});`
+                      : `${color.dark.blue.focus.shadow};`
                   }`
                 );
               }
@@ -4456,78 +4456,78 @@ export default function Sorbit(props: SorbitProps) {
                 );
               }
             }
-            if (color.dark.violet.hovered) {
-              if (color.dark.violet.hovered.fore) {
+            if (color.dark.violet.hover) {
+              if (color.dark.violet.hover.fore) {
                 nextDarkSchemeStyles.push(
-                  `--color-violet-hovered-fore: ${
-                    color.dark.violet.hovered.fore.startsWith("--")
-                      ? `var(${color.dark.violet.hovered.fore});`
-                      : `${color.dark.violet.hovered.fore};`
+                  `--color-violet-hover-fore: ${
+                    color.dark.violet.hover.fore.startsWith("--")
+                      ? `var(${color.dark.violet.hover.fore});`
+                      : `${color.dark.violet.hover.fore};`
                   }`
                 );
               }
-              if (color.dark.violet.hovered.back) {
+              if (color.dark.violet.hover.back) {
                 nextDarkSchemeStyles.push(
-                  `--color-violet-hovered-back: ${
-                    color.dark.violet.hovered.back.startsWith("--")
-                      ? `var(${color.dark.violet.hovered.back});`
-                      : `${color.dark.violet.hovered.back};`
+                  `--color-violet-hover-back: ${
+                    color.dark.violet.hover.back.startsWith("--")
+                      ? `var(${color.dark.violet.hover.back});`
+                      : `${color.dark.violet.hover.back};`
                   }`
                 );
               }
-              if (color.dark.violet.hovered.border) {
+              if (color.dark.violet.hover.border) {
                 nextDarkSchemeStyles.push(
-                  `--color-violet-hovered-border: ${
-                    color.dark.violet.hovered.border.startsWith("--")
-                      ? `var(${color.dark.violet.hovered.border});`
-                      : `${color.dark.violet.hovered.border};`
+                  `--color-violet-hover-border: ${
+                    color.dark.violet.hover.border.startsWith("--")
+                      ? `var(${color.dark.violet.hover.border});`
+                      : `${color.dark.violet.hover.border};`
                   }`
                 );
               }
-              if (color.dark.violet.hovered.shadow) {
+              if (color.dark.violet.hover.shadow) {
                 nextDarkSchemeStyles.push(
-                  `--color-violet-hovered-back: ${
-                    color.dark.violet.hovered.shadow.startsWith("--")
-                      ? `var(${color.dark.violet.hovered.shadow});`
-                      : `${color.dark.violet.hovered.shadow};`
+                  `--color-violet-hover-back: ${
+                    color.dark.violet.hover.shadow.startsWith("--")
+                      ? `var(${color.dark.violet.hover.shadow});`
+                      : `${color.dark.violet.hover.shadow};`
                   }`
                 );
               }
             }
-            if (color.dark.violet.focused) {
-              if (color.dark.violet.focused.fore) {
+            if (color.dark.violet.focus) {
+              if (color.dark.violet.focus.fore) {
                 nextDarkSchemeStyles.push(
-                  `--color-violet-focused-fore: ${
-                    color.dark.violet.focused.fore.startsWith("--")
-                      ? `var(${color.dark.violet.focused.fore});`
-                      : `${color.dark.violet.focused.fore};`
+                  `--color-violet-focus-fore: ${
+                    color.dark.violet.focus.fore.startsWith("--")
+                      ? `var(${color.dark.violet.focus.fore});`
+                      : `${color.dark.violet.focus.fore};`
                   }`
                 );
               }
-              if (color.dark.violet.focused.back) {
+              if (color.dark.violet.focus.back) {
                 nextDarkSchemeStyles.push(
-                  `--color-violet-focused-back: ${
-                    color.dark.violet.focused.back.startsWith("--")
-                      ? `var(${color.dark.violet.focused.back});`
-                      : `${color.dark.violet.focused.back};`
+                  `--color-violet-focus-back: ${
+                    color.dark.violet.focus.back.startsWith("--")
+                      ? `var(${color.dark.violet.focus.back});`
+                      : `${color.dark.violet.focus.back};`
                   }`
                 );
               }
-              if (color.dark.violet.focused.border) {
+              if (color.dark.violet.focus.border) {
                 nextDarkSchemeStyles.push(
-                  `--color-violet-focused-border: ${
-                    color.dark.violet.focused.border.startsWith("--")
-                      ? `var(${color.dark.violet.focused.border});`
-                      : `${color.dark.violet.focused.border};`
+                  `--color-violet-focus-border: ${
+                    color.dark.violet.focus.border.startsWith("--")
+                      ? `var(${color.dark.violet.focus.border});`
+                      : `${color.dark.violet.focus.border};`
                   }`
                 );
               }
-              if (color.dark.violet.focused.shadow) {
+              if (color.dark.violet.focus.shadow) {
                 nextDarkSchemeStyles.push(
-                  `--color-violet-focused-back: ${
-                    color.dark.violet.focused.shadow.startsWith("--")
-                      ? `var(${color.dark.violet.focused.shadow});`
-                      : `${color.dark.violet.focused.shadow};`
+                  `--color-violet-focus-back: ${
+                    color.dark.violet.focus.shadow.startsWith("--")
+                      ? `var(${color.dark.violet.focus.shadow});`
+                      : `${color.dark.violet.focus.shadow};`
                   }`
                 );
               }
