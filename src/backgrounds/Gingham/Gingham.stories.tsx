@@ -25,7 +25,7 @@ export const Plain: Story = {
   },
   render: (props) => (
     <Sorbit>
-      <Gingham {...props}>
+      <Gingham {...props} style={{ width: "100%", height: "600px" }}>
         <span>{"Plain"}</span>
       </Gingham>
     </Sorbit>

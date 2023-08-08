@@ -8,8 +8,7 @@ const meta = {
   title: "Backgrounds/Stripe",
   component: Stripe,
   tags: ["autodocs"],
-  argTypes: {
-  },
+  argTypes: {},
 } satisfies Meta<typeof Stripe>;
 
 export default meta;
@@ -21,11 +20,11 @@ export const Plain: Story = {
     patternColor: {
       name: "blue",
       lightness: 600,
-    }
+    },
   },
   render: (props) => (
     <Sorbit>
-      <Stripe {...props}>
+      <Stripe {...props} style={{ width: "100%", height: "600px" }}>
         <span>{"Plain"}</span>
       </Stripe>
     </Sorbit>
