@@ -22,7 +22,7 @@ type Story = StoryObj<typeof meta>;
 export const Plain: Story = {
   args: {
     isSmall: undefined,
-    colorType: undefined,
+    colorName: undefined,
   },
   render: (props) => (
     <Sorbit>

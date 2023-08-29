@@ -1,4 +1,4 @@
-type ColorType =
+type ColorName =
   | "gray"
   | "red"
   | "orange"
@@ -8,4 +8,4 @@ type ColorType =
   | "blue"
   | "violet";
 
-export default ColorType;
+export default ColorName;

@@ -13,5 +13,14 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
+  viteFinal: (config) => {
+    return {
+      ...config,
+      build: {
+        ...config.build,
+        sourcemap: false,
+      },
+    }
+  },
 };
 export default config;

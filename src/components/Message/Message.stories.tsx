@@ -21,7 +21,7 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Plain: Story = {
   args: {
-    colorType: undefined,
+    colorName: undefined,
   },
   render: (props) => (
     <Sorbit>

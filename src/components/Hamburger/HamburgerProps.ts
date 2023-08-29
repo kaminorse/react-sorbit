@@ -1,7 +1,11 @@
+import BaseComponentProps from "../../common/models/BaseComponentProps";
+
 export default interface HamburgerProps
   extends React.DetailedHTMLProps<
     React.HTMLAttributes<HTMLDivElement>,
     HTMLDivElement
-  > {
-  isActive?: boolean;
+  >, BaseComponentProps {
+  isActive?: boolean | undefined;
+  crownInner?: JSX.Element | string | undefined;
+  heelInner?: JSX.Element | string | undefined;
 }
