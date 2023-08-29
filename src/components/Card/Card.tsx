@@ -1,17 +1,29 @@
 import CardProps from "./CardProps";
 import classNames from "./Card.module.scss";
+import classNameUtility from "../../utilities/classNameUtility";
 
 export default function Card(props: CardProps): JSX.Element {
   const assignedProps = { ...props };
   delete assignedProps["colorName"];
+  //#region BaseComponentProps
+  delete assignedProps["foreColor"];
+  delete assignedProps["backColor"];
+  delete assignedProps["highlighter"];
+  delete assignedProps["spacing"];
+  //#endregion BaseComponentProps
 
-  const className = [
-    classNames["card"],
-    props.colorName ? classNames[`is-${props.colorName}`] : "",
-    props.className ? props.className : "",
-  ].join(" ");
+  const assignedClassNames =
+    classNameUtility.assignBaseComponentPropsClassNames(
+      props,
+      ["card"],
+      classNames
+    );
+  props.colorName && assignedClassNames.push(classNames[`is-${props.colorName}`]);
+  props.className && assignedClassNames.push(props.className);
 
-  return (
-    <div {...assignedProps} className={className} />
+  return props.as ? (
+    <props.as {...assignedProps} className={assignedClassNames.join(" ")} />
+  ) : (
+    <div {...assignedProps} className={assignedClassNames.join(" ")} />
   );
 }

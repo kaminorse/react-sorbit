@@ -6,6 +6,7 @@ export default function Badge(props: BadgeProps): JSX.Element {
   const assignedProps = { ...props };
   delete assignedProps["colorName"];
   delete assignedProps["isSmall"];
+  delete assignedProps["as"];
   //#region BaseComponentProps
   delete assignedProps["foreColor"];
   delete assignedProps["backColor"];
@@ -23,10 +24,9 @@ export default function Badge(props: BadgeProps): JSX.Element {
   props.isSmall && assignedClassNames.push(classNames[`is-small`]);
   props.className && assignedClassNames.push(props.className);
 
-  return (
-    <span
-      {...assignedProps}
-      className={assignedClassNames.join(" ")}
-    />
+  return props.as ? (
+    <props.as {...assignedProps} className={assignedClassNames.join(" ")} />
+  ) : (
+    <span {...assignedProps} className={assignedClassNames.join(" ")} />
   );
 }

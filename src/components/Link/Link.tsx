@@ -13,7 +13,11 @@ export default function Link(props: LinkProps): JSX.Element {
   //#endregion BaseComponentProps
 
   const assignedClassNames =
-    classNameUtility.assignBaseComponentPropsClassNames(props, [], classNames);
+    classNameUtility.assignBaseComponentPropsClassNames(
+      props,
+      ["link"],
+      classNames
+    );
   props.className && assignedClassNames.push(props.className);
 
   return props.as ? (

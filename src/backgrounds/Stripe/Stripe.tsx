@@ -18,12 +18,12 @@ export default function Stripe(props: StripeProps): JSX.Element {
       [classNames["stripe"]],
       classNames
     );
-  props.patternColor &&
-    assignedClassNames.push(
-      classNames[
-        `is-${props.patternColor.name}-${props.patternColor.lightness}`
-      ]
-    );
+  // props.patternColor &&
+  //   assignedClassNames.push(
+  //     classNames[
+  //       `is-${props.patternColor.name}-${props.patternColor.lightness}`
+  //     ]
+  //   );
   props.className && assignedClassNames.push(props.className);
 
   return <Stripe {...assignedProps} className={assignedClassNames.join(" ")} />;
