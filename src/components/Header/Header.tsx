@@ -4,6 +4,7 @@ import classNameUtility from "../../utilities/classNameUtility";
 
 export default function Header(props: HeaderProps): JSX.Element {
   const assignedProps = { ...props };
+  delete assignedProps["isSticky"];
   //#region BaseComponentProps
   delete assignedProps["foreColor"];
   delete assignedProps["backColor"];
