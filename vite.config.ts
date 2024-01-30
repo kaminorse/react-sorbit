@@ -1,26 +1,39 @@
-import { resolve } from "node:path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
+import { libInjectCss } from "vite-plugin-lib-inject-css";
+import { extname, relative, resolve } from "path";
+import { fileURLToPath } from "node:url";
+import { glob } from "glob";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), cssInjectedByJsPlugin()],
+  plugins: [react(), libInjectCss()],
   build: {
+    copyPublicDir: false,
     emptyOutDir: false,
     lib: {
       entry: resolve(__dirname, "src/react-sorbit.ts"),
       name: "ReactSorbit",
       fileName: "react-sorbit",
+      formats: ['es'],
     },
     sourcemap: true,
     rollupOptions: {
-      external: ["react", "react-dom"],
+      external: ["react", "react/jsx-runtime"],
+      input: Object.fromEntries(
+        glob
+          .sync("src/**/*!(*.d).{ts,tsx}")
+          .map((file) => [
+            relative("src", file.slice(0, file.length - extname(file).length)),
+            fileURLToPath(new URL(file, import.meta.url)),
+          ])
+      ),
       output: {
         globals: {
           react: "React",
-          "react-dom": "ReactDOM",
         },
+        assetFileNames: "assets/[name][extname]",
+        entryFileNames: "[name].js",
       },
     },
   },
