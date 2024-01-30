@@ -4578,14 +4578,14 @@ export default function Sorbit(props: SorbitProps) {
   }, [props.cssVariableSetting])
   
   const customStyle: string[] = [];
-  rootStyles && customStyle.push(`:root{${rootStyles.join("")}}`);
-  lightSchemeStyles && customStyle.push(`:root{${lightSchemeStyles.join("")}}`);
-  lightSchemeStyles && customStyle.push(`[data-color-scheme="light"]{${lightSchemeStyles.join("")}}`);
-  darkSchemeStyles && customStyle.push(`[data-color-scheme="dark"]{${darkSchemeStyles.join("")}}`);
+  rootStyles.length > 0 && customStyle.push(`:root{${rootStyles.join("")}}`);
+  lightSchemeStyles.length > 0 && customStyle.push(`:root{${lightSchemeStyles.join("")}}`);
+  lightSchemeStyles.length > 0 && customStyle.push(`[data-color-scheme="light"]{${lightSchemeStyles.join("")}}`);
+  darkSchemeStyles.length > 0 && customStyle.push(`[data-color-scheme="dark"]{${darkSchemeStyles.join("")}}`);
 
   return (
     <>
-      {customStyle ? <style>{customStyle}</style> : <></>}
+      {customStyle.length > 0 && <style suppressHydrationWarning={true}>{customStyle}</style>}
       <Tabula colorScheme={props.colorScheme}>{props.children}</Tabula>
     </>
   );
