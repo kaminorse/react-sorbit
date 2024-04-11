@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import Button from "./Button";
-import Sorbit from "../../base/Sorbit";
+import SorbitStatic from "../../base/SorbitStatic";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -20,8 +20,8 @@ export const Plain: Story = {
   args: {
   },
   render: (props) => (
-    <Sorbit>
+    <SorbitStatic>
       <Button {...props} />
-    </Sorbit>
+    </SorbitStatic>
   ),
 };

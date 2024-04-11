@@ -1,4 +1,4 @@
-import ColorName from "../../common/ColorName";
+import ColorName from "../../common/literalTypes/ColorName";
 import BaseComponentProps from "../../common/models/BaseComponentProps";
 
 export default interface CheckboxProps

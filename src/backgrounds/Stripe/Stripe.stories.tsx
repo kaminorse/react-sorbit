@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import Stripe from "./Stripe";
-import Sorbit from "../../base/Sorbit";
+import SorbitStatic from "../../base/SorbitStatic";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -23,10 +23,10 @@ export const Plain: Story = {
     },
   },
   render: (props) => (
-    <Sorbit>
+    <SorbitStatic>
       <Stripe {...props} style={{ width: "100%", height: "600px" }}>
         <span>{"Plain"}</span>
       </Stripe>
-    </Sorbit>
+    </SorbitStatic>
   ),
 };

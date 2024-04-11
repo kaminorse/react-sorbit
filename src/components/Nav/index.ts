@@ -1,5 +1,3 @@
-"use client";
-
 export { default } from "./Nav";
 export * from "./NavProps";
 

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import Message from "./Message";
-import Sorbit from "../../base/Sorbit";
+import SorbitStatic from "../../base/SorbitStatic";
 import MessageHeader from "./MessageHeader";
 import MessageBody from "./MessageBody";
 
@@ -24,7 +24,7 @@ export const Plain: Story = {
     colorName: undefined,
   },
   render: (props) => (
-    <Sorbit>
+    <SorbitStatic>
       <Message {...props}>
         <MessageHeader>
           {"Header"}
@@ -33,6 +33,6 @@ export const Plain: Story = {
           {"Body"}
         </MessageBody>
       </Message>
-    </Sorbit>
+    </SorbitStatic>
   ),
 };

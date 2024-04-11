@@ -1,5 +1,3 @@
-"use client";
-
 export { default } from "./Message";
 export * from "./MessageProps";
 
