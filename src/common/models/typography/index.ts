@@ -1,1 +1,1 @@
-export * from "./TypographyCssVariable";
+export type * from "./TypographyCssVariable";

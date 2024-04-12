@@ -1,3 +1,3 @@
-export * from "./ColorLightness";
-export * from "./ColorName";
-export * from "./ColorScheme";
+export type * from "./ColorLightness";
+export type * from "./ColorName";
+export type * from "./ColorScheme";
