@@ -1,3 +1,3 @@
 
 export { default } from "./Sorbit";
-export * from "./SorbitProps";
+export type { default as SorbitProps } from "./SorbitProps";

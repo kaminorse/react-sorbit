@@ -1,3 +1,4 @@
 
 export { default } from "./SorbitStatic";
-export * from "./SorbitStaticProps";
+export type { default as SorbitStaticProps } from "./SorbitStaticProps";
+
