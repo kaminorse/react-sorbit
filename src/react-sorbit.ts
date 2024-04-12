@@ -1,6 +1,5 @@
 //#region utilities
 
-
 export * from "./utilities";
 
 //#endregion utilities
@@ -8,11 +7,10 @@ export * from "./utilities";
 //#region common
 
 export type * from "./common/literalTypes";
-export type * from "./common/models/color"
+export type * from "./common/models/color";
 export type * from "./common/models/typography";
 export type { default as BaseComponentProps } from "./common/models/BaseComponentProps";
 export type { default as SorbitCssVariable } from "./common/models/SorbitCssVariable";
-
 
 //#endregion common
 
@@ -37,11 +35,11 @@ export type * from "./base/Tabula";
 
 //#region backgrounds
 
-// export { default as Gingham } from "./backgrounds/Gingham";
-// export * from "./backgrounds/Gingham";
+export { default as Gingham } from "./backgrounds/Gingham";
+export type * from "./backgrounds/Gingham";
 
-// export { default as Stripe } from "./backgrounds/Stripe";
-// export * from "./backgrounds/Stripe";
+export { default as Stripe } from "./backgrounds/Stripe";
+export type * from "./backgrounds/Stripe";
 
 //#endregion backgrounds
 

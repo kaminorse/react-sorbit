@@ -1,7 +1,7 @@
 import ColorLightness from "../literalTypes/ColorLightness";
 import ColorName from "../literalTypes/ColorName";
 
-export default interface BaseProps {
+export default interface BaseComponentProps {
   foreColor?: {
     name: ColorName;
     lightness: ColorLightness;
