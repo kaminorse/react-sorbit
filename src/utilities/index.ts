@@ -1,3 +1,3 @@
 
-export * from "./sorbitStyleUtility";
-export * from "./classNameUtility";
+export { default as sorbitStyleUtility } from "./sorbitStyleUtility";
+export { default as classNameUtility } from "./classNameUtility";

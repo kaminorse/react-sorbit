@@ -1,3 +1,2 @@
-
 export { default } from "./SorbitCssVariableStylesProviderStatic";
-export * from "./SorbitCssVariableStylesProviderStaticProps";
+export type { default as SorbitCssVariableStylesProviderStaticProps } from "./SorbitCssVariableStylesProviderStaticProps";

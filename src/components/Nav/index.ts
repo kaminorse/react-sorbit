@@ -1,26 +1,26 @@
 export { default } from "./Nav";
-export * from "./NavProps";
+export type { default as NavProps } from "./NavProps";
 
 export { default as NavBrand } from "./NavBrand";
-export * from "./NavBrandProps";
+export type { default as NavBrandProps } from "./NavBrandProps";
 
 export { default as NavBrandCenter } from "./NavBrandCenter";
-export * from "./NavBrandCenterProps";
+export type { default as NavBrandCenterProps } from "./NavBrandCenterProps";
 
 export { default as NavBrandLeft } from "./NavBrandLeft";
-export * from "./NavBrandLeftProps";
+export type { default as NavBrandLeftProps } from "./NavBrandLeftProps";
 
 export { default as NavBrandRight } from "./NavBrandRight";
-export * from "./NavBrandRightProps";
+export type { default as NavBrandRightProps } from "./NavBrandRightProps";
 
 export { default as NavDesktop } from "./NavDesktop";
-export * from "./NavDesktopProps";
+export type { default as NavDesktopProps } from "./NavDesktopProps";
 
 export { default as NavMenu } from "./NavMenu";
-export * from "./NavMenuProps";
+export type { default as NavMenuProps } from "./NavMenuProps";
 
 export { default as NavMenuItem } from "./NavMenuItem";
-export * from "./NavMenuItemProps";
+export type { default as NavMenuItemProps } from "./NavMenuItemProps";
 
 export { default as NavMobile } from "./NavMobile";
-export * from "./NavMobileProps";
+export type { default as NavMobileProps } from "./NavMobileProps";

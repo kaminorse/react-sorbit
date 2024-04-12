@@ -1,2 +1,2 @@
 export { default } from "./Header";
-export * from "./HeaderProps";
+export type { default as HeaderProps } from "./HeaderProps";

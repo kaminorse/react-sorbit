@@ -1,8 +1,8 @@
 export { default } from "./Card";
-export type * from "./CardProps";
+export type { default as CardProps } from "./CardProps";
 
 export { default as CardBody } from "./CardBody";
-export type * from "./CardBodyProps";
+export type { default as CardBodyProps } from "./CardBodyProps";
 
 export { default as CardTitle } from "./CardTitle";
-export type * from "./CardTitleProps";
+export type { default as CardTitleProps } from "./CardTitleProps";

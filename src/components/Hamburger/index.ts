@@ -1,2 +1,2 @@
 export { default } from "./Hamburger";
-export * from "./HamburgerProps";
+export type { default as HamburgerProps } from "./HamburgerProps";

@@ -1,8 +1,8 @@
 export { default } from "./Message";
-export * from "./MessageProps";
+export type { default as MessageProps } from "./MessageProps";
 
 export { default as MessageBody } from "./MessageBody";
-export * from "./MessageBodyProps";
+export type { default as MessageBodyProps } from "./MessageBodyProps";
 
 export { default as MessageHeader } from "./MessageHeader";
-export * from "./MessageHeaderProps";
+export type { default as MessageHeaderProps } from "./MessageHeaderProps";
