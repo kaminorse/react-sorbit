@@ -5,8 +5,9 @@ import classNameUtility from "../../utilities/classNameUtility";
 export default function NavMobile(props: NavMobileProps): JSX.Element {
   const assignedProps = { ...props };
   //#region BaseComponentProps
-  delete assignedProps["foreColor"];
-  delete assignedProps["backColor"];
+  delete assignedProps["fore"];
+  delete assignedProps["back"];
+  delete assignedProps["border"];
   delete assignedProps["highlighter"];
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps

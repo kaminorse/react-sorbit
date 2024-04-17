@@ -8,8 +8,9 @@ export default function Hamburger(props: HamburgerProps): JSX.Element {
   delete assignedProps["crownInner"];
   delete assignedProps["heelInner"];
   //#region BaseComponentProps
-  delete assignedProps["foreColor"];
-  delete assignedProps["backColor"];
+  delete assignedProps["fore"];
+  delete assignedProps["back"];
+  delete assignedProps["border"];
   delete assignedProps["highlighter"];
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps

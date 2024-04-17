@@ -6,8 +6,9 @@ export default function Header(props: HeaderProps): JSX.Element {
   const assignedProps = { ...props };
   delete assignedProps["isSticky"];
   //#region BaseComponentProps
-  delete assignedProps["foreColor"];
-  delete assignedProps["backColor"];
+  delete assignedProps["fore"];
+  delete assignedProps["back"];
+  delete assignedProps["border"];
   delete assignedProps["highlighter"];
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps

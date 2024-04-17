@@ -1,8 +1,8 @@
+import LabelProps from "./LabelProps";
+import classNames from "./Label.module.scss";
 import classNameUtility from "../../utilities/classNameUtility";
-import classNames from "./Container.module.scss";
-import ContainerProps from "./ContainerProps";
 
-export default function Container(props: ContainerProps): JSX.Element {
+export default function Label(props: LabelProps): JSX.Element {
   const assignedProps = { ...props };
   //#region BaseComponentProps
   delete assignedProps["fore"];
@@ -15,12 +15,10 @@ export default function Container(props: ContainerProps): JSX.Element {
   const assignedClassNames =
     classNameUtility.assignBaseComponentPropsClassNames(
       props,
-      [classNames["container"]],
+      [classNames["label"]],
       classNames
     );
-    props.className && assignedClassNames.push(props.className);
+  props.className && assignedClassNames.push(props.className);
 
-  return (
-    <div {...assignedProps} className={assignedClassNames.join(" ")} />
-  );
+  return <label {...assignedProps} className={assignedClassNames.join(" ")} />;
 }

@@ -1,9 +1,10 @@
-import MessageHeaderProps from "./MessageHeaderProps";
-import classNames from "./Message.module.scss";
-import classNameUtility from "../../utilities/classNameUtility";
+import { classNameUtility } from "../../utilities";
+import classNames from "./InputText.module.scss";
+import InputTextProps from "./InputTextProps";
 
-export default function MessageHeader(props: MessageHeaderProps): JSX.Element {
+export default function InputText(props: InputTextProps) {
   const assignedProps = { ...props };
+  delete assignedProps["colorName"];
   //#region BaseComponentProps
   delete assignedProps["fore"];
   delete assignedProps["back"];
@@ -15,12 +16,18 @@ export default function MessageHeader(props: MessageHeaderProps): JSX.Element {
   const assignedClassNames =
     classNameUtility.assignBaseComponentPropsClassNames(
       props,
-      [classNames["message-header"]],
+      [classNames["input-text"]],
       classNames
     );
+  props.colorName &&
+    assignedClassNames.push(classNames[`is-${props.colorName}`]);
   props.className && assignedClassNames.push(props.className);
-  
+
   return (
-    <div {...assignedProps} className={assignedClassNames.join(" ")} />
+    <input
+      type="text"
+      {...assignedProps}
+      className={assignedClassNames.join(" ")}
+    />
   );
 }

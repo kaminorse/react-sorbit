@@ -1,18 +1,45 @@
-import ColorLightness from "../literalTypes/ColorLightness";
-import ColorName from "../literalTypes/ColorName";
+import {
+  BorderRadius,
+  BorderStyle,
+  BorderWidth,
+  ColorLightness,
+  ColorName,
+  FontSize,
+  FontWeight,
+} from "../literalTypes";
+import BorderCollapse from "../literalTypes/BorderCollapse";
 
 export default interface BaseComponentProps {
-  foreColor?: {
-    name: ColorName;
-    lightness: ColorLightness;
+  fore?: {
+    color?: {
+      name: ColorName;
+      lightness: ColorLightness;
+    };
+    fontSize?: FontSize;
+    fontWeight?: FontWeight;
+    isItalic?: boolean;
   };
-  backColor?: {
-    name: ColorName;
-    lightness: ColorLightness;
+  back?: {
+    color?: {
+      name: ColorName;
+      lightness: ColorLightness;
+    };
   };
   highlighter?: {
-    name: ColorName;
-    lightness: ColorLightness;
+    color?: {
+      name: ColorName;
+      lightness: ColorLightness;
+    };
+  };
+  border?: {
+    color?: {
+      name: ColorName;
+      lightness: ColorLightness;
+    };
+    collapse?: BorderCollapse;
+    radius?: BorderRadius;
+    style: BorderStyle;
+    width?: BorderWidth;
   };
   spacing?: {
     margin?: {

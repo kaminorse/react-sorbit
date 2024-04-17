@@ -6,8 +6,9 @@ export default function Link(props: LinkProps): JSX.Element {
   const assignedProps = { ...props };
   delete assignedProps["as"];
   //#region BaseComponentProps
-  delete assignedProps["foreColor"];
-  delete assignedProps["backColor"];
+  delete assignedProps["fore"];
+  delete assignedProps["back"];
+  delete assignedProps["border"];
   delete assignedProps["highlighter"];
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps

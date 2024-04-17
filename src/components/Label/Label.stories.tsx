@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import Gingham from "./Gingham";
+import Label from "./Label";
 import SorbitStatic from "../../base/SorbitStatic";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
-  title: "Backgrounds/Gingham",
-  component: Gingham,
+  title: "Components/Label",
+  component: Label,
   tags: ["autodocs"],
   argTypes: {},
-} satisfies Meta<typeof Gingham>;
+} satisfies Meta<typeof Label>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -19,9 +19,7 @@ export const Plain: Story = {
   args: {},
   render: (props) => (
     <SorbitStatic>
-      <Gingham {...props}>
-        <span>{"Plain"}</span>
-      </Gingham>
+      <Label {...props}>{"Plain"}</Label>
     </SorbitStatic>
   ),
 };
