@@ -1,7 +1,7 @@
-import ColorLightness from "../ColorLightness";
-import ColorName from "../ColorName";
+import ColorLightness from "../literalTypes/ColorLightness";
+import ColorName from "../literalTypes/ColorName";
 
-export default interface BaseProps {
+export default interface BaseComponentProps {
   foreColor?: {
     name: ColorName;
     lightness: ColorLightness;
@@ -27,5 +27,5 @@ export default interface BaseProps {
       bottom?: number | "auto" | undefined;
       right?: number | "auto" | undefined;
     };
-  }
+  };
 }

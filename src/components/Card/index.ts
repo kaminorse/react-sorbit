@@ -1,10 +1,8 @@
-"use client";
-
 export { default } from "./Card";
-export * from "./CardProps";
+export type { default as CardProps } from "./CardProps";
 
 export { default as CardBody } from "./CardBody";
-export * from "./CardBodyProps";
+export type { default as CardBodyProps } from "./CardBodyProps";
 
 export { default as CardTitle } from "./CardTitle";
-export * from "./CardTitleProps";
+export type { default as CardTitleProps } from "./CardTitleProps";

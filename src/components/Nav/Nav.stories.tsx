@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import Nav from "./Nav";
-import Sorbit from "../../base/Sorbit";
+import SorbitStatic from "../../base/SorbitStatic";
 import NavMobile from "./NavMobile";
 import NavDesktop from "./NavDesktop";
 import NavBrand from "./NavBrand";
@@ -35,7 +35,7 @@ const navMenuItems = (
 export const Plain: Story = {
   args: {},
   render: (props) => (
-    <Sorbit>
+    <SorbitStatic>
       <Nav {...props}>
         <NavMobile>
           <NavBrand>
@@ -56,6 +56,6 @@ export const Plain: Story = {
           <NavMenu >{navMenuItems}</NavMenu>
         </NavDesktop>
       </Nav>
-    </Sorbit>
+    </SorbitStatic>
   ),
 };

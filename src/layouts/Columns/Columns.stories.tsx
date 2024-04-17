@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import Columns from "./Columns";
-import Sorbit from "../../base/Sorbit";
+import SorbitStatic from "../../base/SorbitStatic";
 import { Column } from ".";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
@@ -21,7 +21,7 @@ export const Plain: Story = {
   args: {
   },
   render: (props) => (
-    <Sorbit>
+    <SorbitStatic>
       <Columns {...props}>
         <Column>
           {"Column1"}
@@ -60,6 +60,6 @@ export const Plain: Story = {
           {"Column12"}
         </Column>
       </Columns>
-    </Sorbit>
+    </SorbitStatic>
   ),
 };

@@ -1,3 +1,2 @@
-"use client";
 export { default } from "./Span";
-export * from "./SpanProps";
+export type { default as SpanProps } from "./SpanProps";

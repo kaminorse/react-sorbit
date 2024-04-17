@@ -1,3 +1,2 @@
-"use client";
 export { default } from "./Badge";
-export * from "./BadgeProps";
+export type { default as BadgeProps } from "./BadgeProps";

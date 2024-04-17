@@ -1,4 +1,3 @@
-"use client";
 
 export { default } from "./Stripe";
-export * from "./StripeProps";
+export type { default as StripeProps } from "./StripeProps";

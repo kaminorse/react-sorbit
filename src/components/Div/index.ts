@@ -1,3 +1,2 @@
-"use client";
 export { default } from "./Div";
-export * from "./DivProps";
+export type { default as DivProps } from "./DivProps";
