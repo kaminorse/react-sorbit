@@ -1,5 +1,5 @@
-import ColorName from "@/common/literalTypes/ColorName";
-import BaseComponentProps from "@/common/models/BaseComponentProps";
+import { ColorName } from "../../common/literalTypes";
+import { BaseComponentProps } from "../../common/models";
 
 export default interface MessageProps
   extends React.DetailedHTMLProps<

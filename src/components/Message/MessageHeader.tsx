@@ -1,4 +1,4 @@
-import { classNameUtility } from "@/utilities";
+import { classNameUtility } from "../../utilities";
 import classNames from "./Message.module.scss";
 import MessageHeaderProps from "./MessageHeaderProps";
 

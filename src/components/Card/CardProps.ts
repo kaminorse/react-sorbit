@@ -1,6 +1,6 @@
-import ColorName from "@/common/literalTypes/ColorName";
-import BaseComponentProps from "@/common/models/BaseComponentProps";
 import React from "react";
+import { ColorName } from "../../common/literalTypes";
+import { BaseComponentProps } from "../../common/models";
 
 export default interface CardProps
   extends React.DetailedHTMLProps<

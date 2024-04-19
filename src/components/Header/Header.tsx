@@ -1,4 +1,4 @@
-import { classNameUtility } from "@/utilities";
+import { classNameUtility } from "../../utilities";
 import classNames from "./Header.module.scss";
 import HeaderProps from "./HeaderProps";
 

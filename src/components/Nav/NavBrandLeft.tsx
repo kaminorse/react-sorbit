@@ -1,4 +1,4 @@
-import { classNameUtility } from "@/utilities";
+import { classNameUtility } from "../../utilities";
 import classNames from "./Nav.module.scss";
 import NavBrandLeftProps from "./NavBrandLeftProps";
 

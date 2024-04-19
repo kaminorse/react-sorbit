@@ -1,4 +1,4 @@
-import BaseComponentProps from "@/common/models/BaseComponentProps";
+import { BaseComponentProps } from "../../common/models";
 import React from "react";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface

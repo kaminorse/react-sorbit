@@ -1,4 +1,4 @@
-import { classNameUtility } from "@/utilities";
+import { classNameUtility } from "../../utilities";
 import classNames from "./Gingham.module.scss";
 import GinghamProps from "./GinghamProps";
 

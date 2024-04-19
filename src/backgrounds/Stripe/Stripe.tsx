@@ -1,4 +1,4 @@
-import { classNameUtility } from "@/utilities";
+import { classNameUtility } from "../../utilities";
 import classNames from "./Stripe.module.scss";
 import StripeProps from "./StripeProps";
 

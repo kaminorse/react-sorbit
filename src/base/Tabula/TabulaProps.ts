@@ -1,4 +1,4 @@
-import ColorScheme from "@/common/literalTypes/ColorScheme";
+import { ColorScheme } from "../../common/literalTypes";
 import React from "react";
 
 export default interface TabulaProps {

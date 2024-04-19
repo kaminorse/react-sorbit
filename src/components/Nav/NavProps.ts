@@ -1,5 +1,5 @@
-import ColorName from "@/common/literalTypes/ColorName";
-import BaseComponentProps from "@/common/models/BaseComponentProps";
+import { ColorName } from "../../common/literalTypes";
+import { BaseComponentProps } from "../../common/models";
 import React from "react";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
