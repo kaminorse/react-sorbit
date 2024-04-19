@@ -1,6 +1,6 @@
-import MessageHeaderProps from "./MessageHeaderProps";
+import { classNameUtility } from "@/utilities";
 import classNames from "./Message.module.scss";
-import classNameUtility from "../../utilities/classNameUtility";
+import MessageHeaderProps from "./MessageHeaderProps";
 
 export default function MessageHeader(props: MessageHeaderProps): JSX.Element {
   const assignedProps = { ...props };

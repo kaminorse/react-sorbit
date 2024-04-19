@@ -1,6 +1,6 @@
-import MessageProps from "./MessageProps";
+import { classNameUtility } from "@/utilities";
 import classNames from "./Message.module.scss";
-import classNameUtility from "../../utilities/classNameUtility";
+import MessageProps from "./MessageProps";
 
 export default function Message(props: MessageProps): JSX.Element {
   const assignedProps = { ...props };

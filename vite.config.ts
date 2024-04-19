@@ -1,13 +1,19 @@
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import { libInjectCss } from "vite-plugin-lib-inject-css";
-import { extname, relative, resolve } from "path";
-import { fileURLToPath } from "node:url";
 import { glob } from "glob";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { extname, relative, resolve } from "path";
+import { defineConfig } from "vite";
+import { libInjectCss } from "vite-plugin-lib-inject-css";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), libInjectCss()],
+  resolve: {                                // ・・・・追加
+    alias: {                                // ・・・・追加
+      "@": path.resolve(__dirname, "./src") // ・・・・追加
+    }                                       // ・・・・追加
+  },
   build: {
     copyPublicDir: false,
     emptyOutDir: false,
@@ -15,7 +21,7 @@ export default defineConfig({
       entry: resolve(__dirname, "src/react-sorbit.ts"),
       name: "ReactSorbit",
       fileName: "react-sorbit",
-      formats: ['es'],
+      formats: ["es"],
     },
     sourcemap: true,
     rollupOptions: {

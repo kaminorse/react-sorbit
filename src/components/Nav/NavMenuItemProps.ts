@@ -1,5 +1,5 @@
+import BaseComponentProps from "@/common/models/BaseComponentProps";
 import React from "react";
-import BaseComponentProps from "../../common/models/BaseComponentProps";
 
 export default interface NavMenuItemProps
   extends React.DetailedHTMLProps<

@@ -1,6 +1,6 @@
-import DivProps from "./DivProps";
+import { classNameUtility } from "@/utilities";
 import classNames from "./Div.module.scss";
-import classNameUtility from "../../utilities/classNameUtility";
+import DivProps from "./DivProps";
 
 export default function Div(props: DivProps): JSX.Element {
   const assignedProps = { ...props };

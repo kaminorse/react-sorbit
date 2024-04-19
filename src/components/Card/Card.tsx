@@ -1,6 +1,6 @@
-import CardProps from "./CardProps";
+import { classNameUtility } from "@/utilities";
 import classNames from "./Card.module.scss";
-import classNameUtility from "../../utilities/classNameUtility";
+import CardProps from "./CardProps";
 
 export default function Card(props: CardProps): JSX.Element {
   const assignedProps = { ...props };

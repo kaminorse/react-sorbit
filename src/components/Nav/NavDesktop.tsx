@@ -1,6 +1,6 @@
-import NavDesktopProps from "./NavDesktopProps";
+import { classNameUtility } from "@/utilities";
 import classNames from "./Nav.module.scss";
-import classNameUtility from "../../utilities/classNameUtility";
+import NavDesktopProps from "./NavDesktopProps";
 
 export default function NavDesktop(props: NavDesktopProps): JSX.Element {
   const assignedProps = { ...props };

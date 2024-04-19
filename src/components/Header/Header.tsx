@@ -1,6 +1,6 @@
-import HeaderProps from "./HeaderProps";
+import { classNameUtility } from "@/utilities";
 import classNames from "./Header.module.scss";
-import classNameUtility from "../../utilities/classNameUtility";
+import HeaderProps from "./HeaderProps";
 
 export default function Header(props: HeaderProps): JSX.Element {
   const assignedProps = { ...props };

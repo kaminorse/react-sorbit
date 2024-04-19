@@ -1,6 +1,6 @@
-import NavMobileProps from "./NavMobileProps";
+import { classNameUtility } from "@/utilities";
 import classNames from "./Nav.module.scss";
-import classNameUtility from "../../utilities/classNameUtility";
+import NavMobileProps from "./NavMobileProps";
 
 export default function NavMobile(props: NavMobileProps): JSX.Element {
   const assignedProps = { ...props };

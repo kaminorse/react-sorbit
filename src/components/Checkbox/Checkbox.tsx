@@ -1,6 +1,6 @@
-import CheckboxProps from "./CheckboxProps";
+import { classNameUtility } from "@/utilities";
 import classNames from "./Checkbox.module.scss";
-import classNameUtility from "../../utilities/classNameUtility";
+import CheckboxProps from "./CheckboxProps";
 
 export default function Checkbox(props: CheckboxProps): JSX.Element {
   const assignedProps = { ...props };

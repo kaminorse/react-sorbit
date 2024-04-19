@@ -1,8 +1,8 @@
 "use client";
-import "./SorbitCssVariableStylesProviderStatic.module.scss";
-import sorbitStyleUtility from "../../utilities/sorbitStyleUtility";
-import SorbitCssVariableStylesProviderStaticProps from "./SorbitCssVariableStylesProviderStaticProps";
 import { useMemo } from "react";
+import sorbitStyleUtility from "../../utilities/sorbitStyleUtility";
+import "./SorbitCssVariableStylesProviderStatic.module.scss";
+import SorbitCssVariableStylesProviderStaticProps from "./SorbitCssVariableStylesProviderStaticProps";
 
 export default function SorbitCssVariableStylesProviderStatic(
   props: SorbitCssVariableStylesProviderStaticProps

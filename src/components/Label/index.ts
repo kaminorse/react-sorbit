@@ -1,2 +1,2 @@
 export { default } from "./Label";
-export type { default as SpanProps } from "./LabelProps";
+export type { default as LabelProps } from "./LabelProps";

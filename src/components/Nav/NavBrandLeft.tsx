@@ -1,6 +1,6 @@
-import NavBrandLeftProps from "./NavBrandLeftProps";
+import { classNameUtility } from "@/utilities";
 import classNames from "./Nav.module.scss";
-import classNameUtility from "../../utilities/classNameUtility";
+import NavBrandLeftProps from "./NavBrandLeftProps";
 
 export default function NavBrandLeft(props: NavBrandLeftProps): JSX.Element {
   const assignedProps = { ...props };

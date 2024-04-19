@@ -1,6 +1,6 @@
-import NavMenuProps from "./NavMenuProps";
+import { classNameUtility } from "@/utilities";
 import classNames from "./Nav.module.scss";
-import classNameUtility from "../../utilities/classNameUtility";
+import NavMenuProps from "./NavMenuProps";
 
 export default function NavMenu(props: NavMenuProps): JSX.Element {
   const assignedProps = { ...props };

@@ -69,6 +69,9 @@ export * from "./components/Header";
 export { default as InputText } from "./components/InputText";
 export * from "./components/InputText";
 
+export { default as Label } from "./components/Label";
+export * from "./components/Label";
+
 export { default as Link } from "./components/Link";
 export * from "./components/Link";
 
@@ -77,6 +80,9 @@ export * from "./components/Message";
 
 export { default as Nav } from "./components/Nav";
 export * from "./components/Nav";
+
+export { default as Section } from "./components/Section";
+export * from "./components/Section";
 
 export { default as Span } from "./components/Span";
 export * from "./components/Span";

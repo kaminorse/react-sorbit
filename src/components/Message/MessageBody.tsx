@@ -1,6 +1,6 @@
-import MessageBodyProps from "./MessageBodyProps";
+import { classNameUtility } from "@/utilities";
 import classNames from "./Message.module.scss";
-import classNameUtility from "../../utilities/classNameUtility";
+import MessageBodyProps from "./MessageBodyProps";
 
 export default function MessageBody(props: MessageBodyProps): JSX.Element {
   const assignedProps = { ...props };

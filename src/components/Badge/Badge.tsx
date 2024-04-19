@@ -1,6 +1,6 @@
 import BadgeProps from "./BadgeProps";
 import classNames from "./Badge.module.scss";
-import classNameUtility from "../../utilities/classNameUtility";
+import { classNameUtility } from "@/utilities";
 
 export default function Badge(props: BadgeProps): JSX.Element {
   const assignedProps = { ...props };

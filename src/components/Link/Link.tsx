@@ -1,6 +1,6 @@
-import LinkProps from "./LinkProps";
+import { classNameUtility } from "@/utilities";
 import classNames from "./Link.module.scss";
-import classNameUtility from "../../utilities/classNameUtility";
+import LinkProps from "./LinkProps";
 
 export default function Link(props: LinkProps): JSX.Element {
   const assignedProps = { ...props };

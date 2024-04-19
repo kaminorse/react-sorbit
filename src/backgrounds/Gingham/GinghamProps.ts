@@ -1,7 +1,7 @@
+import ColorLightness from "@/common/literalTypes/ColorLightness";
+import ColorName from "@/common/literalTypes/ColorName";
+import BaseComponentProps from "@/common/models/BaseComponentProps";
 import React from "react";
-import BaseComponentProps from "../../common/models/BaseComponentProps";
-import ColorName from "../../common/literalTypes/ColorName";
-import ColorLightness from "../../common/literalTypes/ColorLightness";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export default interface GinghamProps

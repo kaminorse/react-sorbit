@@ -1,6 +1,6 @@
 import ButtonProps from "./ButtonProps";
 import classNames from "./Button.module.scss";
-import classNameUtility from "../../utilities/classNameUtility";
+import { classNameUtility } from "@/utilities";
 
 export default function Button(props: ButtonProps): JSX.Element {
   const assignedProps = { ...props };

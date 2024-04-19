@@ -1,4 +1,4 @@
-import BaseComponentProps from "../../common/models/BaseComponentProps";
+import BaseComponentProps from "@/common/models/BaseComponentProps";
 
 export default interface ColumnsProps
   extends React.DetailedHTMLProps<

@@ -1,6 +1,6 @@
-import LabelProps from "./LabelProps";
+import { classNameUtility } from "@/utilities";
 import classNames from "./Label.module.scss";
-import classNameUtility from "../../utilities/classNameUtility";
+import LabelProps from "./LabelProps";
 
 export default function Label(props: LabelProps): JSX.Element {
   const assignedProps = { ...props };
