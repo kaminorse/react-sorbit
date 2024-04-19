@@ -1,13 +1,14 @@
-import StripeProps from "./StripeProps";
+import { classNameUtility } from "@/utilities";
 import classNames from "./Stripe.module.scss";
-import classNameUtility from "../../utilities/classNameUtility";
+import StripeProps from "./StripeProps";
 
 export default function Stripe(props: StripeProps): JSX.Element {
   const assignedProps = { ...props };
   delete assignedProps["patternColor"];
   //#region BaseComponentProps
-  delete assignedProps["foreColor"];
-  delete assignedProps["backColor"];
+  delete assignedProps["fore"];
+  delete assignedProps["back"];
+  delete assignedProps["border"];
   delete assignedProps["highlighter"];
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps

@@ -1,12 +1,13 @@
-import SpanProps from "./SpanProps";
+import { classNameUtility } from "@/utilities";
 import classNames from "./Span.module.scss";
-import classNameUtility from "../../utilities/classNameUtility";
+import SpanProps from "./SpanProps";
 
 export default function Span(props: SpanProps): JSX.Element {
   const assignedProps = { ...props };
   //#region BaseComponentProps
-  delete assignedProps["foreColor"];
-  delete assignedProps["backColor"];
+  delete assignedProps["fore"];
+  delete assignedProps["back"];
+  delete assignedProps["border"];
   delete assignedProps["highlighter"];
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps

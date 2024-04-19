@@ -1,6 +1,6 @@
 import ColumnsProps from "./ColumnsProps";
 import classNames from "./Columns.module.scss";
-import classNameUtility from "../../utilities/classNameUtility";
+import { classNameUtility } from "@/utilities";
 
 export default function Columns(props: ColumnsProps): JSX.Element {
   const assignedProps = { ...props };
@@ -61,8 +61,9 @@ export default function Columns(props: ColumnsProps): JSX.Element {
   delete assignedProps["isFullhdOrLessDirectionColumnReverse"];
   delete assignedProps["isFullhdDirectionColumnReverse"];
   //#region BaseComponentProps
-  delete assignedProps["foreColor"];
-  delete assignedProps["backColor"];
+  delete assignedProps["fore"];
+  delete assignedProps["back"];
+  delete assignedProps["border"];
   delete assignedProps["highlighter"];
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps

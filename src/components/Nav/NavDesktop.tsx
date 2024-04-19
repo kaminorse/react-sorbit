@@ -1,12 +1,13 @@
-import NavDesktopProps from "./NavDesktopProps";
+import { classNameUtility } from "@/utilities";
 import classNames from "./Nav.module.scss";
-import classNameUtility from "../../utilities/classNameUtility";
+import NavDesktopProps from "./NavDesktopProps";
 
 export default function NavDesktop(props: NavDesktopProps): JSX.Element {
   const assignedProps = { ...props };
   //#region BaseComponentProps
-  delete assignedProps["foreColor"];
-  delete assignedProps["backColor"];
+  delete assignedProps["fore"];
+  delete assignedProps["back"];
+  delete assignedProps["border"];
   delete assignedProps["highlighter"];
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps

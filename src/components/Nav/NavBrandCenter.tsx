@@ -1,12 +1,13 @@
-import NavBrandCenterProps from "./NavBrandCenterProps";
+import { classNameUtility } from "@/utilities";
 import classNames from "./Nav.module.scss";
-import classNameUtility from "../../utilities/classNameUtility";
+import NavBrandCenterProps from "./NavBrandCenterProps";
 
 export default function NavBrandCenter(props: NavBrandCenterProps): JSX.Element {
   const assignedProps = { ...props };
   //#region BaseComponentProps
-  delete assignedProps["foreColor"];
-  delete assignedProps["backColor"];
+  delete assignedProps["fore"];
+  delete assignedProps["back"];
+  delete assignedProps["border"];
   delete assignedProps["highlighter"];
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps

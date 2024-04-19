@@ -6,20 +6,50 @@ function assignBaseComponentPropsClassNames<Props extends BaseComponentProps>(
   css: CSSModuleClasses
 ): string[] {
   const assignedClassNames = [...classNames];
-  props.foreColor &&
+  if (props.fore) {
+    props.fore.color &&
+      assignedClassNames.push(
+        css[`forecolor-${props.fore.color.name}-${props.fore.color.lightness}`]
+      );
+    props.fore.fontSize &&
+      assignedClassNames.push(css[`is-font-size-${props.fore.fontSize}`]);
+    props.fore.fontWeight &&
+      assignedClassNames.push(css[`is-font-weight-${props.fore.fontWeight}`]);
+    props.fore.isItalic && assignedClassNames.push(css[`is-italic`]);
+  }
+
+  props.back &&
+    props.back.color &&
     assignedClassNames.push(
-      css[`forecolor-${props.foreColor.name}-${props.foreColor.lightness}`]
-    );
-  props.backColor &&
-    assignedClassNames.push(
-      css[`backcolor-${props.backColor.name}-${props.backColor.lightness}`]
+      css[`backcolor-${props.back.color.name}-${props.back.color.lightness}`]
     );
   props.highlighter &&
+    props.highlighter.color &&
     assignedClassNames.push(
       css[
-        `highlighter-${props.highlighter.name}-${props.highlighter.lightness}`
+        `highlighter-${props.highlighter.color.name}-${props.highlighter.color.lightness}`
       ]
     );
+
+  if (props.border) {
+    assignedClassNames.push(css[`has-border-${props.border.style}`]);
+
+    props.border.color &&
+      assignedClassNames.push(
+        css[
+          `bordercolor-${props.border.color.name}-${props.border.color.lightness}`
+        ]
+      );
+
+    props.border.collapse &&
+      assignedClassNames.push(css[`is-border-${props.border.collapse}`]);
+
+    props.border.radius &&
+      assignedClassNames.push(css[`is-border-radius-${props.border.radius}`]);
+
+    props.border.width &&
+      assignedClassNames.push(css[`is-border-width-${props.border.width}`]);
+  }
 
   if (props.spacing && props.spacing.margin && props.spacing.margin.top) {
     if (props.spacing.margin.top === "auto") {
@@ -33,9 +63,7 @@ function assignBaseComponentPropsClassNames<Props extends BaseComponentProps>(
     if (props.spacing.margin.right === "auto") {
       assignedClassNames.push(css[`mr-auto`]);
     } else {
-      assignedClassNames.push(
-        css[`mr-${props.spacing.margin.right}rem`]
-      );
+      assignedClassNames.push(css[`mr-${props.spacing.margin.right}rem`]);
     }
   }
 
@@ -43,9 +71,7 @@ function assignBaseComponentPropsClassNames<Props extends BaseComponentProps>(
     if (props.spacing.margin.bottom === "auto") {
       assignedClassNames.push(css[`mb-auto`]);
     } else {
-      assignedClassNames.push(
-        css[`mb-${props.spacing.margin.bottom}rem`]
-      );
+      assignedClassNames.push(css[`mb-${props.spacing.margin.bottom}rem`]);
     }
   }
 
@@ -53,9 +79,7 @@ function assignBaseComponentPropsClassNames<Props extends BaseComponentProps>(
     if (props.spacing.margin.left === "auto") {
       assignedClassNames.push(css[`ml-auto`]);
     } else {
-      assignedClassNames.push(
-        css[`ml-${props.spacing.margin.left}rem`]
-      );
+      assignedClassNames.push(css[`ml-${props.spacing.margin.left}rem`]);
     }
   }
 
@@ -71,9 +95,7 @@ function assignBaseComponentPropsClassNames<Props extends BaseComponentProps>(
     if (props.spacing.padding.right === "auto") {
       assignedClassNames.push(css[`pr-auto`]);
     } else {
-      assignedClassNames.push(
-        css[`pr-${props.spacing.padding.right}rem`]
-      );
+      assignedClassNames.push(css[`pr-${props.spacing.padding.right}rem`]);
     }
   }
 
@@ -81,9 +103,7 @@ function assignBaseComponentPropsClassNames<Props extends BaseComponentProps>(
     if (props.spacing.padding.bottom === "auto") {
       assignedClassNames.push(css[`pb-auto`]);
     } else {
-      assignedClassNames.push(
-        css[`pb-${props.spacing.padding.bottom}rem`]
-      );
+      assignedClassNames.push(css[`pb-${props.spacing.padding.bottom}rem`]);
     }
   }
 
@@ -91,9 +111,7 @@ function assignBaseComponentPropsClassNames<Props extends BaseComponentProps>(
     if (props.spacing.padding.left === "auto") {
       assignedClassNames.push(css[`pl-auto`]);
     } else {
-      assignedClassNames.push(
-        css[`pl-${props.spacing.padding.left}rem`]
-      );
+      assignedClassNames.push(css[`pl-${props.spacing.padding.left}rem`]);
     }
   }
   return assignedClassNames;

@@ -1,13 +1,14 @@
-import NavMenuItemProps from "./NavMenuItemProps";
+import { classNameUtility } from "@/utilities";
 import classNames from "./Nav.module.scss";
-import classNameUtility from "../../utilities/classNameUtility";
+import NavMenuItemProps from "./NavMenuItemProps";
 
 export default function NavMenuItem(props: NavMenuItemProps): JSX.Element {
   const assignedProps = { ...props };
   delete assignedProps["as"];
   //#region BaseComponentProps
-  delete assignedProps["foreColor"];
-  delete assignedProps["backColor"];
+  delete assignedProps["fore"];
+  delete assignedProps["back"];
+  delete assignedProps["border"];
   delete assignedProps["highlighter"];
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps
