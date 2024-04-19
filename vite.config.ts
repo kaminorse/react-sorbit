@@ -1,19 +1,14 @@
 import react from "@vitejs/plugin-react-swc";
 import { glob } from "glob";
-import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { extname, relative, resolve } from "path";
 import { defineConfig } from "vite";
 import { libInjectCss } from "vite-plugin-lib-inject-css";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), libInjectCss()],
-  resolve: {                                // ・・・・追加
-    alias: {                                // ・・・・追加
-      "@": path.resolve(__dirname, "./src") // ・・・・追加
-    }                                       // ・・・・追加
-  },
+  plugins: [react(), libInjectCss(), tsconfigPaths()],
   build: {
     copyPublicDir: false,
     emptyOutDir: false,
