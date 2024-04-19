@@ -1,4 +1,4 @@
-import BaseComponentProps from "@/common/models/BaseComponentProps";
+import { BaseComponentProps } from "../../common/models";
 
 export default interface HamburgerProps
   extends React.DetailedHTMLProps<

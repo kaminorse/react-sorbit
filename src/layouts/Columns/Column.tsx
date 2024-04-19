@@ -1,4 +1,4 @@
-import { classNameUtility } from "@/utilities";
+import { classNameUtility } from "../../utilities";
 import ColumnProps from "./ColumnProps";
 import classNames from "./Columns.module.scss";
 

@@ -1,4 +1,4 @@
-import { classNameUtility } from "@/utilities";
+import { classNameUtility } from "../../utilities";
 import classNames from "./Span.module.scss";
 import SpanProps from "./SpanProps";
 

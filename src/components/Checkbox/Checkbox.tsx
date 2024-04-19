@@ -1,4 +1,4 @@
-import { classNameUtility } from "@/utilities";
+import { classNameUtility } from "../../utilities";
 import classNames from "./Checkbox.module.scss";
 import CheckboxProps from "./CheckboxProps";
 

@@ -1,4 +1,4 @@
-import { classNameUtility } from "@/utilities";
+import { classNameUtility } from "../../utilities";
 import classNames from "./Label.module.scss";
 import LabelProps from "./LabelProps";
 

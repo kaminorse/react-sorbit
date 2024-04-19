@@ -4,11 +4,10 @@ import { fileURLToPath } from "node:url";
 import { extname, relative, resolve } from "path";
 import { defineConfig } from "vite";
 import { libInjectCss } from "vite-plugin-lib-inject-css";
-import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), libInjectCss(), tsconfigPaths()],
+  plugins: [react(), libInjectCss()],
   build: {
     copyPublicDir: false,
     emptyOutDir: false,

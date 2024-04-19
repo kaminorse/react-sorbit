@@ -1,4 +1,4 @@
-import { classNameUtility } from "@/utilities";
+import { classNameUtility } from "../../utilities";
 import classNames from "./Hamburger.module.scss";
 import HamburgerProps from "./HamburgerProps";
 

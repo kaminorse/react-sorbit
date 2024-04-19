@@ -1,9 +1,10 @@
-import { classNameUtility } from "@/utilities";
+import { classNameUtility } from "../../utilities";
 import classNames from "./Card.module.scss";
 import CardProps from "./CardProps";
 
 export default function Card(props: CardProps): JSX.Element {
   const assignedProps = { ...props };
+  delete assignedProps["as"];
   delete assignedProps["colorName"];
   //#region BaseComponentProps
   delete assignedProps["fore"];

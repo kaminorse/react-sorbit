@@ -1,5 +1,5 @@
-import ColorCssVariable from "./color/ColorCssVariable";
-import TypographyCssVariable from "./typography/TypographyCssVariable";
+import ColorCssVariable from "./ColorCssVariable";
+import TypographyCssVariable from "./TypographyCssVariable";
 
 export default interface SorbitCssVariable {
   color?: ColorCssVariable | undefined;

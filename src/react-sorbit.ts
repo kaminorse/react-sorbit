@@ -7,10 +7,7 @@ export * from "./utilities";
 //#region common
 
 export * from "./common/literalTypes";
-export * from "./common/models/color";
-export * from "./common/models/typography";
-export type { default as BaseComponentProps } from "./common/models/BaseComponentProps";
-export type { default as SorbitCssVariable } from "./common/models/SorbitCssVariable";
+export * from "./common/models";
 
 //#endregion common
 

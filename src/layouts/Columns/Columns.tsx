@@ -1,6 +1,6 @@
 import ColumnsProps from "./ColumnsProps";
 import classNames from "./Columns.module.scss";
-import { classNameUtility } from "@/utilities";
+import { classNameUtility } from "../../utilities";
 
 export default function Columns(props: ColumnsProps): JSX.Element {
   const assignedProps = { ...props };
