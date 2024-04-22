@@ -12,8 +12,26 @@ import BorderCollapse from "../literalTypes/BorderCollapse";
 export default interface BaseComponentProps {
   fore?: {
     color?: {
-      name: ColorName;
-      lightness: ColorLightness;
+      default?: {
+        name: ColorName;
+        lightness: ColorLightness;
+      }
+      hover?: {
+        name: ColorName;
+        lightness: ColorLightness;
+      };
+      focus?: {
+        name: ColorName;
+        lightness: ColorLightness;
+      };
+      active?: {
+        name: ColorName;
+        lightness: ColorLightness;
+      };
+      disabled?: {
+        name: ColorName;
+        lightness: ColorLightness;
+      };
     };
     fontSize?: FontSize;
     fontWeight?: FontWeight;
@@ -21,20 +39,74 @@ export default interface BaseComponentProps {
   };
   back?: {
     color?: {
-      name: ColorName;
-      lightness: ColorLightness;
+      default?: {
+        name: ColorName;
+        lightness: ColorLightness;
+      }
+      hover?: {
+        name: ColorName;
+        lightness: ColorLightness;
+      };
+      focus?: {
+        name: ColorName;
+        lightness: ColorLightness;
+      };
+      active?: {
+        name: ColorName;
+        lightness: ColorLightness;
+      };
+      disabled?: {
+        name: ColorName;
+        lightness: ColorLightness;
+      };
     };
   };
   highlighter?: {
     color?: {
-      name: ColorName;
-      lightness: ColorLightness;
+      default?: {
+        name: ColorName;
+        lightness: ColorLightness;
+      }
+      hover?: {
+        name: ColorName;
+        lightness: ColorLightness;
+      };
+      focus?: {
+        name: ColorName;
+        lightness: ColorLightness;
+      };
+      active?: {
+        name: ColorName;
+        lightness: ColorLightness;
+      };
+      disabled?: {
+        name: ColorName;
+        lightness: ColorLightness;
+      };
     };
   };
   border?: {
     color?: {
-      name: ColorName;
-      lightness: ColorLightness;
+      default?: {
+        name: ColorName;
+        lightness: ColorLightness;
+      }
+      hover?: {
+        name: ColorName;
+        lightness: ColorLightness;
+      };
+      focus?: {
+        name: ColorName;
+        lightness: ColorLightness;
+      };
+      active?: {
+        name: ColorName;
+        lightness: ColorLightness;
+      };
+      disabled?: {
+        name: ColorName;
+        lightness: ColorLightness;
+      };
     };
     collapse?: BorderCollapse;
     radius?: BorderRadius;

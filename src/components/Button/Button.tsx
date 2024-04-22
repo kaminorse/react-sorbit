@@ -19,13 +19,9 @@ export default function Button(props: ButtonProps): JSX.Element {
       [classNames["button"]],
       classNames
     );
-  props.colorName && assignedClassNames.push(classNames[`is-${props.colorName}`]);
+  props.colorName &&
+    assignedClassNames.push(classNames[`is-${props.colorName}`]);
   props.className && assignedClassNames.push(props.className);
 
-  return (
-    <button
-      {...assignedProps}
-      className={assignedClassNames.join(" ")}
-    />
-  );
+  return <button {...assignedProps} className={assignedClassNames.join(" ")} />;
 }
