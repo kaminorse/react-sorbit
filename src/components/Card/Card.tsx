@@ -14,13 +14,10 @@ export default function Card(props: CardProps): JSX.Element {
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps
 
-  const assignedClassNames =
-    classNameUtility.assignBaseComponentPropsClassNames(
-      props,
-      ["card"],
-      classNames
-    );
-  props.colorName && assignedClassNames.push(classNames[`is-${props.colorName}`]);
+  const assignedClassNames = [classNames["card"]];
+  props.colorName &&
+    assignedClassNames.push(classNames[`is-${props.colorName}`]);
+  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);
 
   return props.as ? (

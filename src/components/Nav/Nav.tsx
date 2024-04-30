@@ -12,13 +12,10 @@ export default function Nav(props: NavProps): JSX.Element {
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps
 
-  const assignedClassNames =
-    classNameUtility.assignBaseComponentPropsClassNames(
-      props,
-      [classNames["nav"]],
-      classNames
-    );
-  props.colorName && assignedClassNames.push(classNames[`is-${props.colorName}`]);
+  const assignedClassNames: string[] = [classNames["nav"]];
+  props.colorName &&
+    assignedClassNames.push(classNames[`is-${props.colorName}`]);
+  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);
 
   return <nav {...assignedProps} className={assignedClassNames.join(" ")} />;

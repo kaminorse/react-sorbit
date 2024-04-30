@@ -13,12 +13,9 @@ export default function CardTitle(props: CardBodyProps): JSX.Element {
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps
 
-  const assignedClassNames =
-    classNameUtility.assignBaseComponentPropsClassNames(
-      props,
-      ["card-title"],
-      classNames
-    );
+  const assignedClassNames = [classNames["card-title"]];
+  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
+  props.className && assignedClassNames.push(props.className);
 
   return props.as ? (
     <props.as {...assignedProps} className={assignedClassNames.join(" ")} />

@@ -13,18 +13,14 @@ export default function Stripe(props: StripeProps): JSX.Element {
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps
 
-  const assignedClassNames =
-    classNameUtility.assignBaseComponentPropsClassNames(
-      props,
-      [classNames["stripe"]],
-      classNames
+  const assignedClassNames = [classNames["stripe"]];
+  props.patternColor &&
+    assignedClassNames.push(
+      classNames[
+        `is-${props.patternColor.name}-${props.patternColor.lightness}`
+      ]
     );
-  // props.patternColor &&
-  //   assignedClassNames.push(
-  //     classNames[
-  //       `is-${props.patternColor.name}-${props.patternColor.lightness}`
-  //     ]
-  //   );
+  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);
 
   return <Stripe {...assignedProps} className={assignedClassNames.join(" ")} />;

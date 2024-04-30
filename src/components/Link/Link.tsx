@@ -13,12 +13,8 @@ export default function Link(props: LinkProps): JSX.Element {
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps
 
-  const assignedClassNames =
-    classNameUtility.assignBaseComponentPropsClassNames(
-      props,
-      ["link"],
-      classNames
-    );
+  const assignedClassNames: string[] = [classNames["link"]];
+  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);
 
   return props.as ? (

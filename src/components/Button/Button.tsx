@@ -13,19 +13,11 @@ export default function Button(props: ButtonProps): JSX.Element {
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps
 
-  const assignedClassNames =
-    classNameUtility.assignBaseComponentPropsClassNames(
-      props,
-      [classNames["button"]],
-      classNames
-    );
-  props.colorName && assignedClassNames.push(classNames[`is-${props.colorName}`]);
+  const assignedClassNames = [classNames["button"]];
+  props.colorName &&
+    assignedClassNames.push(classNames[`is-${props.colorName}`]);
+  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);
 
-  return (
-    <button
-      {...assignedProps}
-      className={assignedClassNames.join(" ")}
-    />
-  );
+  return <button {...assignedProps} className={assignedClassNames.join(" ")} />;
 }

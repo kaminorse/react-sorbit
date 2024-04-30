@@ -13,13 +13,9 @@ export default function Header(props: HeaderProps): JSX.Element {
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps
 
-  const assignedClassNames =
-    classNameUtility.assignBaseComponentPropsClassNames(
-      props,
-      [classNames["header"]],
-      classNames
-    );
+  const assignedClassNames: string[] = [classNames["header"]];
   props.isSticky && assignedClassNames.push(classNames[`is-sticky`]);
+  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);
 
   return <header {...assignedProps} className={assignedClassNames.join(" ")} />;

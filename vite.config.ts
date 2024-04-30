@@ -8,6 +8,16 @@ import { libInjectCss } from "vite-plugin-lib-inject-css";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), libInjectCss()],
+  css: {
+    modules: {
+      globalModulePaths: [
+        /.*\/src\/base\/Sorbit\/.*/,
+        /.*\/src\/base\/SorbitCssVariableStylesProvider\/.*/,
+        /.*\/src\/base\/SorbitCssVariableStylesProviderStatic\/.*/,
+        /.*\/src\/base\/SorbitStatic\/.*/,
+      ]
+    }
+  },
   build: {
     copyPublicDir: false,
     emptyOutDir: false,

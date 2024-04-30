@@ -14,13 +14,9 @@ export default function Checkbox(props: CheckboxProps): JSX.Element {
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps
 
-  const assignedClassNames =
-    classNameUtility.assignBaseComponentPropsClassNames(
-      props,
-      [classNames["checkbox"]],
-      classNames
-    );
+  const assignedClassNames = [classNames["checkbox"]];
   props.colorName && assignedClassNames.push(classNames[`is-${props.colorName}`]);
+  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);
 
   return (

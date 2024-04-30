@@ -1,7 +1,7 @@
 import { ColorName } from "../../common/literalTypes";
 import { BaseComponentProps } from "../../common/models";
 
-export default interface InputTextProps
+export default interface InputProps
   extends React.DetailedHTMLProps<
       React.InputHTMLAttributes<HTMLInputElement>,
       HTMLInputElement

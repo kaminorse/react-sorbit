@@ -10,4 +10,15 @@ export default interface SchemeColor {
   cyan?: ComponentStatePseudoClass | undefined;
   blue?: ComponentStatePseudoClass | undefined;
   violet?: ComponentStatePseudoClass | undefined;
+  button?: {
+    default?: ComponentStatePseudoClass | undefined;
+    gray?: ComponentStatePseudoClass | undefined;
+    red?: ComponentStatePseudoClass | undefined;
+    orange?: ComponentStatePseudoClass | undefined;
+    yellow?: ComponentStatePseudoClass | undefined;
+    green?: ComponentStatePseudoClass | undefined;
+    cyan?: ComponentStatePseudoClass | undefined;
+    blue?: ComponentStatePseudoClass | undefined;
+    violet?: ComponentStatePseudoClass | undefined;
+  };
 }

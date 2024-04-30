@@ -13,14 +13,10 @@ export default function NavMenuItem(props: NavMenuItemProps): JSX.Element {
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps
 
-  const assignedClassNames =
-    classNameUtility.assignBaseComponentPropsClassNames(
-      props,
-      [classNames["nav-menu-item"]],
-      classNames
-    );
+  const assignedClassNames: string[] = [classNames["nav-menu-item"]];
+  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);
-  
+
   return props.as ? (
     <props.as {...assignedProps} className={assignedClassNames.join(" ")} />
   ) : (

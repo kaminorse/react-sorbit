@@ -13,14 +13,10 @@ export default function Message(props: MessageProps): JSX.Element {
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps
 
-  const assignedClassNames =
-    classNameUtility.assignBaseComponentPropsClassNames(
-      props,
-      [classNames["message"]],
-      classNames
-    );
+  const assignedClassNames: string[] = [classNames["message"]];
   props.colorName &&
     assignedClassNames.push(classNames[`is-${props.colorName}`]);
+  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);
 
   return <div {...assignedProps} className={assignedClassNames.join(" ")} />;

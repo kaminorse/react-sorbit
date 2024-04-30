@@ -12,15 +12,9 @@ export default function Container(props: ContainerProps): JSX.Element {
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps
 
-  const assignedClassNames =
-    classNameUtility.assignBaseComponentPropsClassNames(
-      props,
-      [classNames["container"]],
-      classNames
-    );
-    props.className && assignedClassNames.push(props.className);
+  const assignedClassNames: string[] = [classNames["container"]];
+  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
+  props.className && assignedClassNames.push(props.className);
 
-  return (
-    <div {...assignedProps} className={assignedClassNames.join(" ")} />
-  );
+  return <div {...assignedProps} className={assignedClassNames.join(" ")} />;
 }

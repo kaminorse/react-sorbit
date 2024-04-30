@@ -1,13 +1,13 @@
-import BadgeProps from "./BadgeProps";
-import classNames from "./Badge.module.scss";
 import { classNameUtility } from "../../utilities";
+import classNames from "./Badge.module.scss";
+import BadgeProps from "./BadgeProps";
 
 export default function Badge(props: BadgeProps): JSX.Element {
   const assignedProps = { ...props };
   delete assignedProps["colorName"];
   delete assignedProps["isSmall"];
   delete assignedProps["as"];
-  //#region BaseComponentProps
+  // //#region BaseComponentProps
   delete assignedProps["fore"];
   delete assignedProps["back"];
   delete assignedProps["border"];
@@ -15,14 +15,11 @@ export default function Badge(props: BadgeProps): JSX.Element {
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps
 
-  const assignedClassNames =
-    classNameUtility.assignBaseComponentPropsClassNames(
-      props,
-      [classNames["badge"]],
-      classNames
-    );
-  props.colorName && assignedClassNames.push(classNames[`is-${props.colorName}`]);
+  const assignedClassNames = [classNames["badge"]];
+  props.colorName &&
+    assignedClassNames.push(classNames[`is-${props.colorName}`]);
   props.isSmall && assignedClassNames.push(classNames[`is-small`]);
+  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);
 
   return props.as ? (

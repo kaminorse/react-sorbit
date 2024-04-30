@@ -15,13 +15,9 @@ export default function Hamburger(props: HamburgerProps): JSX.Element {
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps
 
-  const assignedClassNames =
-    classNameUtility.assignBaseComponentPropsClassNames(
-      props,
-      [classNames["hamburger"]],
-      classNames
-    );
+  const assignedClassNames = [classNames["hamburger"]];
   props.isActive && assignedClassNames.push(classNames["is-active"]);
+  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);
 
   return (

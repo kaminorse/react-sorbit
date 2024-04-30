@@ -1,5 +1,4 @@
 import { classNameUtility } from "../../utilities";
-import classNames from "./Span.module.scss";
 import SpanProps from "./SpanProps";
 
 export default function Span(props: SpanProps): JSX.Element {
@@ -12,12 +11,8 @@ export default function Span(props: SpanProps): JSX.Element {
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps
 
-  const assignedClassNames =
-    classNameUtility.assignBaseComponentPropsClassNames(
-      props,
-      [],
-      classNames
-    );
+  const assignedClassNames: string[] = [];
+  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);
 
   return <span {...assignedProps} className={assignedClassNames.join(" ")} />;

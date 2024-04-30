@@ -68,74 +68,161 @@ export default function Columns(props: ColumnsProps): JSX.Element {
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps
 
-  const assignedClassNames =
-    classNameUtility.assignBaseComponentPropsClassNames(
-      props,
-      [classNames["columns"]],
-      classNames
+  const assignedClassNames: string[] = [classNames["columns"]];
+
+  props.isDirectionRow &&
+    assignedClassNames.push(classNames["is-direction-row"]);
+  props.isDirectionRowReverse &&
+    assignedClassNames.push(classNames["is-direction-row-reverse"]);
+  props.isDirectionColumn &&
+    assignedClassNames.push(classNames["is-direction-column"]);
+  props.isDirectionColumnReverse &&
+    assignedClassNames.push(classNames["is-direction-column-reverse"]);
+  props.isMobileDirectionRow &&
+    assignedClassNames.push(classNames["is-mobile-direction-row"]);
+  props.isMobileOrMoreDirectionRow &&
+    assignedClassNames.push(classNames["is-mobile-or-more-direction-row"]);
+  props.isTabletOrLessDirectionRow &&
+    assignedClassNames.push(classNames["is-tablet-or-less-direction-row"]);
+  props.isTabletDirectionRow &&
+    assignedClassNames.push(classNames["is-tablet-direction-row"]);
+  props.isTabletOrMoreDirectionRow &&
+    assignedClassNames.push(classNames["is-tablet-or-more-direction-row"]);
+  props.isDesktopOrLessDirectionRow &&
+    assignedClassNames.push(classNames["is-desktop-or-less-direction-row"]);
+  props.isDesktopDirectionRow &&
+    assignedClassNames.push(classNames["is-desktop-direction-row"]);
+  props.isDesktopOrMoreDirectionRow &&
+    assignedClassNames.push(classNames["is-desktop-or-more-direction-row"]);
+  props.isWidescreenOrLessDirectionRow &&
+    assignedClassNames.push(classNames["is-widescreen-or-less-direction-row"]);
+  props.isWidescreenDirectionRow &&
+    assignedClassNames.push(classNames["is-widescreen-direction-row"]);
+  props.isWidescreenOrMoreDirectionRow &&
+    assignedClassNames.push(classNames["is-widescreen-or-more-direction-row"]);
+  props.isFullhdOrLessDirectionRow &&
+    assignedClassNames.push(classNames["is-fullhd-or-less-direction-row"]);
+  props.isFullhdDirectionRow &&
+    assignedClassNames.push(classNames["is-fullhd-direction-row"]);
+  props.isMobileDirectionRowReverse &&
+    assignedClassNames.push(classNames["is-mobile-direction-row-reverse"]);
+  props.isMobileOrMoreDirectionRowReverse &&
+    assignedClassNames.push(
+      classNames["is-mobile-or-more-direction-row-reverse"]
     );
-  props.isDirectionRow && assignedClassNames.push(classNames["is-direction-row"]);
-  props.isDirectionRowReverse && assignedClassNames.push(classNames["is-direction-row-reverse"]);
-  props.isDirectionColumn && assignedClassNames.push(classNames["is-direction-column"]);
-  props.isDirectionColumnReverse && assignedClassNames.push(classNames["is-direction-column-reverse"]);
-  props.isMobileDirectionRow && assignedClassNames.push(classNames["is-mobile-direction-row"]);
-  props.isMobileOrMoreDirectionRow && assignedClassNames.push(classNames["is-mobile-or-more-direction-row"]);
-  props.isTabletOrLessDirectionRow && assignedClassNames.push(classNames["is-tablet-or-less-direction-row"]);
-  props.isTabletDirectionRow && assignedClassNames.push(classNames["is-tablet-direction-row"]);
-  props.isTabletOrMoreDirectionRow && assignedClassNames.push(classNames["is-tablet-or-more-direction-row"]);
-  props.isDesktopOrLessDirectionRow && assignedClassNames.push(classNames["is-desktop-or-less-direction-row"]);
-  props.isDesktopDirectionRow && assignedClassNames.push(classNames["is-desktop-direction-row"]);
-  props.isDesktopOrMoreDirectionRow && assignedClassNames.push(classNames["is-desktop-or-more-direction-row"]);
-  props.isWidescreenOrLessDirectionRow && assignedClassNames.push(classNames["is-widescreen-or-less-direction-row"]);
-  props.isWidescreenDirectionRow && assignedClassNames.push(classNames["is-widescreen-direction-row"]);
-  props.isWidescreenOrMoreDirectionRow && assignedClassNames.push(classNames["is-widescreen-or-more-direction-row"]);
-  props.isFullhdOrLessDirectionRow && assignedClassNames.push(classNames["is-fullhd-or-less-direction-row"]);
-  props.isFullhdDirectionRow && assignedClassNames.push(classNames["is-fullhd-direction-row"]);
-  props.isMobileDirectionRowReverse && assignedClassNames.push(classNames["is-mobile-direction-row-reverse"]);
-  props.isMobileOrMoreDirectionRowReverse && assignedClassNames.push(classNames["is-mobile-or-more-direction-row-reverse"]);
-  props.isTabletOrLessDirectionRowReverse && assignedClassNames.push(classNames["is-tablet-or-less-direction-row-reverse"]);
-  props.isTabletDirectionRowReverse && assignedClassNames.push(classNames["is-tablet-direction-row-reverse"]);
-  props.isTabletOrMoreDirectionRowReverse && assignedClassNames.push(classNames["is-tablet-or-more-direction-row-reverse"]);
-  props.isDesktopOrLessDirectionRowReverse && assignedClassNames.push(classNames["is-desktop-or-less-direction-row-reverse"]);
-  props.isDesktopDirectionRowReverse && assignedClassNames.push(classNames["is-desktop-direction-row-reverse"]);
-  props.isDesktopOrMoreDirectionRowReverse && assignedClassNames.push(classNames["is-desktop-or-more-direction-row-reverse"]);
-  props.isWidescreenOrLessDirectionRowReverse && assignedClassNames.push(classNames["is-widescreen-or-less-direction-row-reverse"]);
-  props.isWidescreenDirectionRowReverse && assignedClassNames.push(classNames["is-widescreen-direction-row-reverse"]);
-  props.isWidescreenOrMoreDirectionRowReverse && assignedClassNames.push(classNames["is-widescreen-or-more-direction-row-reverse"]);
-  props.isFullhdOrLessDirectionRowReverse && assignedClassNames.push(classNames["is-fullhd-or-less-direction-row-reverse"]);
-  props.isFullhdDirectionRowReverse && assignedClassNames.push(classNames["is-fullhd-direction-row-reverse"]);
-  props.isMobileDirectionColumn && assignedClassNames.push(classNames["is-mobile-direction-column"]);
-  props.isMobileOrMoreDirectionColumn && assignedClassNames.push(classNames["is-mobile-or-more-direction-column"]);
-  props.isTabletOrLessDirectionColumn && assignedClassNames.push(classNames["is-tablet-or-less-direction-column"]);
-  props.isTabletDirectionColumn && assignedClassNames.push(classNames["is-tablet-direction-column"]);
-  props.isTabletOrMoreDirectionColumn && assignedClassNames.push(classNames["is-tablet-or-more-direction-column"]);
-  props.isDesktopOrLessDirectionColumn && assignedClassNames.push(classNames["is-desktop-or-less-direction-column"]);
-  props.isDesktopDirectionColumn && assignedClassNames.push(classNames["is-desktop-direction-column"]);
-  props.isDesktopOrMoreDirectionColumn && assignedClassNames.push(classNames["is-desktop-or-more-direction-column"]);
-  props.isWidescreenOrLessDirectionColumn && assignedClassNames.push(classNames["is-widescreen-or-less-direction-column"]);
-  props.isWidescreenDirectionColumn && assignedClassNames.push(classNames["is-widescreen-direction-column"]);
-  props.isWidescreenOrMoreDirectionColumn && assignedClassNames.push(classNames["is-widescreen-or-more-direction-column"]);
-  props.isFullhdOrLessDirectionColumn && assignedClassNames.push(classNames["is-fullhd-or-less-direction-column"]);
-  props.isFullhdDirectionColumn && assignedClassNames.push(classNames["is-fullhd-direction-column"]);
-  props.isMobileDirectionColumnReverse && assignedClassNames.push(classNames["is-mobile-direction-column-reverse"]);
-  props.isMobileOrMoreDirectionColumnReverse && assignedClassNames.push(classNames["is-mobile-or-more-direction-column-reverse"]);
-  props.isTabletOrLessDirectionColumnReverse && assignedClassNames.push(classNames["is-tablet-or-less-direction-column-reverse"]);
-  props.isTabletDirectionColumnReverse && assignedClassNames.push(classNames["is-tablet-direction-column-reverse"]);
-  props.isTabletOrMoreDirectionColumnReverse && assignedClassNames.push(classNames["is-tablet-or-more-direction-column-reverse"]);
-  props.isDesktopOrLessDirectionColumnReverse && assignedClassNames.push(classNames["is-desktop-or-less-direction-column-reverse"]);
-  props.isDesktopDirectionColumnReverse && assignedClassNames.push(classNames["is-desktop-direction-column-reverse"]);
-  props.isDesktopOrMoreDirectionColumnReverse && assignedClassNames.push(classNames["is-desktop-or-more-direction-column-reverse"]);
-  props.isWidescreenOrLessDirectionColumnReverse && assignedClassNames.push(classNames["is-widescreen-or-less-direction-column-reverse"]);
-  props.isWidescreenDirectionColumnReverse && assignedClassNames.push(classNames["is-widescreen-direction-column-reverse"]);
-  props.isWidescreenOrMoreDirectionColumnReverse && assignedClassNames.push(classNames["is-widescreen-or-more-direction-column-reverse"]);
-  props.isFullhdOrLessDirectionColumnReverse && assignedClassNames.push(classNames["is-fullhd-or-less-direction-column-reverse"]);
-  props.isFullhdDirectionColumnReverse && assignedClassNames.push(classNames["is-fullhd-direction-column-reverse"]); 
+  props.isTabletOrLessDirectionRowReverse &&
+    assignedClassNames.push(
+      classNames["is-tablet-or-less-direction-row-reverse"]
+    );
+  props.isTabletDirectionRowReverse &&
+    assignedClassNames.push(classNames["is-tablet-direction-row-reverse"]);
+  props.isTabletOrMoreDirectionRowReverse &&
+    assignedClassNames.push(
+      classNames["is-tablet-or-more-direction-row-reverse"]
+    );
+  props.isDesktopOrLessDirectionRowReverse &&
+    assignedClassNames.push(
+      classNames["is-desktop-or-less-direction-row-reverse"]
+    );
+  props.isDesktopDirectionRowReverse &&
+    assignedClassNames.push(classNames["is-desktop-direction-row-reverse"]);
+  props.isDesktopOrMoreDirectionRowReverse &&
+    assignedClassNames.push(
+      classNames["is-desktop-or-more-direction-row-reverse"]
+    );
+  props.isWidescreenOrLessDirectionRowReverse &&
+    assignedClassNames.push(
+      classNames["is-widescreen-or-less-direction-row-reverse"]
+    );
+  props.isWidescreenDirectionRowReverse &&
+    assignedClassNames.push(classNames["is-widescreen-direction-row-reverse"]);
+  props.isWidescreenOrMoreDirectionRowReverse &&
+    assignedClassNames.push(
+      classNames["is-widescreen-or-more-direction-row-reverse"]
+    );
+  props.isFullhdOrLessDirectionRowReverse &&
+    assignedClassNames.push(
+      classNames["is-fullhd-or-less-direction-row-reverse"]
+    );
+  props.isFullhdDirectionRowReverse &&
+    assignedClassNames.push(classNames["is-fullhd-direction-row-reverse"]);
+  props.isMobileDirectionColumn &&
+    assignedClassNames.push(classNames["is-mobile-direction-column"]);
+  props.isMobileOrMoreDirectionColumn &&
+    assignedClassNames.push(classNames["is-mobile-or-more-direction-column"]);
+  props.isTabletOrLessDirectionColumn &&
+    assignedClassNames.push(classNames["is-tablet-or-less-direction-column"]);
+  props.isTabletDirectionColumn &&
+    assignedClassNames.push(classNames["is-tablet-direction-column"]);
+  props.isTabletOrMoreDirectionColumn &&
+    assignedClassNames.push(classNames["is-tablet-or-more-direction-column"]);
+  props.isDesktopOrLessDirectionColumn &&
+    assignedClassNames.push(classNames["is-desktop-or-less-direction-column"]);
+  props.isDesktopDirectionColumn &&
+    assignedClassNames.push(classNames["is-desktop-direction-column"]);
+  props.isDesktopOrMoreDirectionColumn &&
+    assignedClassNames.push(classNames["is-desktop-or-more-direction-column"]);
+  props.isWidescreenOrLessDirectionColumn &&
+    assignedClassNames.push(
+      classNames["is-widescreen-or-less-direction-column"]
+    );
+  props.isWidescreenDirectionColumn &&
+    assignedClassNames.push(classNames["is-widescreen-direction-column"]);
+  props.isWidescreenOrMoreDirectionColumn &&
+    assignedClassNames.push(
+      classNames["is-widescreen-or-more-direction-column"]
+    );
+  props.isFullhdOrLessDirectionColumn &&
+    assignedClassNames.push(classNames["is-fullhd-or-less-direction-column"]);
+  props.isFullhdDirectionColumn &&
+    assignedClassNames.push(classNames["is-fullhd-direction-column"]);
+  props.isMobileDirectionColumnReverse &&
+    assignedClassNames.push(classNames["is-mobile-direction-column-reverse"]);
+  props.isMobileOrMoreDirectionColumnReverse &&
+    assignedClassNames.push(
+      classNames["is-mobile-or-more-direction-column-reverse"]
+    );
+  props.isTabletOrLessDirectionColumnReverse &&
+    assignedClassNames.push(
+      classNames["is-tablet-or-less-direction-column-reverse"]
+    );
+  props.isTabletDirectionColumnReverse &&
+    assignedClassNames.push(classNames["is-tablet-direction-column-reverse"]);
+  props.isTabletOrMoreDirectionColumnReverse &&
+    assignedClassNames.push(
+      classNames["is-tablet-or-more-direction-column-reverse"]
+    );
+  props.isDesktopOrLessDirectionColumnReverse &&
+    assignedClassNames.push(
+      classNames["is-desktop-or-less-direction-column-reverse"]
+    );
+  props.isDesktopDirectionColumnReverse &&
+    assignedClassNames.push(classNames["is-desktop-direction-column-reverse"]);
+  props.isDesktopOrMoreDirectionColumnReverse &&
+    assignedClassNames.push(
+      classNames["is-desktop-or-more-direction-column-reverse"]
+    );
+  props.isWidescreenOrLessDirectionColumnReverse &&
+    assignedClassNames.push(
+      classNames["is-widescreen-or-less-direction-column-reverse"]
+    );
+  props.isWidescreenDirectionColumnReverse &&
+    assignedClassNames.push(
+      classNames["is-widescreen-direction-column-reverse"]
+    );
+  props.isWidescreenOrMoreDirectionColumnReverse &&
+    assignedClassNames.push(
+      classNames["is-widescreen-or-more-direction-column-reverse"]
+    );
+  props.isFullhdOrLessDirectionColumnReverse &&
+    assignedClassNames.push(
+      classNames["is-fullhd-or-less-direction-column-reverse"]
+    );
+  props.isFullhdDirectionColumnReverse &&
+    assignedClassNames.push(classNames["is-fullhd-direction-column-reverse"]);
+
+  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);
 
-  return (
-    <div
-      {...assignedProps}
-      className={assignedClassNames.join(" ")}
-    />
-  );
+  return <div {...assignedProps} className={assignedClassNames.join(" ")} />;
 }

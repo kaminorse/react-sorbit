@@ -1,8 +1,8 @@
 import { classNameUtility } from "../../utilities";
-import classNames from "./InputText.module.scss";
-import InputTextProps from "./InputTextProps";
+import classNames from "./Input.module.scss";
+import InputProps from "./InputProps";
 
-export default function InputText(props: InputTextProps) {
+export default function Input(props: InputProps) {
   const assignedProps = { ...props };
   delete assignedProps["colorName"];
   //#region BaseComponentProps
@@ -13,21 +13,11 @@ export default function InputText(props: InputTextProps) {
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps
 
-  const assignedClassNames =
-    classNameUtility.assignBaseComponentPropsClassNames(
-      props,
-      [classNames["input-text"]],
-      classNames
-    );
+  const assignedClassNames: string[] = [classNames["input"]];
   props.colorName &&
     assignedClassNames.push(classNames[`is-${props.colorName}`]);
+  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);
 
-  return (
-    <input
-      type="text"
-      {...assignedProps}
-      className={assignedClassNames.join(" ")}
-    />
-  );
+  return <input {...assignedProps} className={assignedClassNames.join(" ")} />;
 }
