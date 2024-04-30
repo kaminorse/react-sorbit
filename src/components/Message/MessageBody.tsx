@@ -12,13 +12,10 @@ export default function MessageBody(props: MessageBodyProps): JSX.Element {
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps
 
-  const assignedClassNames =
-    classNameUtility.assignBaseComponentPropsClassNames(
-      props,
-      [classNames["message-body"]],
-      classNames
-    );
+  const assignedClassNames: string[] = [classNames["message-body"]];
+  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);
+
   return (
     <div {...assignedProps} className={assignedClassNames.join(" ")} />
   );

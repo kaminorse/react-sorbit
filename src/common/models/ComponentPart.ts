@@ -3,4 +3,5 @@ export default interface ComponentPart {
   back?: string | undefined;
   border?: string | undefined;
   shadow?: string | undefined;
+  placeholder?: string | undefined;
 }

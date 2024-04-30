@@ -12,13 +12,10 @@ export default function NavDesktop(props: NavDesktopProps): JSX.Element {
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps
 
-  const assignedClassNames =
-    classNameUtility.assignBaseComponentPropsClassNames(
-      props,
-      [classNames["nav-desktop"]],
-      classNames
-    );
+  const assignedClassNames: string[] = [classNames["nav-desktop"]];
+  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);
+
   return (
     <div {...assignedProps} className={assignedClassNames.join(" ")} />
   )

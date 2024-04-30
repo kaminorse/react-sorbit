@@ -12,13 +12,10 @@ export default function NavBrandCenter(props: NavBrandCenterProps): JSX.Element 
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps
 
-  const assignedClassNames =
-    classNameUtility.assignBaseComponentPropsClassNames(
-      props,
-      [classNames["nav-brand-center"]],
-      classNames
-    );
+  const assignedClassNames: string[] = [classNames["nav-brand-center"]];
+  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);
+
   return (
     <div {...assignedProps} className={assignedClassNames.join(" ")} />
   )

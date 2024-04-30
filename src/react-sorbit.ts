@@ -63,8 +63,8 @@ export * from "./components/Hamburger";
 export { default as Header } from "./components/Header";
 export * from "./components/Header";
 
-export { default as InputText } from "./components/InputText";
-export * from "./components/InputText";
+export { default as Input } from "./components/Input";
+export * from "./components/Input";
 
 export { default as Label } from "./components/Label";
 export * from "./components/Label";

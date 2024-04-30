@@ -1,235 +1,426 @@
 import BaseComponentProps from "../common/models/BaseComponentProps";
+import { BorderDetailProps, ColorAttributes } from "../common/literalTypes";
 
-function assignBaseComponentPropsClassNames<Props extends BaseComponentProps>(
-  props: Props,
-  classNames: string[],
-  css: CSSModuleClasses
-): string[] {
-  const assignedClassNames = [...classNames];
+function getUtilityClassNames(props: BaseComponentProps): string[] {
+  const assignedClassNames: string[] = [];
+  const assignStateColor = (
+    name: string,
+    stateStr: string,
+    state?: ColorAttributes,
+    colorScheme?: string
+  ) => {
+    // state &&
+    //   assignedClassNames.push(
+    //
+    //       `${name}${colorScheme ? `-${colorScheme}` : ""}${
+    //         stateStr === "default" ? "" : `-${stateStr}`
+    //       }-${state.name}-${state.lightness}`
+    //     ]
+    //   );
+
+    state &&
+      assignedClassNames.push(
+        `${name}${colorScheme ? `-${colorScheme}` : ""}${
+          stateStr === "default" ? "" : `-${stateStr}`
+        }-${state.name}-${state.lightness}`
+      );
+  };
+
   if (props.fore) {
     if (props.fore.color) {
-      props.fore.color.default &&
-        assignedClassNames.push(
-          css[
-            `forecolor-${props.fore.color.default.name}-${props.fore.color.default.lightness}`
-          ]
+      assignStateColor("forecolor", "default", props.fore.color.default);
+      assignStateColor("forecolor", "hover", props.fore.color.hover);
+      assignStateColor("forecolor", "focus", props.fore.color.focus);
+      assignStateColor("forecolor", "active", props.fore.color.active);
+      assignStateColor("forecolor", "disabled", props.fore.color.disabled);
+
+      if (props.fore.color.light) {
+        const foreColorLight = props.fore.color.light;
+
+        assignStateColor(
+          "forecolor",
+          "default",
+          foreColorLight.default,
+          "light"
         );
-      props.fore.color.hover &&
-        assignedClassNames.push(
-          css[
-            `forecolor-${props.fore.color.hover.name}-hover-${props.fore.color.hover.lightness}`
-          ]
+        assignStateColor("forecolor", "hover", foreColorLight.hover, "light");
+        assignStateColor("forecolor", "focus", foreColorLight.focus, "light");
+        assignStateColor("forecolor", "active", foreColorLight.active, "light");
+        assignStateColor(
+          "forecolor",
+          "disabled",
+          foreColorLight.disabled,
+          "light"
         );
-      props.fore.color.focus &&
-        assignedClassNames.push(
-          css[
-            `forecolor-${props.fore.color.focus.name}-focus-${props.fore.color.focus.lightness}`
-          ]
+      }
+      if (props.fore.color.dark) {
+        const foreColorDark = props.fore.color.dark;
+
+        assignStateColor("forecolor", "default", foreColorDark.default, "dark");
+        assignStateColor("forecolor", "hover", foreColorDark.hover, "dark");
+        assignStateColor("forecolor", "focus", foreColorDark.focus, "dark");
+        assignStateColor("forecolor", "active", foreColorDark.active, "dark");
+        assignStateColor(
+          "forecolor",
+          "disabled",
+          foreColorDark.disabled,
+          "dark"
         );
-      props.fore.color.active &&
-        assignedClassNames.push(
-          css[
-            `forecolor-${props.fore.color.active.name}-active-${props.fore.color.active.lightness}`
-          ]
-        );
-      props.fore.color.disabled &&
-        assignedClassNames.push(
-          css[
-            `forecolor-${props.fore.color.disabled.name}-disabled-${props.fore.color.disabled.lightness}`
-          ]
-        );
+      }
     }
+
+    // props.fore.fontSize &&
+    //   assignedClassNames.push(`is-font-size-${props.fore.fontSize}`);
+    // props.fore.fontWeight &&
+    //   assignedClassNames.push(`is-font-weight-${props.fore.fontWeight}`);
+    // props.fore.isItalic && assignedClassNames.push(`is-italic`]);
     props.fore.fontSize &&
-      assignedClassNames.push(css[`is-font-size-${props.fore.fontSize}`]);
+      assignedClassNames.push(`is-font-size-${props.fore.fontSize}`);
     props.fore.fontWeight &&
-      assignedClassNames.push(css[`is-font-weight-${props.fore.fontWeight}`]);
-    props.fore.isItalic && assignedClassNames.push(css[`is-italic`]);
+      assignedClassNames.push(`is-font-weight-${props.fore.fontWeight}`);
+    props.fore.isItalic && assignedClassNames.push(`is-italic`);
   }
 
   if (props.back) {
     if (props.back.color) {
-      props.back.color.default &&
-        assignedClassNames.push(
-          css[
-            `backcolor-${props.back.color.default.name}-${props.back.color.default.lightness}`
-          ]
+      assignStateColor("backcolor", "default", props.back.color.default);
+      assignStateColor("backcolor", "hover", props.back.color.hover);
+      assignStateColor("backcolor", "focus", props.back.color.focus);
+      assignStateColor("backcolor", "active", props.back.color.active);
+      assignStateColor("backcolor", "disabled", props.back.color.disabled);
+      if (props.back.color.light) {
+        const backColorLight = props.back.color.light;
+
+        assignStateColor(
+          "backcolor",
+          "default",
+          backColorLight.default,
+          "light"
         );
-      props.back.color.hover &&
-        assignedClassNames.push(
-          css[
-            `backcolor-${props.back.color.hover.name}-hover-${props.back.color.hover.lightness}`
-          ]
+        assignStateColor("backcolor", "hover", backColorLight.hover, "light");
+        assignStateColor("backcolor", "focus", backColorLight.focus, "light");
+        assignStateColor("backcolor", "active", backColorLight.active, "light");
+        assignStateColor(
+          "backcolor",
+          "disabled",
+          backColorLight.disabled,
+          "light"
         );
-      props.back.color.focus &&
-        assignedClassNames.push(
-          css[
-            `backcolor-${props.back.color.focus.name}-focus-${props.back.color.focus.lightness}`
-          ]
+      }
+      if (props.back.color.dark) {
+        const backColorDark = props.back.color.dark;
+
+        assignStateColor("backcolor", "default", backColorDark.default, "dark");
+        assignStateColor("backcolor", "hover", backColorDark.hover, "dark");
+        assignStateColor("backcolor", "focus", backColorDark.focus, "dark");
+        assignStateColor("backcolor", "active", backColorDark.active, "dark");
+        assignStateColor(
+          "backcolor",
+          "disabled",
+          backColorDark.disabled,
+          "dark"
         );
-      props.back.color.active &&
-        assignedClassNames.push(
-          css[
-            `backcolor-${props.back.color.active.name}-active-${props.back.color.active.lightness}`
-          ]
-        );
-      props.back.color.disabled &&
-        assignedClassNames.push(
-          css[
-            `backcolor-${props.back.color.disabled.name}-disabled-${props.back.color.disabled.lightness}`
-          ]
-        );
+      }
     }
   }
 
   if (props.highlighter) {
     if (props.highlighter.color) {
-      props.highlighter.color.default &&
-        assignedClassNames.push(
-          css[
-            `highlighter-${props.highlighter.color.default.name}-${props.highlighter.color.default.lightness}`
-          ]
+      assignStateColor(
+        "highlighter",
+        "default",
+        props.highlighter.color.default
+      );
+      assignStateColor("highlighter", "hover", props.highlighter.color.hover);
+      assignStateColor("highlighter", "focus", props.highlighter.color.focus);
+      assignStateColor("highlighter", "active", props.highlighter.color.active);
+      assignStateColor(
+        "highlighter",
+        "disabled",
+        props.highlighter.color.disabled
+      );
+      if (props.highlighter.color.light) {
+        const highlighterColorLight = props.highlighter.color.light;
+
+        assignStateColor(
+          "highlighter",
+          "default",
+          highlighterColorLight.default,
+          "light"
         );
-      props.highlighter.color.hover &&
-        assignedClassNames.push(
-          css[
-            `highlighter-${props.highlighter.color.hover.name}-hover-${props.highlighter.color.hover.lightness}`
-          ]
+        assignStateColor(
+          "highlighter",
+          "hover",
+          highlighterColorLight.hover,
+          "light"
         );
-      props.highlighter.color.focus &&
-        assignedClassNames.push(
-          css[
-            `highlighter-${props.highlighter.color.focus.name}-focus-${props.highlighter.color.focus.lightness}`
-          ]
+        assignStateColor(
+          "highlighter",
+          "focus",
+          highlighterColorLight.focus,
+          "light"
         );
-      props.highlighter.color.active &&
-        assignedClassNames.push(
-          css[
-            `highlighter-${props.highlighter.color.active.name}-active-${props.highlighter.color.active.lightness}`
-          ]
+        assignStateColor(
+          "highlighter",
+          "active",
+          highlighterColorLight.active,
+          "light"
         );
-      props.highlighter.color.disabled &&
-        assignedClassNames.push(
-          css[
-            `highlighter-${props.highlighter.color.disabled.name}-disabled-${props.highlighter.color.disabled.lightness}`
-          ]
+        assignStateColor(
+          "highlighter",
+          "disabled",
+          highlighterColorLight.disabled,
+          "light"
         );
+      }
+      if (props.highlighter.color.dark) {
+        const highlighterColorDark = props.highlighter.color.dark;
+
+        assignStateColor(
+          "highlighter",
+          "default",
+          highlighterColorDark.default,
+          "dark"
+        );
+        assignStateColor(
+          "highlighter",
+          "hover",
+          highlighterColorDark.hover,
+          "dark"
+        );
+        assignStateColor(
+          "highlighter",
+          "focus",
+          highlighterColorDark.focus,
+          "dark"
+        );
+        assignStateColor(
+          "highlighter",
+          "active",
+          highlighterColorDark.active,
+          "dark"
+        );
+        assignStateColor(
+          "highlighter",
+          "disabled",
+          highlighterColorDark.disabled,
+          "dark"
+        );
+      }
     }
   }
 
   if (props.border) {
-    assignedClassNames.push(css[`has-border-${props.border.style}`]);
+    assignedClassNames.push(`has-border-${props.border.style}`);
 
     if (props.border.color) {
-      props.border.color.default &&
-        assignedClassNames.push(
-          css[
-            `bordercolor-${props.border.color.default.name}-${props.border.color.default.lightness}`
-          ]
+      assignStateColor("bordercolor", "default", props.border.color.default);
+      assignStateColor("bordercolor", "hover", props.border.color.hover);
+      assignStateColor("bordercolor", "focus", props.border.color.focus);
+      assignStateColor("bordercolor", "active", props.border.color.active);
+      assignStateColor("bordercolor", "disabled", props.border.color.disabled);
+      if (props.border.color.light) {
+        const borderColorLight = props.border.color.light;
+
+        assignStateColor(
+          "bordercolor",
+          "default",
+          borderColorLight.default,
+          "light"
         );
-      props.border.color.hover &&
-        assignedClassNames.push(
-          css[
-            `bordercolor-${props.border.color.hover.name}-hover-${props.border.color.hover.lightness}`
-          ]
+        assignStateColor(
+          "bordercolor",
+          "hover",
+          borderColorLight.hover,
+          "light"
         );
-      props.border.color.focus &&
-        assignedClassNames.push(
-          css[
-            `bordercolor-${props.border.color.focus.name}-focus-${props.border.color.focus.lightness}`
-          ]
+        assignStateColor(
+          "bordercolor",
+          "focus",
+          borderColorLight.focus,
+          "light"
         );
-      props.border.color.active &&
-        assignedClassNames.push(
-          css[
-            `bordercolor-${props.border.color.active.name}-active-${props.border.color.active.lightness}`
-          ]
+        assignStateColor(
+          "bordercolor",
+          "active",
+          borderColorLight.active,
+          "light"
         );
-      props.border.color.disabled &&
-        assignedClassNames.push(
-          css[
-            `bordercolor-${props.border.color.disabled.name}-disabled-${props.border.color.disabled.lightness}`
-          ]
+        assignStateColor(
+          "bordercolor",
+          "disabled",
+          borderColorLight.disabled,
+          "light"
         );
+      }
+      if (props.border.color.dark) {
+        const borderColorDark = props.border.color.dark;
+
+        assignStateColor(
+          "bordercolor",
+          "default",
+          borderColorDark.default,
+          "dark"
+        );
+        assignStateColor("bordercolor", "hover", borderColorDark.hover, "dark");
+        assignStateColor("bordercolor", "focus", borderColorDark.focus, "dark");
+        assignStateColor(
+          "bordercolor",
+          "active",
+          borderColorDark.active,
+          "dark"
+        );
+        assignStateColor(
+          "bordercolor",
+          "disabled",
+          borderColorDark.disabled,
+          "dark"
+        );
+      }
     }
 
-    props.border.collapse &&
-      assignedClassNames.push(css[`is-border-${props.border.collapse}`]);
+    // props.border.width &&
+    //   assignedClassNames.push(`is-border-width-${props.border.width}`);
 
-    props.border.radius &&
-      assignedClassNames.push(css[`is-border-radius-${props.border.radius}`]);
+    // props.border.collapse &&
+    //   assignedClassNames.push(`is-border-${props.border.collapse}`);
+
+    // props.border.radius &&
+    //   assignedClassNames.push(`is-border-radius-${props.border.radius}`);
 
     props.border.width &&
-      assignedClassNames.push(css[`is-border-width-${props.border.width}`]);
+      assignedClassNames.push(`is-border-width-${props.border.width}`);
+
+    props.border.collapse &&
+      assignedClassNames.push(`is-border-${props.border.collapse}`);
+
+    props.border.radius &&
+      assignedClassNames.push(`is-border-radius-${props.border.radius}`);
+
+    const assignBorderDetail = (
+      borderDetailProps: BorderDetailProps,
+      position: "top" | "bottom" | "left" | "right"
+    ) => {
+      if (borderDetailProps.color) {
+        assignStateColor(
+          `bordercolor-${position}`,
+          "default",
+          borderDetailProps.color.default
+        );
+        assignStateColor(
+          `bordercolor-${position}`,
+          "hover",
+          borderDetailProps.color.hover
+        );
+        assignStateColor(
+          `bordercolor-${position}`,
+          "focus",
+          borderDetailProps.color.focus
+        );
+        assignStateColor(
+          `bordercolor-${position}`,
+          "active",
+          borderDetailProps.color.active
+        );
+        assignStateColor(
+          `bordercolor-${position}`,
+          "disabled",
+          borderDetailProps.color.disabled
+        );
+      }
+      borderDetailProps.style &&
+        assignedClassNames.push(
+          `is-border-${position}-style-${borderDetailProps.style}`
+        );
+
+      borderDetailProps.width &&
+        assignedClassNames.push(
+          `is-border-${position}-width-${borderDetailProps.width}`
+        );
+    };
+
+    if (props.border.top) {
+      assignBorderDetail(props.border.top, "top");
+    }
+    if (props.border.right) {
+      assignBorderDetail(props.border.right, "right");
+    }
+    if (props.border.bottom) {
+      assignBorderDetail(props.border.bottom, "bottom");
+    }
+    if (props.border.left) {
+      assignBorderDetail(props.border.left, "left");
+    }
   }
 
   if (props.spacing && props.spacing.margin && props.spacing.margin.top) {
     if (props.spacing.margin.top === "auto") {
-      assignedClassNames.push(css[`mt-auto`]);
+      assignedClassNames.push(`mt-auto`);
     } else {
-      assignedClassNames.push(css[`mt-${props.spacing.margin.top}rem`]);
+      assignedClassNames.push(`mt-${props.spacing.margin.top}rem`);
     }
   }
 
   if (props.spacing && props.spacing.margin && props.spacing.margin.right) {
     if (props.spacing.margin.right === "auto") {
-      assignedClassNames.push(css[`mr-auto`]);
+      assignedClassNames.push(`mr-auto`);
     } else {
-      assignedClassNames.push(css[`mr-${props.spacing.margin.right}rem`]);
+      assignedClassNames.push(`mr-${props.spacing.margin.right}rem`);
     }
   }
 
   if (props.spacing && props.spacing.margin && props.spacing.margin.bottom) {
     if (props.spacing.margin.bottom === "auto") {
-      assignedClassNames.push(css[`mb-auto`]);
+      assignedClassNames.push(`mb-auto`);
     } else {
-      assignedClassNames.push(css[`mb-${props.spacing.margin.bottom}rem`]);
+      assignedClassNames.push(`mb-${props.spacing.margin.bottom}rem`);
     }
   }
 
   if (props.spacing && props.spacing.margin && props.spacing.margin.left) {
     if (props.spacing.margin.left === "auto") {
-      assignedClassNames.push(css[`ml-auto`]);
+      assignedClassNames.push(`ml-auto`);
     } else {
-      assignedClassNames.push(css[`ml-${props.spacing.margin.left}rem`]);
+      assignedClassNames.push(`ml-${props.spacing.margin.left}rem`);
     }
   }
 
   if (props.spacing && props.spacing.padding && props.spacing.padding.top) {
     if (props.spacing.padding.top === "auto") {
-      assignedClassNames.push(css[`pt-auto`]);
+      assignedClassNames.push(`pt-auto`);
     } else {
-      assignedClassNames.push(css[`pt-${props.spacing.padding.top}rem`]);
+      assignedClassNames.push(`pt-${props.spacing.padding.top}rem`);
     }
   }
 
   if (props.spacing && props.spacing.padding && props.spacing.padding.right) {
     if (props.spacing.padding.right === "auto") {
-      assignedClassNames.push(css[`pr-auto`]);
+      assignedClassNames.push(`pr-auto`);
     } else {
-      assignedClassNames.push(css[`pr-${props.spacing.padding.right}rem`]);
+      assignedClassNames.push(`pr-${props.spacing.padding.right}rem`);
     }
   }
 
   if (props.spacing && props.spacing.padding && props.spacing.padding.bottom) {
     if (props.spacing.padding.bottom === "auto") {
-      assignedClassNames.push(css[`pb-auto`]);
+      assignedClassNames.push(`pb-auto`);
     } else {
-      assignedClassNames.push(css[`pb-${props.spacing.padding.bottom}rem`]);
+      assignedClassNames.push(`pb-${props.spacing.padding.bottom}rem`);
     }
   }
 
   if (props.spacing && props.spacing.padding && props.spacing.padding.left) {
     if (props.spacing.padding.left === "auto") {
-      assignedClassNames.push(css[`pl-auto`]);
+      assignedClassNames.push(`pl-auto`);
     } else {
-      assignedClassNames.push(css[`pl-${props.spacing.padding.left}rem`]);
+      assignedClassNames.push(`pl-${props.spacing.padding.left}rem`);
     }
   }
   return assignedClassNames;
 }
 
 const classNameUtility = {
-  assignBaseComponentPropsClassNames,
+  getUtilityClassNames,
 };
 
 export default classNameUtility;

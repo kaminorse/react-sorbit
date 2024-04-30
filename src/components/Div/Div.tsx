@@ -1,5 +1,4 @@
 import { classNameUtility } from "../../utilities";
-import classNames from "./Div.module.scss";
 import DivProps from "./DivProps";
 
 export default function Div(props: DivProps): JSX.Element {
@@ -12,12 +11,8 @@ export default function Div(props: DivProps): JSX.Element {
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps
 
-  const assignedClassNames =
-    classNameUtility.assignBaseComponentPropsClassNames(
-      props,
-      [],
-      classNames
-    );
+  const assignedClassNames: string[] = [];
+  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);
 
   return <div {...assignedProps} className={assignedClassNames.join(" ")} />;
