@@ -1,7 +1,6 @@
 import { ColorScheme } from "../../common/literalTypes";
-import React from "react";
+import { PropsWithChildren } from "react";
 
-export default interface TabulaProps {
-  children?: React.ReactNode;
+export default interface TabulaProps extends PropsWithChildren {
   colorScheme?: ColorScheme;
 }

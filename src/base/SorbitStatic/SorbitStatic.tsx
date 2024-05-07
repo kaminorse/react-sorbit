@@ -1,6 +1,6 @@
 import SorbitCssVariableStylesProviderStatic from "../SorbitCssVariableStylesProviderStatic/SorbitCssVariableStylesProviderStatic";
 import Tabula from "../Tabula";
-import "./SorbitStatic.module.scss";
+import "./SorbitStatic.scss";
 import SorbitStaticProps from "./SorbitStaticProps";
 
 export default function SorbitStatic(props: SorbitStaticProps) {

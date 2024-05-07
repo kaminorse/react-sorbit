@@ -1,5 +1,5 @@
 import sorbitStyleUtility from "../../utilities/sorbitStyleUtility";
-import "./SorbitCssVariableStylesProvider.module.scss";
+import "./SorbitCssVariableStylesProvider.scss";
 import SorbitCssVariableStylesProviderProps from "./SorbitCssVariableStylesProviderProps";
 
 export default function SorbitCssVariableStylesProvider(
