@@ -73,6 +73,8 @@ export * from "./components/Span";
 
 //#region layouts
 
+export * from "./layouts/Centering";
+
 export * from "./layouts/Columns";
 
 export * from "./layouts/Container";
