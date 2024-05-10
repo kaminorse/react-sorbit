@@ -1,9 +1,3 @@
-import { BaseComponentProps } from "../../common/models";
+import { DivProps } from "../Div";
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-export default interface MessageBodyProps
-  extends React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLDivElement>,
-    HTMLDivElement
-  >, BaseComponentProps {
-}
+export default interface MessageBodyProps extends DivProps {}

@@ -1,4 +1,4 @@
-export { default } from "./Message";
+export { default as Message } from "./Message";
 export type { default as MessageProps } from "./MessageProps";
 
 export { default as MessageBody } from "./MessageBody";

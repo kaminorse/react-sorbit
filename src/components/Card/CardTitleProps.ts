@@ -1,12 +1,7 @@
 import React from "react";
-import { BaseComponentProps } from "../../common/models";
+import { DivProps } from "../Div";
 
-export default interface CardTitleProps
-  extends React.DetailedHTMLProps<
-      React.HTMLAttributes<HTMLDivElement>,
-      HTMLDivElement
-    >,
-    BaseComponentProps {
+export default interface CardTitleProps extends DivProps {
   as?: React.ElementType | undefined;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;

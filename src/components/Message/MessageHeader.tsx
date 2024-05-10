@@ -1,5 +1,5 @@
 import { classNameUtility } from "../../utilities";
-import classNames from "./Message.module.scss";
+import classNames from "./MessageHeader.module.scss";
 import MessageHeaderProps from "./MessageHeaderProps";
 
 export default function MessageHeader(props: MessageHeaderProps): JSX.Element {

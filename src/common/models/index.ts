@@ -1,4 +1,3 @@
-
 export type { default as BaseComponentProps } from "./BaseComponentProps";
 export type { default as ColorCssVariable } from "./ColorCssVariable";
 export type { default as ComponentPart } from "./ComponentPart";

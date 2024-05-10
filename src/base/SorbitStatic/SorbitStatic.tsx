@@ -1,5 +1,5 @@
 import SorbitCssVariableStylesProviderStatic from "../SorbitCssVariableStylesProviderStatic/SorbitCssVariableStylesProviderStatic";
-import Tabula from "../Tabula";
+import { Tabula } from "../Tabula";
 import "./SorbitStatic.scss";
 import SorbitStaticProps from "./SorbitStaticProps";
 

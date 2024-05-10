@@ -1,5 +1,5 @@
 import { classNameUtility } from "../../utilities";
-import classNames from "./Message.module.scss";
+import classNames from "./MessageBody.module.scss";
 import MessageBodyProps from "./MessageBodyProps";
 
 export default function MessageBody(props: MessageBodyProps): JSX.Element {

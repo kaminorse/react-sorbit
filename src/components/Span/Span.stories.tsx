@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import Span from "./Span";
-import SorbitStatic from "../../base/SorbitStatic";
+import { SorbitStatic } from "../../base/SorbitStatic";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {

@@ -1,11 +1,6 @@
-import { BaseComponentProps } from "../../common/models";
+import { DivProps } from "../../components/Div";
 
-export default interface ColumnsProps
-  extends React.DetailedHTMLProps<
-      React.HTMLAttributes<HTMLDivElement>,
-      HTMLDivElement
-    >,
-    BaseComponentProps {
+export default interface ColumnsProps extends DivProps {
   isDirectionRow?: boolean | undefined;
   isDirectionRowReverse?: boolean | undefined;
   isDirectionColumn?: boolean | undefined;

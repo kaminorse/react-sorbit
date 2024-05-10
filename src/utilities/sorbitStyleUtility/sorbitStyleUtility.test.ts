@@ -49,7 +49,7 @@ test("change color white.", () => {
 });
 
 colors.forEach((color) => {
-  for (let i = 18; i >= 2; i--) {
+  for (let i = 19; i >= 2; i--) {
     const gradation = i * 50;
     test(`change color ${color}[${gradation}]`, () => {
       const cssVariables: SorbitCssVariable = {
