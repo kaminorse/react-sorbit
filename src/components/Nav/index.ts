@@ -1,4 +1,4 @@
-export { default } from "./Nav";
+export { default as Nav } from "./Nav";
 export type { default as NavProps } from "./NavProps";
 
 export { default as NavBrand } from "./NavBrand";

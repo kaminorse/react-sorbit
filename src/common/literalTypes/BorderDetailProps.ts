@@ -6,6 +6,6 @@ type BorderDetailProps = {
   color?: ColorProps;
   style: BorderStyle;
   width?: BorderWidth;
-}
+};
 
 export default BorderDetailProps;

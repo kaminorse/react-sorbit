@@ -6,5 +6,5 @@ export default function Tabula(props: TabulaProps) {
     <div className={classNames.tabula} data-color-scheme={props.colorScheme}>
       {props.children}
     </div>
-  )
+  );
 }

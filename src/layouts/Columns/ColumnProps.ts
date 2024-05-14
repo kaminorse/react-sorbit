@@ -1,12 +1,6 @@
-import { BaseComponentProps } from "../../common/models";
+import { DivProps } from "../../components/Div";
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-export default interface ColumnProps
-  extends React.DetailedHTMLProps<
-      React.HTMLAttributes<HTMLDivElement>,
-      HTMLDivElement
-    >,
-    BaseComponentProps {
+export default interface ColumnProps extends DivProps {
   isFull?: boolean;
   size?: number | undefined;
   sizeMobile?: number | undefined;

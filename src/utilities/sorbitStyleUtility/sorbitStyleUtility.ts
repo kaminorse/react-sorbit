@@ -1,9 +1,9 @@
-import SorbitCssVariable from "../common/models/SorbitCssVariable";
+import SorbitCssVariable from "../../common/models/SorbitCssVariable";
 import {
   ComponentPart,
   ComponentStatePseudoClass,
   Hsl,
-} from "../common/models";
+} from "../../common/models";
 
 function getComponentColorVariables(
   colorName: string,
@@ -188,11 +188,23 @@ function getRootStyles(cssVariableSetting?: SorbitCssVariable): string[] {
       };
 
       if (color.white) {
-        rootStyles.push(`--color-white: ${color.white};`);
+        if (typeof color.white === "string") {
+          rootStyles.push(`--color-white: ${color.white};`);
+        } else {
+          rootStyles.push(
+            `--color-white: hsl(${color.white.hue}, ${color.white.saturation}%, ${color.white.lightness}%);`
+          );
+        }
       }
 
       if (color.black) {
-        rootStyles.push(`--color-black: ${color.black};`);
+        if (typeof color.black === "string") {
+          rootStyles.push(`--color-black: ${color.black};`);
+        } else {
+          rootStyles.push(
+            `--color-black: hsl(${color.black.hue}, ${color.black.saturation}%, ${color.black.lightness}%);`
+          );
+        }
       }
 
       if (color.gray) {
@@ -201,7 +213,7 @@ function getRootStyles(cssVariableSetting?: SorbitCssVariable): string[] {
         setColorDetailVariable(colorName, 950, gradation[950]);
         setColorDetailVariable(colorName, 900, gradation[900]);
         setColorDetailVariable(colorName, 850, gradation[850]);
-        setColorDetailVariable(colorName, 800, gradation[900]);
+        setColorDetailVariable(colorName, 800, gradation[800]);
         setColorDetailVariable(colorName, 750, gradation[750]);
         setColorDetailVariable(colorName, 700, gradation[700]);
         setColorDetailVariable(colorName, 650, gradation[650]);
@@ -224,7 +236,7 @@ function getRootStyles(cssVariableSetting?: SorbitCssVariable): string[] {
         setColorDetailVariable(colorName, 950, gradation[950]);
         setColorDetailVariable(colorName, 900, gradation[900]);
         setColorDetailVariable(colorName, 850, gradation[850]);
-        setColorDetailVariable(colorName, 800, gradation[900]);
+        setColorDetailVariable(colorName, 800, gradation[800]);
         setColorDetailVariable(colorName, 750, gradation[750]);
         setColorDetailVariable(colorName, 700, gradation[700]);
         setColorDetailVariable(colorName, 650, gradation[650]);
@@ -247,7 +259,7 @@ function getRootStyles(cssVariableSetting?: SorbitCssVariable): string[] {
         setColorDetailVariable(colorName, 950, gradation[950]);
         setColorDetailVariable(colorName, 900, gradation[900]);
         setColorDetailVariable(colorName, 850, gradation[850]);
-        setColorDetailVariable(colorName, 800, gradation[900]);
+        setColorDetailVariable(colorName, 800, gradation[800]);
         setColorDetailVariable(colorName, 750, gradation[750]);
         setColorDetailVariable(colorName, 700, gradation[700]);
         setColorDetailVariable(colorName, 650, gradation[650]);
@@ -270,7 +282,7 @@ function getRootStyles(cssVariableSetting?: SorbitCssVariable): string[] {
         setColorDetailVariable(colorName, 950, gradation[950]);
         setColorDetailVariable(colorName, 900, gradation[900]);
         setColorDetailVariable(colorName, 850, gradation[850]);
-        setColorDetailVariable(colorName, 800, gradation[900]);
+        setColorDetailVariable(colorName, 800, gradation[800]);
         setColorDetailVariable(colorName, 750, gradation[750]);
         setColorDetailVariable(colorName, 700, gradation[700]);
         setColorDetailVariable(colorName, 650, gradation[650]);
@@ -293,7 +305,7 @@ function getRootStyles(cssVariableSetting?: SorbitCssVariable): string[] {
         setColorDetailVariable(colorName, 950, gradation[950]);
         setColorDetailVariable(colorName, 900, gradation[900]);
         setColorDetailVariable(colorName, 850, gradation[850]);
-        setColorDetailVariable(colorName, 800, gradation[900]);
+        setColorDetailVariable(colorName, 800, gradation[800]);
         setColorDetailVariable(colorName, 750, gradation[750]);
         setColorDetailVariable(colorName, 700, gradation[700]);
         setColorDetailVariable(colorName, 650, gradation[650]);
@@ -316,7 +328,7 @@ function getRootStyles(cssVariableSetting?: SorbitCssVariable): string[] {
         setColorDetailVariable(colorName, 950, gradation[950]);
         setColorDetailVariable(colorName, 900, gradation[900]);
         setColorDetailVariable(colorName, 850, gradation[850]);
-        setColorDetailVariable(colorName, 800, gradation[900]);
+        setColorDetailVariable(colorName, 800, gradation[800]);
         setColorDetailVariable(colorName, 750, gradation[750]);
         setColorDetailVariable(colorName, 700, gradation[700]);
         setColorDetailVariable(colorName, 650, gradation[650]);
@@ -339,7 +351,7 @@ function getRootStyles(cssVariableSetting?: SorbitCssVariable): string[] {
         setColorDetailVariable(colorName, 950, gradation[950]);
         setColorDetailVariable(colorName, 900, gradation[900]);
         setColorDetailVariable(colorName, 850, gradation[850]);
-        setColorDetailVariable(colorName, 800, gradation[900]);
+        setColorDetailVariable(colorName, 800, gradation[800]);
         setColorDetailVariable(colorName, 750, gradation[750]);
         setColorDetailVariable(colorName, 700, gradation[700]);
         setColorDetailVariable(colorName, 650, gradation[650]);
@@ -362,7 +374,7 @@ function getRootStyles(cssVariableSetting?: SorbitCssVariable): string[] {
         setColorDetailVariable(colorName, 950, gradation[950]);
         setColorDetailVariable(colorName, 900, gradation[900]);
         setColorDetailVariable(colorName, 850, gradation[850]);
-        setColorDetailVariable(colorName, 800, gradation[900]);
+        setColorDetailVariable(colorName, 800, gradation[800]);
         setColorDetailVariable(colorName, 750, gradation[750]);
         setColorDetailVariable(colorName, 700, gradation[700]);
         setColorDetailVariable(colorName, 650, gradation[650]);

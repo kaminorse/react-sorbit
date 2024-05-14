@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import Nav from "./Nav";
-import SorbitStatic from "../../base/SorbitStatic";
+import { SorbitStatic } from "../../base/SorbitStatic";
 import NavMobile from "./NavMobile";
 import NavDesktop from "./NavDesktop";
 import NavBrand from "./NavBrand";
@@ -9,15 +9,17 @@ import NavMenu from "./NavMenu";
 import NavBrandLeft from "./NavBrandLeft";
 import NavBrandCenter from "./NavBrandCenter";
 import NavBrandRight from "./NavBrandRight";
-import Hamburger from "../Hamburger";
 import NavMenuItem from "./NavMenuItem";
+import { Hamburger } from "../Hamburger";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
   title: "Components/Nav",
   component: Nav,
   tags: ["autodocs"],
-  argTypes: {},
+  argTypes: {
+    
+  },
 } satisfies Meta<typeof Nav>;
 
 export default meta;
@@ -45,7 +47,7 @@ export const Plain: Story = {
             <NavBrandCenter>{"Center"}</NavBrandCenter>
             <NavBrandRight></NavBrandRight>
           </NavBrand>
-          <NavMenu>{navMenuItems}</NavMenu>
+          <NavMenu isActive={true}>{navMenuItems}</NavMenu>
         </NavMobile>
         <NavDesktop>
           <NavBrand>

@@ -1,14 +1,16 @@
+import { Angle, Percentage } from "../literalTypes";
+
 export default interface Hsl {
   /**
    * 0~360(°)
    */
-  hue: number;
+  hue: Angle;
   /**
    * 0~100(%)
    */
-  saturation: number;
+  saturation: Percentage;
   /**
    * 0~100(%)
    */
-  lightness: number;
+  lightness: Percentage;
 }

@@ -1,10 +1,6 @@
 import { ColorName } from "../../common/literalTypes";
-import { BaseComponentProps } from "../../common/models";
+import { DivProps } from "../Div";
 
-export default interface MessageProps
-  extends React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLDivElement>,
-    HTMLDivElement
-  >, BaseComponentProps {
+export default interface MessageProps extends DivProps {
   colorName?: ColorName;
 }

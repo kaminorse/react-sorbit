@@ -1,9 +1,10 @@
 import Gradation from "./Gradation";
+import Hsl from "./Hsl";
 import SchemeColor from "./SchemeColor";
 
 export default interface ColorCssVariable {
-  white?: string | undefined;
-  black?: string | undefined;
+  white?: Hsl | string | undefined;
+  black?: Hsl | string | undefined;
   gray?: Gradation | undefined;
   red?: Gradation | undefined;
   orange?: Gradation | undefined;

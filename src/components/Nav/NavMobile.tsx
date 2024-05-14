@@ -1,5 +1,5 @@
 import { classNameUtility } from "../../utilities";
-import classNames from "./Nav.module.scss";
+import classNames from "./NavMobile.module.scss";
 import NavMobileProps from "./NavMobileProps";
 
 export default function NavMobile(props: NavMobileProps): JSX.Element {

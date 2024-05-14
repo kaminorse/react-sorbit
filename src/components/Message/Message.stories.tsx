@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import Message from "./Message";
-import SorbitStatic from "../../base/SorbitStatic";
+import { SorbitStatic } from "../../base/SorbitStatic";
 import MessageHeader from "./MessageHeader";
 import MessageBody from "./MessageBody";
 

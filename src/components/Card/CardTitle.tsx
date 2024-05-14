@@ -1,5 +1,5 @@
 import { classNameUtility } from "../../utilities";
-import classNames from "./Card.module.scss";
+import classNames from "./CardTitle.module.scss";
 import CardBodyProps from "./CardBodyProps";
 
 export default function CardTitle(props: CardBodyProps): JSX.Element {

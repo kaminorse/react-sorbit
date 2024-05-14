@@ -4,10 +4,11 @@ import { fileURLToPath } from "node:url";
 import { extname, relative, resolve } from "path";
 import { defineConfig } from "vite";
 import { libInjectCss } from "vite-plugin-lib-inject-css";
+import dts from "vite-plugin-dts";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), libInjectCss()],
+  plugins: [react(), libInjectCss(), dts({ include: ["src"] })],
   css: {
     modules: {
       globalModulePaths: [
@@ -15,8 +16,8 @@ export default defineConfig({
         /.*\/src\/base\/SorbitCssVariableStylesProvider\/.*/,
         /.*\/src\/base\/SorbitCssVariableStylesProviderStatic\/.*/,
         /.*\/src\/base\/SorbitStatic\/.*/,
-      ]
-    }
+      ],
+    },
   },
   build: {
     copyPublicDir: false,
@@ -32,7 +33,9 @@ export default defineConfig({
       external: ["react", "react/jsx-runtime"],
       input: Object.fromEntries(
         glob
-          .sync("src/**/*!(*.d).{ts,tsx}")
+          .sync("src/**/*!(*.d).{ts,tsx}", {
+            ignore: ["src/**/*.stories.tsx", "src/**/*.test.{ts,tsx}"],
+          })
           .map((file) => [
             relative("src", file.slice(0, file.length - extname(file).length)),
             fileURLToPath(new URL(file, import.meta.url)),
