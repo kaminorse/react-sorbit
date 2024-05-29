@@ -1,22 +1,23 @@
-import Hsl from "./Hsl";
+import Oklch from "./Oklch";
 
 export default interface Gradation {
-  950?: Hsl | undefined;
-  900?: Hsl | undefined;
-  850?: Hsl | undefined;
-  800?: Hsl | undefined;
-  750?: Hsl | undefined;
-  700?: Hsl | undefined;
-  650?: Hsl | undefined;
-  600?: Hsl | undefined;
-  550?: Hsl | undefined;
-  500?: Hsl | undefined;
-  450?: Hsl | undefined;
-  400?: Hsl | undefined;
-  350?: Hsl | undefined;
-  300?: Hsl | undefined;
-  250?: Hsl | undefined;
-  200?: Hsl | undefined;
-  150?: Hsl | undefined;
-  100?: Hsl | undefined;
+  950?: Oklch | undefined;
+  900?: Oklch | undefined;
+  850?: Oklch | undefined;
+  800?: Oklch | undefined;
+  750?: Oklch | undefined;
+  700?: Oklch | undefined;
+  650?: Oklch | undefined;
+  600?: Oklch | undefined;
+  550?: Oklch | undefined;
+  500?: Oklch | undefined;
+  450?: Oklch | undefined;
+  400?: Oklch | undefined;
+  350?: Oklch | undefined;
+  300?: Oklch | undefined;
+  250?: Oklch | undefined;
+  200?: Oklch | undefined;
+  150?: Oklch | undefined;
+  100?: Oklch | undefined;
+  50?: Oklch | undefined;
 }

@@ -1,10 +1,9 @@
 import { classNameUtility } from "../../utilities";
-import classNames from "./CardTitle.module.scss";
-import CardTitleProps from "./CardTitleProps";
+import RubyProps from "./RubyProps";
 
-export default function CardTitle(props: CardTitleProps): JSX.Element {
+export default function Ruby(props: RubyProps): JSX.Element {
   const assignedProps = { ...props };
-  delete assignedProps["as"];
+  delete assignedProps["rubyText"];
   //#region BaseComponentProps
   delete assignedProps["fore"];
   delete assignedProps["back"];
@@ -13,13 +12,16 @@ export default function CardTitle(props: CardTitleProps): JSX.Element {
   delete assignedProps["spacing"];
   //#endregion BaseComponentProps
 
-  const assignedClassNames = [classNames["card-title"]];
+  const assignedClassNames: string[] = [];
   assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);
 
-  return props.as ? (
-    <props.as {...assignedProps} className={assignedClassNames.join(" ")} />
-  ) : (
-    <div {...assignedProps} className={assignedClassNames.join(" ")} />
+  return (
+    <ruby {...assignedProps} className={assignedClassNames.join(" ")}>
+      {props.children}
+      <rp>(</rp>
+      <rt>{props.rubyText}</rt>
+      <rp>)</rp>
+    </ruby>
   );
 }
