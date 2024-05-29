@@ -6,6 +6,7 @@ type ColorName =
   | "green"
   | "cyan"
   | "blue"
-  | "violet";
+  | "violet"
+  | "magenta";
 
 export default ColorName;
