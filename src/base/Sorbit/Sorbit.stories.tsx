@@ -42,12 +42,12 @@ const elem = (
       <Div
         fore={{
           color: {
-            light: { default: { name: "blue", lightness: 600 } },
-            dark: { default: { name: "red", lightness: 600 } },
+            light: { default: { name: "blue", lightness: 500 } },
+            dark: { default: { name: "red", lightness: 500 } },
           },
         }}
       >
-        {"color light blue 600, dark red 600"}
+        {"color light blue 500, dark red 500"}
       </Div>
     </Div>
   </>

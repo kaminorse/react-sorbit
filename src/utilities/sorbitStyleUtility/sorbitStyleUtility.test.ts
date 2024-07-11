@@ -11,10 +11,11 @@ const colors: string[] = [
   "cyan",
   "blue",
   "violet",
+  "magenta",
 ];
 
-const colorSaturationGray = 18;
-const colorSaturationColorful = 68;
+const colorchromaGray = 0.04;
+const colorchromaColorful = 0.11;
 
 test("change color black.", () => {
   const cssVariables: SorbitCssVariable = {
@@ -22,14 +23,14 @@ test("change color black.", () => {
       black: {
         hue: 190,
         lightness: 13,
-        saturation: colorSaturationGray,
+        chroma: colorchromaGray,
       },
     },
   };
 
   expect(
     sorbitStyleUtility.getSorbitCssVariableStyles(cssVariables)
-  ).toStrictEqual([":root{--color-black: hsl(190, 18%, 13%);}"]);
+  ).toStrictEqual([":root{--color-black-oklch: 13% 0.04 190;--color-black: oklch(var(--color-black-oklch));}"]);
 });
 
 test("change color white.", () => {
@@ -38,18 +39,18 @@ test("change color white.", () => {
       white: {
         hue: 190,
         lightness: 98,
-        saturation: colorSaturationGray,
+        chroma: colorchromaGray,
       },
     },
   };
 
   expect(
     sorbitStyleUtility.getSorbitCssVariableStyles(cssVariables)
-  ).toStrictEqual([":root{--color-white: hsl(190, 18%, 98%);}"]);
+  ).toStrictEqual([":root{--color-white-oklch: 98% 0.04 190;--color-white: oklch(var(--color-white-oklch));}"]);
 });
 
 colors.forEach((color) => {
-  for (let i = 19; i >= 2; i--) {
+  for (let i = 19; i >= 1; i--) {
     const gradation = i * 50;
     test(`change color ${color}[${gradation}]`, () => {
       const cssVariables: SorbitCssVariable = {
@@ -58,15 +59,16 @@ colors.forEach((color) => {
             [gradation]: {
               hue: 0,
               lightness: 98,
-              saturation: colorSaturationColorful,
+              chroma: colorchromaColorful,
             },
           },
         },
       };
+      const gradStr = gradation < 100 ? "050" : `${gradation}`;
       expect(
         sorbitStyleUtility.getSorbitCssVariableStyles(cssVariables)
       ).toStrictEqual([
-        `:root{--color-${color}-${gradation}-hsl: 0, 68%, 98%;--color-${color}-${gradation}: hsl(var(--color-${color}-${gradation}-hsl));}`,
+        `:root{--color-${color}-${gradStr}-oklch: 98% 0.11 0;--color-${color}-${gradStr}: oklch(var(--color-${color}-${gradStr}-oklch));}`,
       ]);
     });
   }

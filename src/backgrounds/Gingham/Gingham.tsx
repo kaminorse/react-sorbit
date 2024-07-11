@@ -14,12 +14,16 @@ export default function Gingham(props: GinghamProps): JSX.Element {
   //#endregion BaseComponentProps
 
   const assignedClassNames = [classNames["gingham"]];
-  props.patternColor &&
+  if (props.patternColor) {
+    const lightness =
+      props.patternColor.lightness < 100
+        ? `0${props.patternColor.lightness}`
+        : props.patternColor.lightness;
     assignedClassNames.push(
-      classNames[
-        `is-${props.patternColor.name}-${props.patternColor.lightness}`
-      ]
+      classNames[`is-${props.patternColor.name}-${lightness}`],
     );
+  }
+
   assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);
 

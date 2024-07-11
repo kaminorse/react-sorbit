@@ -1,10 +1,10 @@
 import Gradation from "./Gradation";
-import Hsl from "./Hsl";
+import Oklch from "./Oklch";
 import SchemeColor from "./SchemeColor";
 
 export default interface ColorCssVariable {
-  white?: Hsl | string | undefined;
-  black?: Hsl | string | undefined;
+  white?: Oklch | string | undefined;
+  black?: Oklch | string | undefined;
   gray?: Gradation | undefined;
   red?: Gradation | undefined;
   orange?: Gradation | undefined;
@@ -13,6 +13,7 @@ export default interface ColorCssVariable {
   cyan?: Gradation | undefined;
   blue?: Gradation | undefined;
   violet?: Gradation | undefined;
+  magenta?: Gradation | undefined;
   light?: SchemeColor | undefined;
   dark?: SchemeColor | undefined;
 }

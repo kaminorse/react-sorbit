@@ -65,6 +65,8 @@ export * from "./components/Nav";
 
 export * from "./components/Progress";
 
+export * from "./components/Ruby";
+
 export * from "./components/Section";
 
 export * from "./components/Span";
