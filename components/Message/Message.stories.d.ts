@@ -10,4 +10,5 @@ declare const meta: {
 export default meta;
 type Story = StoryObj<typeof meta>;
 export declare const Plain: Story;
+export declare const BodyOnly: Story;
 //# sourceMappingURL=Message.stories.d.ts.map
