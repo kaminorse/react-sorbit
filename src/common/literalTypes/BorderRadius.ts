@@ -1,3 +1,3 @@
-type BorderRadius = "bit-rounded" | "circle" | "quite-rounded" | "rounded";
+type BorderRadius = "small" | "circle" | "large" | "medium" | "pill";
 
 export default BorderRadius;

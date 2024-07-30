@@ -36,3 +36,18 @@ export const Plain: Story = {
     </SorbitStatic>
   ),
 };
+
+export const BodyOnly: Story = {
+  args: {
+    colorName: undefined,
+  },
+  render: (props) => (
+    <SorbitStatic>
+      <Message {...props}>
+        <MessageBody>
+          {"Body"}
+        </MessageBody>
+      </Message>
+    </SorbitStatic>
+  ),
+};
