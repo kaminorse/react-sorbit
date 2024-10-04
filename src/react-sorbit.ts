@@ -35,6 +35,8 @@ export * from "./backgrounds/Stripe";
 
 //#region components
 
+export * from "./components/Accordion";
+
 export * from "./components/Badge";
 
 export * from "./components/Button";
