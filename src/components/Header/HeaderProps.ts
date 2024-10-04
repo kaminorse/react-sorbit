@@ -1,3 +1,4 @@
+import { ColorName } from "../../common/literalTypes";
 import { BaseComponentProps } from "../../common/models";
 import React from "react";
 
@@ -7,5 +8,6 @@ export default interface HeaderProps
       HTMLElement
     >,
     BaseComponentProps {
+  colorName?: ColorName;
   isSticky?: boolean | undefined;
 }

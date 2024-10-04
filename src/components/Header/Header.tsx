@@ -4,6 +4,7 @@ import HeaderProps from "./HeaderProps";
 
 export default function Header(props: HeaderProps): JSX.Element {
   const assignedProps = { ...props };
+  delete assignedProps["colorName"];
   delete assignedProps["isSticky"];
   //#region BaseComponentProps
   delete assignedProps["fore"];
@@ -14,6 +15,8 @@ export default function Header(props: HeaderProps): JSX.Element {
   //#endregion BaseComponentProps
 
   const assignedClassNames: string[] = [classNames["header"]];
+  props.colorName &&
+    assignedClassNames.push(classNames[`is-${props.colorName}`]);
   props.isSticky && assignedClassNames.push(classNames[`is-sticky`]);
   assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);

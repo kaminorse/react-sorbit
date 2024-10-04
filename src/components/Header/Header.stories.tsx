@@ -21,7 +21,9 @@ export const Plain: Story = {
   },
   render: (props) => (
     <SorbitStatic>
-      <Header {...props} />
+      <Header {...props}>
+        {"Header"}
+      </Header>
     </SorbitStatic>
   ),
 };
