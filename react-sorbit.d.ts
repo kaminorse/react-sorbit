@@ -8,6 +8,7 @@ export * from './base/SorbitStatic';
 export * from './base/Tabula';
 export * from './backgrounds/Gingham';
 export * from './backgrounds/Stripe';
+export * from './components/Accordion';
 export * from './components/Badge';
 export * from './components/Button';
 export * from './components/Card';
