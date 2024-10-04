@@ -74,7 +74,7 @@
     "react-dom": "^18.3.1",
     "rimraf": "^5.0.5",
     "sass": "^1.77.0",
-    "sorbit": "^0.5.0",
+    "sorbit": "^0.6.0",
     "storybook": "^8.0.10",
     "typescript": "^5.4.5",
     "vite": "^5.2.11",
