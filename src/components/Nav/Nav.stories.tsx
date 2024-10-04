@@ -2,8 +2,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import Nav from "./Nav";
 import { SorbitStatic } from "../../base/SorbitStatic";
-import NavMobile from "./NavMobile";
-import NavDesktop from "./NavDesktop";
 import NavBrand from "./NavBrand";
 import NavMenu from "./NavMenu";
 import NavBrandLeft from "./NavBrandLeft";
@@ -11,6 +9,8 @@ import NavBrandCenter from "./NavBrandCenter";
 import NavBrandRight from "./NavBrandRight";
 import NavMenuItem from "./NavMenuItem";
 import { Hamburger } from "../Hamburger";
+import NavAccordion from "./NavAccordion";
+import NavStatic from "./NavStatic";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -18,7 +18,7 @@ const meta = {
   component: Nav,
   tags: ["autodocs"],
   argTypes: {
-    
+
   },
 } satisfies Meta<typeof Nav>;
 
@@ -39,7 +39,7 @@ export const Plain: Story = {
   render: (props) => (
     <SorbitStatic>
       <Nav {...props}>
-        <NavMobile>
+        <NavAccordion isTabletOrLess>
           <NavBrand>
             <NavBrandLeft>
               <Hamburger />
@@ -48,15 +48,15 @@ export const Plain: Story = {
             <NavBrandRight></NavBrandRight>
           </NavBrand>
           <NavMenu isActive={true}>{navMenuItems}</NavMenu>
-        </NavMobile>
-        <NavDesktop>
+        </NavAccordion>
+        <NavStatic isDesktopOrMore>
           <NavBrand>
             <NavBrandLeft>{"NavBrandLeft"}</NavBrandLeft>
             <NavBrandCenter>{"NavBrandCenter"}</NavBrandCenter>
             <NavBrandRight>{"NavBrandRight"}</NavBrandRight>
           </NavBrand>
           <NavMenu >{navMenuItems}</NavMenu>
-        </NavDesktop>
+        </NavStatic>
       </Nav>
     </SorbitStatic>
   ),
