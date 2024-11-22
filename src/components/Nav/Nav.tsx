@@ -4,6 +4,7 @@ import NavProps from "./NavProps";
 
 export default function Nav(props: NavProps): JSX.Element {
   const assignedProps = { ...props };
+  delete assignedProps["colorName"];
   //#region BaseComponentProps
   delete assignedProps["fore"];
   delete assignedProps["back"];
