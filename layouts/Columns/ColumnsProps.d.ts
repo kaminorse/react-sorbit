@@ -1,5 +1,4 @@
 import { DivProps } from '../../components/Div';
-
 export default interface ColumnsProps extends DivProps {
     isDirectionRow?: boolean | undefined;
     isDirectionRowReverse?: boolean | undefined;

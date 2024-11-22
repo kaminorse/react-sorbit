@@ -1,5 +1,4 @@
 import { DivProps } from '../../components/Div';
-
 export default interface ColumnProps extends DivProps {
     isFull?: boolean;
     size?: number | undefined;

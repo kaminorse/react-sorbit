@@ -1,6 +1,5 @@
 import { StoryObj } from '@storybook/react';
 import { default as Span } from './Span';
-
 declare const meta: {
     title: string;
     component: typeof Span;

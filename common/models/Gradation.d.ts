@@ -1,5 +1,4 @@
 import { default as Oklch } from './Oklch';
-
 export default interface Gradation {
     950?: Oklch | undefined;
     900?: Oklch | undefined;

@@ -1,5 +1,4 @@
 import { default as ComponentPart } from './ComponentPart';
-
 export default interface ComponentStatePseudoClass {
     default?: ComponentPart | undefined;
     disabled?: ComponentPart | undefined;

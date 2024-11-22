@@ -1,6 +1,5 @@
 import { StoryObj } from '@storybook/react';
 import { default as Link } from './Link';
-
 declare const meta: {
     title: string;
     component: typeof Link;

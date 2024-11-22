@@ -1,6 +1,5 @@
 import { StoryObj } from '@storybook/react';
 import { default as Container } from './Container';
-
 declare const meta: {
     title: string;
     component: typeof Container;

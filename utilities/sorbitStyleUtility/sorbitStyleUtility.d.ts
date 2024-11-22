@@ -1,5 +1,4 @@
 import { default as SorbitCssVariable } from '../../common/models/SorbitCssVariable';
-
 declare function getSorbitCssVariableStyles(cssVariableSetting?: SorbitCssVariable): string[];
 declare function getRootStyles(cssVariableSetting?: SorbitCssVariable): string[];
 declare function getLightSchemeStyles(cssVariableSetting?: SorbitCssVariable): string[];

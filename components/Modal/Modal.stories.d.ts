@@ -1,6 +1,5 @@
 import { StoryObj } from '@storybook/react';
 import { default as Modal } from './Modal';
-
 declare const meta: {
     title: string;
     component: typeof Modal;

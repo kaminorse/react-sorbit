@@ -1,6 +1,5 @@
 import { StoryObj } from '@storybook/react';
 import { default as Input } from './Input';
-
 declare const meta: {
     title: string;
     component: typeof Input;

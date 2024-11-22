@@ -1,6 +1,5 @@
 import { StoryObj } from '@storybook/react';
 import { default as Button } from './Button';
-
 declare const meta: {
     title: string;
     component: typeof Button;

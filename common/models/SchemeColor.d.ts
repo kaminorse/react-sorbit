@@ -1,5 +1,4 @@
 import { default as ComponentStatePseudoClass } from './ComponentStatePseudoClass';
-
 export default interface SchemeColor {
     default?: ComponentStatePseudoClass | undefined;
     gray?: ComponentStatePseudoClass | undefined;

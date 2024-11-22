@@ -1,6 +1,5 @@
 import { StoryObj } from '@storybook/react';
 import { default as Label } from './Label';
-
 declare const meta: {
     title: string;
     component: typeof Label;

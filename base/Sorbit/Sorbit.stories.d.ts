@@ -1,6 +1,5 @@
 import { StoryObj } from '@storybook/react';
 import { default as Sorbit } from './Sorbit';
-
 declare const meta: {
     title: string;
     component: typeof Sorbit;

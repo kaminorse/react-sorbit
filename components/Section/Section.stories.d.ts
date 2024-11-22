@@ -1,6 +1,5 @@
 import { StoryObj } from '@storybook/react';
 import { default as Section } from './Section';
-
 declare const meta: {
     title: string;
     component: typeof Section;

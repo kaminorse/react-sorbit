@@ -1,5 +1,4 @@
 import { BorderCollapse, BorderDetailProps, BorderRadius, BorderStyle, BorderWidth, ColorProps, FontSize, FontWeight } from '../literalTypes';
-
 export default interface BaseComponentProps {
     fore?: {
         color?: ColorProps;

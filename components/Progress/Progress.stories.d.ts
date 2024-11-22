@@ -1,6 +1,5 @@
 import { StoryObj } from '@storybook/react';
 import { default as Progress } from './Progress';
-
 declare const meta: {
     title: string;
     component: typeof Progress;

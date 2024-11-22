@@ -1,6 +1,5 @@
 import { StoryObj } from '@storybook/react';
 import { default as Loader } from './Loader';
-
 declare const meta: {
     title: string;
     component: typeof Loader;

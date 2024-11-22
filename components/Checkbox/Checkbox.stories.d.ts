@@ -1,6 +1,5 @@
 import { StoryObj } from '@storybook/react';
 import { default as Checkbox } from './Checkbox';
-
 declare const meta: {
     title: string;
     component: typeof Checkbox;

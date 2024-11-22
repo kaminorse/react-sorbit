@@ -1,6 +1,5 @@
 import { StoryObj } from '@storybook/react';
 import { default as Ruby } from './Ruby';
-
 declare const meta: {
     title: string;
     component: typeof Ruby;

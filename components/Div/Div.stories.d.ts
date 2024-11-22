@@ -1,6 +1,5 @@
 import { StoryObj } from '@storybook/react';
 import { default as Div } from './Div';
-
 declare const meta: {
     title: string;
     component: typeof Div;

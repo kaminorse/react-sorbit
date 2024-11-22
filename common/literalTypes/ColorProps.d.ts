@@ -1,5 +1,4 @@
 import { default as ColorAttributes } from './ColorAttributes';
-
 type ColorProps = {
     default?: ColorAttributes;
     hover?: ColorAttributes;

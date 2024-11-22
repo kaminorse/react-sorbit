@@ -1,6 +1,5 @@
 import { StoryObj } from '@storybook/react';
 import { default as Card } from './Card';
-
 declare const meta: {
     title: string;
     component: typeof Card;

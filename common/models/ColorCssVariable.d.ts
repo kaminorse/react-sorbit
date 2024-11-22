@@ -1,7 +1,6 @@
 import { default as Gradation } from './Gradation';
 import { default as Oklch } from './Oklch';
 import { default as SchemeColor } from './SchemeColor';
-
 export default interface ColorCssVariable {
     white?: Oklch | string | undefined;
     black?: Oklch | string | undefined;

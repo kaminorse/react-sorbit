@@ -1,6 +1,5 @@
 import { StoryObj } from '@storybook/react';
 import { default as Accordion } from './Accordion';
-
 declare const meta: {
     title: string;
     component: typeof Accordion;

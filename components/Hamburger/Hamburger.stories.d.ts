@@ -1,6 +1,5 @@
 import { StoryObj } from '@storybook/react';
 import { default as Hamburger } from './Hamburger';
-
 declare const meta: {
     title: string;
     component: typeof Hamburger;

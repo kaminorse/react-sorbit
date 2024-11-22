@@ -1,5 +1,4 @@
 import { DivProps } from '../Div';
-
 export default interface NavAccordionProps extends DivProps {
     isMobile?: boolean | undefined;
     isMobileOrMore?: boolean | undefined;

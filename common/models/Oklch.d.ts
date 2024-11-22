@@ -1,5 +1,4 @@
 import { Angle, Percentage } from '../literalTypes';
-
 export default interface Oklch {
     /**
      * 0~360(°)

@@ -1,6 +1,5 @@
 import { StoryObj } from '@storybook/react';
 import { default as Nav } from './Nav';
-
 declare const meta: {
     title: string;
     component: typeof Nav;
