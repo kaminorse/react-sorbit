@@ -1,6 +1,11 @@
 import { ColorScheme } from "../../common/literalTypes";
-import { PropsWithChildren } from "react";
+import { DivProps } from "../../components/Div";
 
-export default interface SorootProps extends PropsWithChildren {
+export default interface SorootProps extends DivProps {
+  as?:
+    | React.ElementType
+    | undefined;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any;
   colorScheme?: ColorScheme;
 }
