@@ -30,7 +30,7 @@ test("change color black.", () => {
 
   expect(
     sorbitStyleUtility.getSorbitCssVariableStyles(cssVariables)
-  ).toStrictEqual([":root{--color-black-oklch: 13% 0.04 190;--color-black: oklch(var(--color-black-oklch));}"]);
+  ).toStrictEqual([":root{--sorbit-color-black-oklch: 13% 0.04 190;--sorbit-color-black: oklch(var(--sorbit-color-black-oklch));}"]);
 });
 
 test("change color white.", () => {
@@ -46,7 +46,7 @@ test("change color white.", () => {
 
   expect(
     sorbitStyleUtility.getSorbitCssVariableStyles(cssVariables)
-  ).toStrictEqual([":root{--color-white-oklch: 98% 0.04 190;--color-white: oklch(var(--color-white-oklch));}"]);
+  ).toStrictEqual([":root{--sorbit-color-white-oklch: 98% 0.04 190;--sorbit-color-white: oklch(var(--sorbit-color-white-oklch));}"]);
 });
 
 colors.forEach((color) => {
@@ -68,7 +68,7 @@ colors.forEach((color) => {
       expect(
         sorbitStyleUtility.getSorbitCssVariableStyles(cssVariables)
       ).toStrictEqual([
-        `:root{--color-${color}-${gradStr}-oklch: 98% 0.11 0;--color-${color}-${gradStr}: oklch(var(--color-${color}-${gradStr}-oklch));}`,
+        `:root{--sorbit-color-${color}-${gradStr}-oklch: 98% 0.11 0;--sorbit-color-${color}-${gradStr}: oklch(var(--sorbit-color-${color}-${gradStr}-oklch));}`,
       ]);
     });
   }
