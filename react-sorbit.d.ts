@@ -5,7 +5,7 @@ export * from './base/SorbitCssVariableStylesProvider';
 export * from './base/SorbitCssVariableStylesProviderStatic';
 export * from './base/Sorbit';
 export * from './base/SorbitStatic';
-export * from './base/Tabula';
+export * from './base/Soroot';
 export * from './backgrounds/Gingham';
 export * from './backgrounds/Stripe';
 export * from './components/Accordion';

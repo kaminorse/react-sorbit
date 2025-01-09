@@ -1,1 +1,1 @@
-{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../src/base/SorbitCssVariableStylesProvider/index.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,OAAO,IAAI,+BAA+B,EAAE,MAAM,mCAAmC,CAAC;AAC/F,YAAY,EAAE,OAAO,IAAI,oCAAoC,EAAE,MAAM,wCAAwC,CAAC"}
+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../src/base/SorbitCssVariableStylesProvider/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,IAAI,+BAA+B,EAAE,MAAM,mCAAmC,CAAC;AAC/F,YAAY,EAAE,OAAO,IAAI,oCAAoC,EAAE,MAAM,wCAAwC,CAAC"}
