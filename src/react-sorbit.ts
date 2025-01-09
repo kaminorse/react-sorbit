@@ -21,7 +21,7 @@ export * from "./base/Sorbit";
 
 export * from "./base/SorbitStatic";
 
-export * from "./base/Tabula";
+export * from "./base/Soroot";
 
 //#endregion base
 

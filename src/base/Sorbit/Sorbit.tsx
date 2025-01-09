@@ -1,5 +1,5 @@
 import SorbitCssVariableStylesProvider from "../SorbitCssVariableStylesProvider/SorbitCssVariableStylesProvider";
-import { Tabula } from "../Tabula";
+import { Soroot } from "../Soroot";
 import "./Sorbit.scss";
 import SorbitProps from "./SorbitProps";
 
@@ -9,7 +9,7 @@ export default function Sorbit(props: SorbitProps) {
       <SorbitCssVariableStylesProvider
         cssVariableSetting={props.cssVariableSetting}
       >
-        <Tabula colorScheme={props.colorScheme}>{props.children}</Tabula>
+        <Soroot colorScheme={props.colorScheme}>{props.children}</Soroot>
       </SorbitCssVariableStylesProvider>
     </>
   );
