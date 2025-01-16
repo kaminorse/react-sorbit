@@ -35,6 +35,8 @@ export * from "./backgrounds/Stripe";
 
 //#region components
 
+export * from "./components/AdminNav";
+
 export * from "./components/Accordion";
 
 export * from "./components/Badge";
@@ -76,6 +78,8 @@ export * from "./components/Span";
 //#endregion components
 
 //#region layouts
+
+export * from "./layouts/Admin";
 
 export * from "./layouts/Centering";
 
