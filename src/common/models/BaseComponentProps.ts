@@ -34,17 +34,27 @@ export default interface BaseComponentProps {
     right?: BorderDetailProps;
   };
   spacing?: {
-    margin?: {
-      top?: number | "auto" | undefined;
-      left?: number | "auto" | undefined;
-      bottom?: number | "auto" | undefined;
-      right?: number | "auto" | undefined;
-    };
-    padding?: {
-      top?: number | "auto" | undefined;
-      left?: number | "auto" | undefined;
-      bottom?: number | "auto" | undefined;
-      right?: number | "auto" | undefined;
-    };
+    margin?:
+      | {
+          x?: number | "auto";
+          y?: number | "auto";
+          top?: number | "auto";
+          left?: number | "auto";
+          bottom?: number | "auto";
+          right?: number | "auto";
+        }
+      | number
+      | "auto";
+    padding?:
+      | {
+          x?: number | "auto";
+          y?: number | "auto";
+          top?: number | "auto";
+          left?: number | "auto";
+          bottom?: number | "auto";
+          right?: number | "auto";
+        }
+      | number
+      | "auto";
   };
 }

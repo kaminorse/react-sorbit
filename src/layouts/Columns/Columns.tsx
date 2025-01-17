@@ -60,6 +60,8 @@ export default function Columns(props: ColumnsProps): JSX.Element {
   delete assignedProps["isWidescreenOrMoreDirectionColumnReverse"];
   delete assignedProps["isFullhdOrLessDirectionColumnReverse"];
   delete assignedProps["isFullhdDirectionColumnReverse"];
+  delete assignedProps["gutter"];
+
   //#region BaseComponentProps
   delete assignedProps["fore"];
   delete assignedProps["back"];
@@ -220,6 +222,33 @@ export default function Columns(props: ColumnsProps): JSX.Element {
     );
   props.isFullhdDirectionColumnReverse &&
     assignedClassNames.push(classNames["is-fullhd-direction-column-reverse"]);
+
+  if (props.gutter) {
+    if (typeof props.gutter === "string") {
+      assignedClassNames.push(classNames[`has-gutter-${props.gutter}`]);
+    } else if (typeof props.gutter === "number") {
+      assignedClassNames.push(classNames[`has-gutter-${props.gutter}rem`]);
+    } else {
+      if (props.gutter.x) {
+        if (typeof props.gutter.x === "string") {
+          assignedClassNames.push(classNames[`has-gutter-x-${props.gutter.x}`]);
+        } else if (typeof props.gutter.x === "number") {
+          assignedClassNames.push(
+            classNames[`has-gutter-x-${props.gutter.x}rem`]
+          );
+        }
+      }
+      if (props.gutter.y) {
+        if (typeof props.gutter.y === "string") {
+          assignedClassNames.push(classNames[`has-gutter-y-${props.gutter.y}`]);
+        } else if (typeof props.gutter.y === "number") {
+          assignedClassNames.push(
+            classNames[`has-gutter-y-${props.gutter.y}rem`]
+          );
+        }
+      }
+    }
+  }
 
   assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);

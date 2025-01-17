@@ -353,69 +353,120 @@ function getUtilityClassNames(props: BaseComponentProps): string[] {
     }
   }
 
-  if (props.spacing && props.spacing.margin && props.spacing.margin.top) {
-    if (props.spacing.margin.top === "auto") {
-      assignedClassNames.push(`mt-auto`);
-    } else {
-      assignedClassNames.push(`mt-${props.spacing.margin.top}rem`);
+  if (props.spacing) {
+    if (props.spacing.margin) {
+      if (typeof props.spacing.margin === "number") {
+        assignedClassNames.push(`m-${props.spacing.margin}rem`);
+      } else if (typeof props.spacing.margin === "string") {
+        assignedClassNames.push(`m-auto`);
+      } else {
+        if (props.spacing.margin.x) {
+          if (props.spacing.margin.x === "auto") {
+            assignedClassNames.push(`mx-auto`);
+          } else {
+            assignedClassNames.push(`mx-${props.spacing.margin.x}rem`);
+          }
+        }
+
+        if (props.spacing.margin.y) {
+          if (props.spacing.margin.y === "auto") {
+            assignedClassNames.push(`my-auto`);
+          } else {
+            assignedClassNames.push(`my-${props.spacing.margin.y}rem`);
+          }
+        }
+
+        if (props.spacing.margin.top) {
+          if (props.spacing.margin.top === "auto") {
+            assignedClassNames.push(`mt-auto`);
+          } else {
+            assignedClassNames.push(`mt-${props.spacing.margin.top}rem`);
+          }
+        }
+
+        if (props.spacing.margin.right) {
+          if (props.spacing.margin.right === "auto") {
+            assignedClassNames.push(`mr-auto`);
+          } else {
+            assignedClassNames.push(`mr-${props.spacing.margin.right}rem`);
+          }
+        }
+
+        if (props.spacing.margin.bottom) {
+          if (props.spacing.margin.bottom === "auto") {
+            assignedClassNames.push(`mb-auto`);
+          } else {
+            assignedClassNames.push(`mb-${props.spacing.margin.bottom}rem`);
+          }
+        }
+
+        if (props.spacing.margin.left) {
+          if (props.spacing.margin.left === "auto") {
+            assignedClassNames.push(`ml-auto`);
+          } else {
+            assignedClassNames.push(`ml-${props.spacing.margin.left}rem`);
+          }
+        }
+      }
+    }
+
+    if (props.spacing.padding) {
+      if (typeof props.spacing.padding === "number") {
+        assignedClassNames.push(`p-${props.spacing.padding}rem`);
+      } else if (typeof props.spacing.padding === "string") {
+        assignedClassNames.push(`p-auto`);
+      } else {
+        if (props.spacing.padding.x) {
+          if (props.spacing.padding.x === "auto") {
+            assignedClassNames.push(`px-auto`);
+          } else {
+            assignedClassNames.push(`px-${props.spacing.padding.x}rem`);
+          }
+        }
+
+        if (props.spacing.padding.y) {
+          if (props.spacing.padding.y === "auto") {
+            assignedClassNames.push(`py-auto`);
+          } else {
+            assignedClassNames.push(`py-${props.spacing.padding.y}rem`);
+          }
+        }
+
+        if (props.spacing.padding.top) {
+          if (props.spacing.padding.top === "auto") {
+            assignedClassNames.push(`pt-auto`);
+          } else {
+            assignedClassNames.push(`pt-${props.spacing.padding.top}rem`);
+          }
+        }
+
+        if (props.spacing.padding.right) {
+          if (props.spacing.padding.right === "auto") {
+            assignedClassNames.push(`pr-auto`);
+          } else {
+            assignedClassNames.push(`pr-${props.spacing.padding.right}rem`);
+          }
+        }
+
+        if (props.spacing.padding.bottom) {
+          if (props.spacing.padding.bottom === "auto") {
+            assignedClassNames.push(`pb-auto`);
+          } else {
+            assignedClassNames.push(`pb-${props.spacing.padding.bottom}rem`);
+          }
+        }
+
+        if (props.spacing.padding.left) {
+          if (props.spacing.padding.left === "auto") {
+            assignedClassNames.push(`pl-auto`);
+          } else {
+            assignedClassNames.push(`pl-${props.spacing.padding.left}rem`);
+          }
+        }
+      }
     }
   }
 
-  if (props.spacing && props.spacing.margin && props.spacing.margin.right) {
-    if (props.spacing.margin.right === "auto") {
-      assignedClassNames.push(`mr-auto`);
-    } else {
-      assignedClassNames.push(`mr-${props.spacing.margin.right}rem`);
-    }
-  }
-
-  if (props.spacing && props.spacing.margin && props.spacing.margin.bottom) {
-    if (props.spacing.margin.bottom === "auto") {
-      assignedClassNames.push(`mb-auto`);
-    } else {
-      assignedClassNames.push(`mb-${props.spacing.margin.bottom}rem`);
-    }
-  }
-
-  if (props.spacing && props.spacing.margin && props.spacing.margin.left) {
-    if (props.spacing.margin.left === "auto") {
-      assignedClassNames.push(`ml-auto`);
-    } else {
-      assignedClassNames.push(`ml-${props.spacing.margin.left}rem`);
-    }
-  }
-
-  if (props.spacing && props.spacing.padding && props.spacing.padding.top) {
-    if (props.spacing.padding.top === "auto") {
-      assignedClassNames.push(`pt-auto`);
-    } else {
-      assignedClassNames.push(`pt-${props.spacing.padding.top}rem`);
-    }
-  }
-
-  if (props.spacing && props.spacing.padding && props.spacing.padding.right) {
-    if (props.spacing.padding.right === "auto") {
-      assignedClassNames.push(`pr-auto`);
-    } else {
-      assignedClassNames.push(`pr-${props.spacing.padding.right}rem`);
-    }
-  }
-
-  if (props.spacing && props.spacing.padding && props.spacing.padding.bottom) {
-    if (props.spacing.padding.bottom === "auto") {
-      assignedClassNames.push(`pb-auto`);
-    } else {
-      assignedClassNames.push(`pb-${props.spacing.padding.bottom}rem`);
-    }
-  }
-
-  if (props.spacing && props.spacing.padding && props.spacing.padding.left) {
-    if (props.spacing.padding.left === "auto") {
-      assignedClassNames.push(`pl-auto`);
-    } else {
-      assignedClassNames.push(`pl-${props.spacing.padding.left}rem`);
-    }
-  }
   return assignedClassNames;
 }
 

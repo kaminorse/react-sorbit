@@ -57,4 +57,10 @@ export default interface ColumnsProps extends DivProps {
   isWidescreenOrMoreDirectionColumnReverse?: boolean | undefined;
   isFullhdOrLessDirectionColumnReverse?: boolean | undefined;
   isFullhdDirectionColumnReverse?: boolean | undefined;
+  gutter?:
+    | `${number}rem`
+    | {
+        x?: `${number}rem` | number;
+        y?: `${number}rem` | number;
+      };
 }
