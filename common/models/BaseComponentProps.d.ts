@@ -25,17 +25,21 @@ export default interface BaseComponentProps {
     };
     spacing?: {
         margin?: {
-            top?: number | "auto" | undefined;
-            left?: number | "auto" | undefined;
-            bottom?: number | "auto" | undefined;
-            right?: number | "auto" | undefined;
-        };
+            x?: number | "auto";
+            y?: number | "auto";
+            top?: number | "auto";
+            left?: number | "auto";
+            bottom?: number | "auto";
+            right?: number | "auto";
+        } | number | "auto";
         padding?: {
-            top?: number | "auto" | undefined;
-            left?: number | "auto" | undefined;
-            bottom?: number | "auto" | undefined;
-            right?: number | "auto" | undefined;
-        };
+            x?: number | "auto";
+            y?: number | "auto";
+            top?: number | "auto";
+            left?: number | "auto";
+            bottom?: number | "auto";
+            right?: number | "auto";
+        } | number | "auto";
     };
 }
 //# sourceMappingURL=BaseComponentProps.d.ts.map
