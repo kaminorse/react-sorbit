@@ -5,6 +5,7 @@ import GinghamProps from "./GinghamProps";
 export default function Gingham(props: GinghamProps): JSX.Element {
   const assignedProps = { ...props };
   delete assignedProps["patternColor"];
+  delete assignedProps["as"];
   //#region BaseComponentProps
   delete assignedProps["fore"];
   delete assignedProps["back"];
@@ -27,7 +28,9 @@ export default function Gingham(props: GinghamProps): JSX.Element {
   assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);
 
-  return (
-    <Gingham {...assignedProps} className={assignedClassNames.join(" ")} />
+  return props.as ? (
+    <props.as {...assignedProps} className={assignedClassNames.join(" ")} />
+  ) : (
+    <div {...assignedProps} className={assignedClassNames.join(" ")} />
   );
 }
