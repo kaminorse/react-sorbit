@@ -4,6 +4,7 @@ import {
   ComponentStatePseudoClass,
   Oklch,
 } from "../../common/models";
+import ComponentSchemeColor from "../../common/models/ComponentSchemeColor";
 
 const prefix = "sorbit-";
 
@@ -585,6 +586,109 @@ function getLightSchemeStyles(
 ): string[] {
   const lightSchemeStyles: string[] = [];
 
+  const setComponentSchemeColor = (component: ComponentSchemeColor, elementName?: string) => {
+    if (component.default) {
+      const styles = getColorVariables(
+        `default`,
+        component.default,
+        elementName
+      );
+      if (styles.length > 0) {
+        lightSchemeStyles.push(...styles);
+      }
+    }
+    if (component.gray) {
+      const styles = getColorVariables(
+        `gray`,
+        component.gray,
+        elementName
+      );
+      if (styles.length > 0) {
+        lightSchemeStyles.push(...styles);
+      }
+    }
+    if (component.red) {
+      const styles = getColorVariables(
+        `red`,
+        component.red,
+        elementName
+      );
+      if (styles.length > 0) {
+        lightSchemeStyles.push(...styles);
+      }
+    }
+    if (component.orange) {
+      const styles = getColorVariables(
+        `orange`,
+        component.orange,
+        elementName
+      );
+      if (styles.length > 0) {
+        lightSchemeStyles.push(...styles);
+      }
+    }
+    if (component.yellow) {
+      const styles = getColorVariables(
+        `yellow`,
+        component.yellow,
+        elementName
+      );
+      if (styles.length > 0) {
+        lightSchemeStyles.push(...styles);
+      }
+    }
+    if (component.green) {
+      const styles = getColorVariables(
+        `green`,
+        component.green,
+        elementName
+      );
+      if (styles.length > 0) {
+        lightSchemeStyles.push(...styles);
+      }
+    }
+    if (component.cyan) {
+      const styles = getColorVariables(
+        `cyan`,
+        component.cyan,
+        elementName
+      );
+      if (styles.length > 0) {
+        lightSchemeStyles.push(...styles);
+      }
+    }
+    if (component.blue) {
+      const styles = getColorVariables(
+        `blue`,
+        component.blue,
+        elementName
+      );
+      if (styles.length > 0) {
+        lightSchemeStyles.push(...styles);
+      }
+    }
+    if (component.violet) {
+      const styles = getColorVariables(
+        `violet`,
+        component.violet,
+        elementName
+      );
+      if (styles.length > 0) {
+        lightSchemeStyles.push(...styles);
+      }
+    }
+    if (component.magenta) {
+      const styles = getColorVariables(
+        `magenta`,
+        component.magenta,
+        elementName
+      );
+      if (styles.length > 0) {
+        lightSchemeStyles.push(...styles);
+      }
+    }
+  };
+
   if (cssVariableSetting) {
     if (cssVariableSetting.color) {
       const color = cssVariableSetting.color;
@@ -644,105 +748,96 @@ function getLightSchemeStyles(
           }
         }
 
-        if (color.light.button) {
-          if (color.light.button.default) {
-            const styles = getColorVariables(
-              `default`,
-              color.light.button.default,
-              `button`
-            );
-            if (styles.length > 0) {
-              lightSchemeStyles.push(...styles);
+        if (color.light.components) {
+          const components = color.light.components;
+
+          if (components.accordion) {
+            const accordion = components.accordion;
+            setComponentSchemeColor(accordion, `accordion`);
+
+            if (accordion.accordionSummary) {
+              const accordionSummary = accordion.accordionSummary;
+              setComponentSchemeColor(accordionSummary, `accordion-summary`);
+            }
+
+            if (accordion.accordionDetails) {
+              const accordionDetails = accordion.accordionDetails;
+              setComponentSchemeColor(accordionDetails, `accordion-details`);
             }
           }
-          if (color.light.button.gray) {
-            const styles = getColorVariables(
-              `gray`,
-              color.light.button.gray,
-              `button`
-            );
-            if (styles.length > 0) {
-              lightSchemeStyles.push(...styles);
+
+          if (components.adminNav) {
+            const adminNav = components.adminNav;
+            setComponentSchemeColor(adminNav, `admin-nav`);
+
+            if (adminNav.adminNavBrand) {
+              const adminNavBrand = adminNav.adminNavBrand;
+              setComponentSchemeColor(adminNavBrand, `admin-nav-brand`);
+            }
+
+            if (adminNav.adminNavMenu) {
+              const adminNavMenu = adminNav.adminNavMenu;
+              setComponentSchemeColor(adminNavMenu, `admin-nav-menu`);
+            }
+
+            if (adminNav.adminNavMenuItem) {
+              const adminNavMenuItem = adminNav.adminNavMenuItem;
+              setComponentSchemeColor(adminNavMenuItem, `admin-nav-menu-item`);
             }
           }
-          if (color.light.button.red) {
-            const styles = getColorVariables(
-              `red`,
-              color.light.button.red,
-              `button`
-            );
-            if (styles.length > 0) {
-              lightSchemeStyles.push(...styles);
+
+          if (components.badge) {
+            const badge = components.badge;
+            setComponentSchemeColor(badge, `badge`);
+          }
+
+          if (components.breadcrumb) {
+            const breadcrumb = components.breadcrumb;
+            setComponentSchemeColor(breadcrumb, `breadcrumb`);
+
+            if (breadcrumb.breadcrumbDivider) {
+              const breadcrumbDivider = breadcrumb.breadcrumbDivider;
+              setComponentSchemeColor(breadcrumbDivider, `card-divider`);
             }
           }
-          if (color.light.button.orange) {
-            const styles = getColorVariables(
-              `orange`,
-              color.light.button.orange,
-              `button`
-            );
-            if (styles.length > 0) {
-              lightSchemeStyles.push(...styles);
+
+          if (components.button) {
+            const button = components.button;
+            setComponentSchemeColor(button, `button`);
+          }
+
+          if (components.card) {
+            const card = components.card;
+            setComponentSchemeColor(card, `card`);
+
+            if (card.cardTitle) {
+              const cardTitle = card.cardTitle;
+              setComponentSchemeColor(cardTitle, `card-title`);
+            }
+
+            if (card.cardBody) {
+              const cardBody = card.cardBody;
+              setComponentSchemeColor(cardBody, `card-body`);
             }
           }
-          if (color.light.button.yellow) {
-            const styles = getColorVariables(
-              `yellow`,
-              color.light.button.yellow,
-              `button`
-            );
-            if (styles.length > 0) {
-              lightSchemeStyles.push(...styles);
+
+          if (components.dialog) {
+            const dialog = components.dialog;
+            setComponentSchemeColor(dialog, `dialog`);
+
+            if (dialog.dialogAvatar) {
+              const dialogAvatar = dialog.dialogAvatar;
+              setComponentSchemeColor(dialogAvatar, `dialog-avatar`);
             }
-          }
-          if (color.light.button.green) {
-            const styles = getColorVariables(
-              `green`,
-              color.light.button.green,
-              `button`
-            );
-            if (styles.length > 0) {
-              lightSchemeStyles.push(...styles);
+
+            if (dialog.dialogName) {
+              const dialogName = dialog.dialogName;
+              setComponentSchemeColor(dialogName, `dialog-name`);
             }
-          }
-          if (color.light.button.cyan) {
-            const styles = getColorVariables(
-              `cyan`,
-              color.light.button.cyan,
-              `button`
-            );
-            if (styles.length > 0) {
-              lightSchemeStyles.push(...styles);
-            }
-          }
-          if (color.light.button.blue) {
-            const styles = getColorVariables(
-              `blue`,
-              color.light.button.blue,
-              `button`
-            );
-            if (styles.length > 0) {
-              lightSchemeStyles.push(...styles);
-            }
-          }
-          if (color.light.button.violet) {
-            const styles = getColorVariables(
-              `violet`,
-              color.light.button.violet,
-              `button`
-            );
-            if (styles.length > 0) {
-              lightSchemeStyles.push(...styles);
-            }
-          }
-          if (color.light.button.magenta) {
-            const styles = getColorVariables(
-              `magenta`,
-              color.light.button.magenta,
-              `button`
-            );
-            if (styles.length > 0) {
-              lightSchemeStyles.push(...styles);
+
+            if (dialog.dialogMessage) {
+              const dialogMessage = dialog.dialogMessage;
+              setComponentSchemeColor(dialogMessage, `dialog-message`);
             }
           }
         }
@@ -755,6 +850,109 @@ function getLightSchemeStyles(
 
 function getDarkSchemeStyles(cssVariableSetting?: SorbitCssVariable): string[] {
   const darkSchemeStyles: string[] = [];
+
+  const setComponentSchemeColor = (component: ComponentSchemeColor, elementName?: string) => {
+    if (component.default) {
+      const styles = getColorVariables(
+        `default`,
+        component.default,
+        elementName
+      );
+      if (styles.length > 0) {
+        darkSchemeStyles.push(...styles);
+      }
+    }
+    if (component.gray) {
+      const styles = getColorVariables(
+        `gray`,
+        component.gray,
+        elementName
+      );
+      if (styles.length > 0) {
+        darkSchemeStyles.push(...styles);
+      }
+    }
+    if (component.red) {
+      const styles = getColorVariables(
+        `red`,
+        component.red,
+        elementName
+      );
+      if (styles.length > 0) {
+        darkSchemeStyles.push(...styles);
+      }
+    }
+    if (component.orange) {
+      const styles = getColorVariables(
+        `orange`,
+        component.orange,
+        elementName
+      );
+      if (styles.length > 0) {
+        darkSchemeStyles.push(...styles);
+      }
+    }
+    if (component.yellow) {
+      const styles = getColorVariables(
+        `yellow`,
+        component.yellow,
+        elementName
+      );
+      if (styles.length > 0) {
+        darkSchemeStyles.push(...styles);
+      }
+    }
+    if (component.green) {
+      const styles = getColorVariables(
+        `green`,
+        component.green,
+        elementName
+      );
+      if (styles.length > 0) {
+        darkSchemeStyles.push(...styles);
+      }
+    }
+    if (component.cyan) {
+      const styles = getColorVariables(
+        `cyan`,
+        component.cyan,
+        elementName
+      );
+      if (styles.length > 0) {
+        darkSchemeStyles.push(...styles);
+      }
+    }
+    if (component.blue) {
+      const styles = getColorVariables(
+        `blue`,
+        component.blue,
+        elementName
+      );
+      if (styles.length > 0) {
+        darkSchemeStyles.push(...styles);
+      }
+    }
+    if (component.violet) {
+      const styles = getColorVariables(
+        `violet`,
+        component.violet,
+        elementName
+      );
+      if (styles.length > 0) {
+        darkSchemeStyles.push(...styles);
+      }
+    }
+    if (component.magenta) {
+      const styles = getColorVariables(
+        `magenta`,
+        component.magenta,
+        elementName
+      );
+      if (styles.length > 0) {
+        darkSchemeStyles.push(...styles);
+      }
+    }
+  };
 
   if (cssVariableSetting) {
     if (cssVariableSetting.color) {
@@ -821,105 +1019,96 @@ function getDarkSchemeStyles(cssVariableSetting?: SorbitCssVariable): string[] {
           }
         }
 
-        if (color.dark.button) {
-          if (color.dark.button.default) {
-            const styles = getColorVariables(
-              `default`,
-              color.dark.button.default,
-              `button`
-            );
-            if (styles.length > 0) {
-              darkSchemeStyles.push(...styles);
+        if (color.dark.components) {
+          const components = color.dark.components;
+
+          if (components.accordion) {
+            const accordion = components.accordion;
+            setComponentSchemeColor(accordion, `accordion`);
+
+            if (accordion.accordionSummary) {
+              const accordionSummary = accordion.accordionSummary;
+              setComponentSchemeColor(accordionSummary, `accordion-summary`);
+            }
+
+            if (accordion.accordionDetails) {
+              const accordionDetails = accordion.accordionDetails;
+              setComponentSchemeColor(accordionDetails, `accordion-details`);
             }
           }
-          if (color.dark.button.gray) {
-            const styles = getColorVariables(
-              `gray`,
-              color.dark.button.gray,
-              `button`
-            );
-            if (styles.length > 0) {
-              darkSchemeStyles.push(...styles);
+
+          if (components.adminNav) {
+            const adminNav = components.adminNav;
+            setComponentSchemeColor(adminNav, `admin-nav`);
+
+            if (adminNav.adminNavBrand) {
+              const adminNavBrand = adminNav.adminNavBrand;
+              setComponentSchemeColor(adminNavBrand, `admin-nav-brand`);
+            }
+
+            if (adminNav.adminNavMenu) {
+              const adminNavMenu = adminNav.adminNavMenu;
+              setComponentSchemeColor(adminNavMenu, `admin-nav-menu`);
+            }
+
+            if (adminNav.adminNavMenuItem) {
+              const adminNavMenuItem = adminNav.adminNavMenuItem;
+              setComponentSchemeColor(adminNavMenuItem, `admin-nav-menu-item`);
             }
           }
-          if (color.dark.button.red) {
-            const styles = getColorVariables(
-              `red`,
-              color.dark.button.red,
-              `button`
-            );
-            if (styles.length > 0) {
-              darkSchemeStyles.push(...styles);
+
+          if (components.badge) {
+            const badge = components.badge;
+            setComponentSchemeColor(badge, `badge`);
+          }
+
+          if (components.breadcrumb) {
+            const breadcrumb = components.breadcrumb;
+            setComponentSchemeColor(breadcrumb, `breadcrumb`);
+
+            if (breadcrumb.breadcrumbDivider) {
+              const breadcrumbDivider = breadcrumb.breadcrumbDivider;
+              setComponentSchemeColor(breadcrumbDivider, `card-divider`);
             }
           }
-          if (color.dark.button.orange) {
-            const styles = getColorVariables(
-              `orange`,
-              color.dark.button.orange,
-              `button`
-            );
-            if (styles.length > 0) {
-              darkSchemeStyles.push(...styles);
+
+          if (components.button) {
+            const button = components.button;
+            setComponentSchemeColor(button, `button`);
+          }
+
+          if (components.card) {
+            const card = components.card;
+            setComponentSchemeColor(card, `card`);
+
+            if (card.cardTitle) {
+              const cardTitle = card.cardTitle;
+              setComponentSchemeColor(cardTitle, `card-title`);
+            }
+
+            if (card.cardBody) {
+              const cardBody = card.cardBody;
+              setComponentSchemeColor(cardBody, `card-body`);
             }
           }
-          if (color.dark.button.yellow) {
-            const styles = getColorVariables(
-              `yellow`,
-              color.dark.button.yellow,
-              `button`
-            );
-            if (styles.length > 0) {
-              darkSchemeStyles.push(...styles);
+
+          if (components.dialog) {
+            const dialog = components.dialog;
+            setComponentSchemeColor(dialog, `dialog`);
+
+            if (dialog.dialogAvatar) {
+              const dialogAvatar = dialog.dialogAvatar;
+              setComponentSchemeColor(dialogAvatar, `dialog-avatar`);
             }
-          }
-          if (color.dark.button.green) {
-            const styles = getColorVariables(
-              `green`,
-              color.dark.button.green,
-              `button`
-            );
-            if (styles.length > 0) {
-              darkSchemeStyles.push(...styles);
+
+            if (dialog.dialogName) {
+              const dialogName = dialog.dialogName;
+              setComponentSchemeColor(dialogName, `dialog-name`);
             }
-          }
-          if (color.dark.button.cyan) {
-            const styles = getColorVariables(
-              `cyan`,
-              color.dark.button.cyan,
-              `button`
-            );
-            if (styles.length > 0) {
-              darkSchemeStyles.push(...styles);
-            }
-          }
-          if (color.dark.button.blue) {
-            const styles = getColorVariables(
-              `blue`,
-              color.dark.button.blue,
-              `button`
-            );
-            if (styles.length > 0) {
-              darkSchemeStyles.push(...styles);
-            }
-          }
-          if (color.dark.button.violet) {
-            const styles = getColorVariables(
-              `violet`,
-              color.dark.button.violet,
-              `button`
-            );
-            if (styles.length > 0) {
-              darkSchemeStyles.push(...styles);
-            }
-          }
-          if (color.dark.button.magenta) {
-            const styles = getColorVariables(
-              `magenta`,
-              color.dark.button.magenta,
-              `button`
-            );
-            if (styles.length > 0) {
-              darkSchemeStyles.push(...styles);
+
+            if (dialog.dialogMessage) {
+              const dialogMessage = dialog.dialogMessage;
+              setComponentSchemeColor(dialogMessage, `dialog-message`);
             }
           }
         }
