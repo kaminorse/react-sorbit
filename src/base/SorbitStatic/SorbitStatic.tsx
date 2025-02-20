@@ -4,12 +4,15 @@ import "./SorbitStatic.scss";
 import SorbitStaticProps from "./SorbitStaticProps";
 
 export default function SorbitStatic(props: SorbitStaticProps) {
+  const assignedProps = { ...props };
+  delete assignedProps["cssVariableSetting"];
+
   return (
     <>
       <SorbitCssVariableStylesProviderStatic
         cssVariableSetting={props.cssVariableSetting}
       >
-        <Soroot colorScheme={props.colorScheme}>{props.children}</Soroot>
+        <Soroot {...assignedProps} />
       </SorbitCssVariableStylesProviderStatic>
     </>
   );

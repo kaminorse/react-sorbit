@@ -1,8 +1,6 @@
-import { ColorScheme } from "../../common/literalTypes";
 import { SorbitCssVariable } from "../../common/models";
-import { PropsWithChildren } from "react";
+import { SorootProps } from "../Soroot";
 
-export default interface SorbitProps extends PropsWithChildren {
-  colorScheme?: ColorScheme;
+export default interface SorbitProps extends SorootProps {
   cssVariableSetting?: SorbitCssVariable;
 }

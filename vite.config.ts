@@ -3,8 +3,8 @@ import { glob } from "glob";
 import { fileURLToPath } from "node:url";
 import { extname, relative, resolve } from "path";
 import { defineConfig } from "vite";
-import { libInjectCss } from "vite-plugin-lib-inject-css";
 import dts from "vite-plugin-dts";
+import { libInjectCss } from "vite-plugin-lib-inject-css";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -17,6 +17,11 @@ export default defineConfig({
         /.*\/src\/base\/SorbitCssVariableStylesProviderStatic\/.*/,
         /.*\/src\/base\/SorbitStatic\/.*/,
       ],
+    },
+    preprocessorOptions: {
+      scss: {
+        api: "modern-compiler",
+      },
     },
   },
   build: {

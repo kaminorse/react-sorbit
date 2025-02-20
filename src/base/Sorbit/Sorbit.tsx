@@ -4,12 +4,15 @@ import "./Sorbit.scss";
 import SorbitProps from "./SorbitProps";
 
 export default function Sorbit(props: SorbitProps) {
+  const assignedProps = { ...props };
+  delete assignedProps["cssVariableSetting"];
+
   return (
     <>
       <SorbitCssVariableStylesProvider
         cssVariableSetting={props.cssVariableSetting}
       >
-        <Soroot colorScheme={props.colorScheme}>{props.children}</Soroot>
+        <Soroot {...assignedProps} />
       </SorbitCssVariableStylesProvider>
     </>
   );

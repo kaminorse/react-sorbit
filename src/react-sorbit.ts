@@ -7,6 +7,7 @@ export * from "./utilities";
 //#region common
 
 export * from "./common/literalTypes";
+
 export * from "./common/models";
 
 //#endregion common
@@ -48,6 +49,8 @@ export * from "./components/Button";
 export * from "./components/Card";
 
 export * from "./components/Checkbox";
+
+export * from "./components/Dialog";
 
 export * from "./components/Div";
 
