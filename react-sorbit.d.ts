@@ -15,6 +15,7 @@ export * from './components/Breadcrumb';
 export * from './components/Button';
 export * from './components/Card';
 export * from './components/Checkbox';
+export * from './components/Dialog';
 export * from './components/Div';
 export * from './components/Hamburger';
 export * from './components/Header';
