@@ -474,6 +474,107 @@ function getRootStyles(cssVariableSetting?: SorbitCssVariable): string[] {
         }
       }
     }
+
+    if (cssVariableSetting.components) {
+      const components = cssVariableSetting.components;
+
+      if (components.breadcrumb) {
+        const breadcrumb = components.breadcrumb;
+        if (breadcrumb.breadcrumbDivider) {
+          rootStyles.push(
+            `--${prefix}breadcrumb-divider: ${breadcrumb.breadcrumbDivider};`
+          );
+        }
+      }
+
+      if (components.button) {
+        const button = components.button;
+        if (button.paddingX) {
+          rootStyles.push(
+            `--${prefix}button-padding-x: ${button.paddingX};`
+          );
+        }
+        if (button.paddingY) {
+          rootStyles.push(
+            `--${prefix}button-padding-y: ${button.paddingY};`
+          );
+        }
+      }
+
+      if (components.dialog) {
+        const dialog = components.dialog;
+        if (dialog.avatarSizeDefault) {
+          rootStyles.push(
+            `--${prefix}dialog-avatar-size-default: ${dialog.avatarSizeDefault};`
+          );
+        }
+        if (dialog.avatarSizeSmall) {
+          rootStyles.push(
+            `--${prefix}dialog-avatar-size-small: ${dialog.avatarSizeSmall};`
+          );
+        }
+        if (dialog.avatarSizeLarge) {
+          rootStyles.push(
+            `--${prefix}dialog-avatar-size-large: ${dialog.avatarSizeLarge};`
+          );
+        }
+        if (dialog.avatarTopOffset) {
+          rootStyles.push(
+            `--${prefix}dialog-avatar-top-offset: ${dialog.avatarTopOffset};`
+          );
+        }
+        if (dialog.nameFontSize) {
+          if (typeof dialog.nameFontSize.includes("rem")) {
+            rootStyles.push(
+              `--${prefix}dialog-name-font-size: ${dialog.nameFontSize};`
+            );
+          } else {
+            rootStyles.push(
+              `--${prefix}dialog-name-font-size: var(--${prefix}font-size-${dialog.nameFontSize});`
+            );
+          }
+        }
+        if (dialog.namePaddingX) {
+          rootStyles.push(
+            `--${prefix}dialog-name-padding-x: ${dialog.namePaddingX};`
+          );
+        }
+        if (dialog.namePaddingY) {
+          rootStyles.push(
+            `--${prefix}dialog-name-padding-y: ${dialog.namePaddingY};`
+          );
+        }
+        if (dialog.messageArrowHeight) {
+          rootStyles.push(
+            `--${prefix}dialog-messege-arrow-height: ${dialog.messageArrowHeight};`
+          );
+        }
+        if (dialog.messageArrowWidth) {
+          rootStyles.push(
+            `--${prefix}dialog-messege-arrow-width: ${dialog.messageArrowWidth};`
+          );
+        }
+        if (dialog.messageInnerPaddingX) {
+          rootStyles.push(
+            `--${prefix}dialog-message-inner-padding-x: ${dialog.messageInnerPaddingX};`
+          );
+        }
+        if (dialog.messageInnerPaddingY) {
+          rootStyles.push(
+            `--${prefix}dialog-message-inner-padding-y: ${dialog.messageInnerPaddingY};`
+          );
+        }
+      }
+
+      if (components.heading) {
+        const heading = components.heading;
+        if (heading.fontFamily) {
+          rootStyles.push(
+            `--${prefix}font-family-heading: ${heading.fontFamily};`
+          );
+        }
+      }
+    }
   }
 
   return rootStyles;
