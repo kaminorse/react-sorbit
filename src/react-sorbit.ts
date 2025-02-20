@@ -56,6 +56,8 @@ export * from "./components/Div";
 
 export * from "./components/Hamburger";
 
+export * from "./components/Heading";
+
 export * from "./components/Header";
 
 export * from "./components/Input";
