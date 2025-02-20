@@ -1,6 +1,6 @@
 {
   "name": "react-sorbit",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "type": "module",
   "main": "./dist/react-sorbit.js",
   "types": "./dist/react-sorbit.d.ts",
