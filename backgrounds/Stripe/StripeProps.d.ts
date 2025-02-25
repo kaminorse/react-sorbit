@@ -8,5 +8,6 @@ export default interface StripeProps extends React.DetailedHTMLProps<React.HTMLA
         name: ColorName;
         lightness: ColorLightness;
     } | undefined;
+    degree?: 0 | 45 | 90 | 135 | 180;
 }
 //# sourceMappingURL=StripeProps.d.ts.map

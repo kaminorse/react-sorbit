@@ -8,5 +8,6 @@ export default interface GinghamProps extends React.DetailedHTMLProps<React.HTML
         name: ColorName;
         lightness: ColorLightness;
     } | undefined;
+    degree?: 0 | 45 | 90 | 135 | 180;
 }
 //# sourceMappingURL=GinghamProps.d.ts.map
