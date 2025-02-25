@@ -17,4 +17,5 @@ export default interface StripeProps
         lightness: ColorLightness;
       }
     | undefined;
+  degree?: 0 | 45 | 90 | 135 | 180;
 }

@@ -5,6 +5,7 @@ import StripeProps from "./StripeProps";
 export default function Stripe(props: StripeProps): JSX.Element {
   const assignedProps = { ...props };
   delete assignedProps["patternColor"];
+  delete assignedProps["degree"];
   delete assignedProps["as"];
   //#region BaseComponentProps
   delete assignedProps["fore"];
@@ -22,6 +23,12 @@ export default function Stripe(props: StripeProps): JSX.Element {
         : props.patternColor.lightness;
     assignedClassNames.push(
       classNames[`is-${props.patternColor.name}-${lightness}`],
+    );
+  }
+
+  if (props.degree) {
+    assignedClassNames.push(
+      classNames[`is-${props.degree}deg`],
     );
   }
 
