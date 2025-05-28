@@ -6,6 +6,7 @@ export default function Header(props: HeaderProps): JSX.Element {
   const assignedProps = { ...props };
   delete assignedProps["colorName"];
   delete assignedProps["isSticky"];
+  delete assignedProps["isFixed"];
   //#region BaseComponentProps
   delete assignedProps["fore"];
   delete assignedProps["back"];
@@ -18,6 +19,7 @@ export default function Header(props: HeaderProps): JSX.Element {
   props.colorName &&
     assignedClassNames.push(classNames[`is-${props.colorName}`]);
   props.isSticky && assignedClassNames.push(classNames[`is-sticky`]);
+  props.isFixed && assignedClassNames.push(classNames[`is-fixed`]);
   assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
   props.className && assignedClassNames.push(props.className);
 

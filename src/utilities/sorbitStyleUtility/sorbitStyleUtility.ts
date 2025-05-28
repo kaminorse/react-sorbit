@@ -435,6 +435,38 @@ function getRootStyles(cssVariableSetting?: SorbitCssVariable): string[] {
 
     if (cssVariableSetting.typography) {
       const typography = cssVariableSetting.typography;
+      if (typography.fontFamily) {
+        if (typography.fontFamily.sansSerif) {
+          rootStyles.push(
+            `--${prefix}font-family-sans-serif: ${typography.fontFamily.sansSerif};`
+          );
+        }
+        if (typography.fontFamily.serif) {
+          rootStyles.push(
+            `--${prefix}font-family-serif: ${typography.fontFamily.serif};`
+          );
+        }
+        if (typography.fontFamily.monospace) {
+          rootStyles.push(
+            `--${prefix}font-family-monospace: ${typography.fontFamily.monospace};`
+          );
+        }
+        if (typography.fontFamily.main) {
+          rootStyles.push(
+            `--${prefix}font-family-main: ${typography.fontFamily.main};`
+          );
+        }
+        if (typography.fontFamily.heading) {
+          rootStyles.push(
+            `--${prefix}font-family-heading: ${typography.fontFamily.heading};`
+          );
+        }
+        if (typography.fontFamily.code) {
+          rootStyles.push(
+            `--${prefix}font-family-code: ${typography.fontFamily.code};`
+          );
+        }
+      }
       if (typography.fontSize) {
         if (typography.fontSize.small) {
           rootStyles.push(`--${prefix}font-size-small: ${typography.fontSize.small};`);
