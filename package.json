@@ -32,8 +32,7 @@
   },
   "homepage": "https://github.com/kaminorse/react-sorbit#readme",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "sideEffects": [
     "**/*.css"
