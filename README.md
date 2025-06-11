@@ -13,7 +13,7 @@ react-sorbit is an open-source react wrapper for [sorbit](https://github.com/kam
 ## Installation
 
 ```shell
-npm install react-sorbit
+npm install react-sorbit @emotion/react lodash
 ```
 
 ## License

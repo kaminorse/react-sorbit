@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import Progress from "./Progress";
-import { SorbitStatic } from "../../base/SorbitStatic";
+import Sorbit from "../../base/Sorbit";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -22,8 +22,8 @@ export const Plain: Story = {
     percentage: 50,
   },
   render: (props) => (
-    <SorbitStatic>
+    <Sorbit>
       <Progress {...props} />
-    </SorbitStatic>
+    </Sorbit>
   ),
 };

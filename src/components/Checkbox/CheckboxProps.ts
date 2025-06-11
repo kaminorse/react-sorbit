@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { ColorName } from "../../common/literalTypes";
 import { BaseComponentProps } from "../../common/models";
 
@@ -7,5 +8,5 @@ export default interface CheckboxProps
     HTMLInputElement
   >, BaseComponentProps {
   colorName?: ColorName;
-  text?: string | JSX.Element;
+  text?: string | ReactNode;
 }

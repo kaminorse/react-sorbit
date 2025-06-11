@@ -1,8 +1,12 @@
-import { classNameUtility } from "../../utilities";
+"use client";
+import { useMemo } from "react";
+import classNameUtility from "../../utilities/classNameUtility";
+import emotionCssUtility from "../../utilities/emotionCssUtility";
 import classNames from "./Checkbox.module.scss";
 import CheckboxProps from "./CheckboxProps";
 
-export default function Checkbox(props: CheckboxProps): JSX.Element {
+/** @deprecated */
+export default function Checkbox(props: CheckboxProps) {
   const assignedProps = { ...props };
   delete assignedProps["colorName"];
   delete assignedProps["text"];
@@ -12,15 +16,48 @@ export default function Checkbox(props: CheckboxProps): JSX.Element {
   delete assignedProps["border"];
   delete assignedProps["highlighter"];
   delete assignedProps["spacing"];
+  delete assignedProps["css"];
   //#endregion BaseComponentProps
 
   const assignedClassNames = [classNames["checkbox"]];
-  props.colorName && assignedClassNames.push(classNames[`is-${props.colorName}`]);
-  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
-  props.className && assignedClassNames.push(props.className);
+  props.colorName &&
+    assignedClassNames.push(classNames[`is-${props.colorName}`]);
+
+  const utilityClassNames = useMemo(() => {
+    return classNameUtility.getUtilityClassNames({
+      fore: props.fore,
+      back: props.back,
+      border: props.border,
+      highlighter: props.highlighter,
+      spacing: props.spacing,
+    });
+  }, [props.fore, props.back, props.border, props.highlighter, props.spacing]);
+  assignedClassNames.push(...utilityClassNames);
+
+  if (props.className) {
+    assignedClassNames.push(props.className);
+  }
+
+  const css = useMemo(() => {
+    return emotionCssUtility.getEmotionCss({
+      fore: props.fore,
+      back: props.back,
+      border: props.border,
+      highlighter: props.highlighter,
+      spacing: props.spacing,
+      css: props.css,
+    });
+  }, [
+    props.fore,
+    props.back,
+    props.border,
+    props.highlighter,
+    props.spacing,
+    props.css,
+  ]);
 
   return (
-    <span id={props.id} className={assignedClassNames.join(" ")}>
+    <span id={props.id} className={assignedClassNames.join(" ")} css={css}>
       <input
         {...assignedProps}
         id={`${props.id ? props.id : ""}-input`}

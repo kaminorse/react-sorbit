@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import Checkbox from "./Checkbox";
-import { SorbitStatic } from "../../base/SorbitStatic";
+import Sorbit from "../../base/Sorbit";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -31,8 +31,8 @@ export const Plain: Story = {
     colorName: undefined,
   },
   render: (props) => (
-    <SorbitStatic>
+    <Sorbit>
       <Checkbox {...props} />
-    </SorbitStatic>
+    </Sorbit>
   ),
 };

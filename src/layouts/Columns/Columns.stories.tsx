@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import Columns from "./Columns";
-import { SorbitStatic } from "../../base/SorbitStatic";
-import { Column } from ".";
+import Sorbit from "../../base/Sorbit";
+import { Column } from "../Column";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -21,7 +21,7 @@ export const AllAuto: Story = {
   args: {
   },
   render: (props) => (
-    <SorbitStatic>
+    <Sorbit>
       <Columns {...props}>
         <Column>
           {"Column1"}
@@ -60,7 +60,7 @@ export const AllAuto: Story = {
           {"Column12"}
         </Column>
       </Columns>
-    </SorbitStatic>
+    </Sorbit>
   ),
 };
 
@@ -68,7 +68,7 @@ export const TabletOrLess: Story = {
   args: {
   },
   render: (props) => (
-    <SorbitStatic>
+    <Sorbit>
       <Columns {...props}>
         <Column sizeTabletOrLess={12}>
           {"Column1"}
@@ -107,7 +107,7 @@ export const TabletOrLess: Story = {
           {"Column12"}
         </Column>
       </Columns>
-    </SorbitStatic>
+    </Sorbit>
   ),
 };
 
@@ -115,7 +115,7 @@ export const Tablet6Mobile12: Story = {
   args: {
   },
   render: (props) => (
-    <SorbitStatic>
+    <Sorbit>
       <Columns {...props}>
         <Column sizeTablet={6} sizeMobile={12}>
           {"Column1"}
@@ -154,6 +154,6 @@ export const Tablet6Mobile12: Story = {
           {"Column12"}
         </Column>
       </Columns>
-    </SorbitStatic>
+    </Sorbit>
   ),
 };

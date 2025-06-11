@@ -1,12 +1,18 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import Sorbit from "./Sorbit";
 import {
+  Angle,
   Button,
+  ColorName,
   Div,
+  Gradation,
   Message,
   MessageBody,
   MessageHeader,
+  Oklch,
+  Percentage,
+  SorbitCssVariable,
 } from "../../react-sorbit";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
@@ -19,6 +25,117 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
+
+type ColorInfo = {
+  name: ColorName;
+  hue: Angle;
+  chroma: number;
+};
+
+const colorChromaGray = 0.02;
+const colorChromaColorful = 0.14;
+
+const colorLightness500 = 61;
+const colorLightnessOffsetLighter = 4;
+const colorLightnessOffsetDarker = 4;
+
+const colorGray: ColorInfo = {
+  name: "gray",
+  hue: 90,
+  chroma: colorChromaGray,
+};
+const colorRed: ColorInfo = {
+  name: "red",
+  hue: 0,
+  chroma: colorChromaColorful,
+};
+const colorOrange: ColorInfo = {
+  name: "orange",
+  hue: 58,
+  chroma: colorChromaColorful,
+};
+
+const colorYellow: ColorInfo = {
+  name: "yellow",
+  hue: 102,
+  chroma: colorChromaColorful,
+};
+
+const colorGreen: ColorInfo = {
+  name: "green",
+  hue: 132,
+  chroma: colorChromaColorful,
+};
+
+const colorCyan: ColorInfo = {
+  name: "cyan",
+  hue: 212,
+  chroma: colorChromaColorful,
+};
+
+const colorBlue: ColorInfo = {
+  name: "blue",
+  hue: 262,
+  chroma: colorChromaColorful,
+};
+
+const colorViolet: ColorInfo = {
+  name: "violet",
+  hue: 286,
+  chroma: colorChromaColorful,
+};
+
+const colorMagenta: ColorInfo = {
+  name: "magenta",
+  hue: 316,
+  chroma: colorChromaColorful,
+};
+
+function getColorVar(color: ColorInfo): Gradation {
+  let colorVar: Gradation = {};
+  for (let i = 19; i >= 1; i--) {
+    const gradation = i * 50;
+    const chroma = colorChromaColorful;
+
+    const lightness =
+      i < 10
+        ? colorLightness500 - (10 - i) * colorLightnessOffsetDarker
+        : i > 10
+        ? colorLightness500 + (i - 10) * colorLightnessOffsetLighter
+        : colorLightness500;
+
+    const oklch: Oklch = {
+      hue: color.hue,
+      lightness: lightness as Percentage,
+      chroma: color.name === "gray" ? color.chroma : chroma,
+    };
+    colorVar = Object.assign(colorVar, {
+      [gradation]: oklch,
+    });
+  }
+
+  return colorVar;
+}
+
+function genSorbitCssVariable(): SorbitCssVariable {
+  let cssVariableSetting: SorbitCssVariable = {
+    color: {
+      gray: getColorVar(colorGray),
+      red: getColorVar(colorRed),
+      orange: getColorVar(colorOrange),
+      yellow: getColorVar(colorYellow),
+      green: getColorVar(colorGreen),
+      cyan: getColorVar(colorCyan),
+      blue: getColorVar(colorBlue),
+      violet: getColorVar(colorViolet),
+      magenta: getColorVar(colorMagenta),
+    },
+  };
+
+  return cssVariableSetting;
+}
+
+const cssVariableSetting = genSorbitCssVariable();
 
 const elem = (
   <>
@@ -57,12 +174,14 @@ const elem = (
 export const LightTheme: Story = {
   args: {
     colorScheme: "light",
+    cssVariableSetting: cssVariableSetting,
   },
   render: (props) => <Sorbit {...props}>{elem}</Sorbit>,
 };
 export const DarkTheme: Story = {
   args: {
     colorScheme: "dark",
+    cssVariableSetting: cssVariableSetting,
   },
   render: (props) => <Sorbit {...props}>{elem}</Sorbit>,
 };

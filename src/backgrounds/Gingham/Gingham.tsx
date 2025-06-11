@@ -1,8 +1,11 @@
-import { classNameUtility } from "../../utilities";
+"use client";
+import { useMemo } from "react";
+import classNameUtility from "../../utilities/classNameUtility";
+import emotionCssUtility from "../../utilities/emotionCssUtility";
 import classNames from "./Gingham.module.scss";
 import GinghamProps from "./GinghamProps";
 
-export default function Gingham(props: GinghamProps): JSX.Element {
+export default function Gingham(props: GinghamProps) {
   const assignedProps = { ...props };
   delete assignedProps["patternColor"];
   delete assignedProps["degree"];
@@ -13,6 +16,7 @@ export default function Gingham(props: GinghamProps): JSX.Element {
   delete assignedProps["border"];
   delete assignedProps["highlighter"];
   delete assignedProps["spacing"];
+  delete assignedProps["css"];
   //#endregion BaseComponentProps
 
   const assignedClassNames = [classNames["gingham"]];
@@ -22,22 +26,58 @@ export default function Gingham(props: GinghamProps): JSX.Element {
         ? `0${props.patternColor.lightness}`
         : props.patternColor.lightness;
     assignedClassNames.push(
-      classNames[`is-${props.patternColor.name}-${lightness}`],
+      classNames[`is-${props.patternColor.name}-${lightness}`]
     );
   }
 
   if (props.degree) {
-    assignedClassNames.push(
-      classNames[`is-${props.degree}deg`],
-    );
+    assignedClassNames.push(classNames[`is-${props.degree}deg`]);
   }
 
-  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
-  props.className && assignedClassNames.push(props.className);
+  const utilityClassNames = useMemo(() => {
+    return classNameUtility.getUtilityClassNames({
+      fore: props.fore,
+      back: props.back,
+      border: props.border,
+      highlighter: props.highlighter,
+      spacing: props.spacing,
+    });
+  }, [props.fore, props.back, props.border, props.highlighter, props.spacing]);
+  assignedClassNames.push(...utilityClassNames);
+
+  if (props.className) {
+    assignedClassNames.push(props.className);
+  }
+
+  const css = useMemo(() => {
+    return emotionCssUtility.getEmotionCss({
+      fore: props.fore,
+      back: props.back,
+      border: props.border,
+      highlighter: props.highlighter,
+      spacing: props.spacing,
+      css: props.css,
+    });
+  }, [
+    props.fore,
+    props.back,
+    props.border,
+    props.highlighter,
+    props.spacing,
+    props.css,
+  ]);
 
   return props.as ? (
-    <props.as {...assignedProps} className={assignedClassNames.join(" ")} />
+    <props.as
+      {...assignedProps}
+      className={assignedClassNames.join(" ")}
+      css={css}
+    />
   ) : (
-    <div {...assignedProps} className={assignedClassNames.join(" ")} />
+    <div
+      {...assignedProps}
+      className={assignedClassNames.join(" ")}
+      css={css}
+    />
   );
 }

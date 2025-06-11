@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import Message from "./Message";
-import { SorbitStatic } from "../../base/SorbitStatic";
-import MessageHeader from "./MessageHeader";
-import MessageBody from "./MessageBody";
+import Sorbit from "../../base/Sorbit";
+import MessageHeader from "../MessageHeader/MessageHeader";
+import MessageBody from "../MessageBody/MessageBody";
 
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
@@ -24,7 +24,7 @@ export const Plain: Story = {
     colorName: undefined,
   },
   render: (props) => (
-    <SorbitStatic>
+    <Sorbit>
       <Message {...props}>
         <MessageHeader>
           {"Header"}
@@ -33,7 +33,7 @@ export const Plain: Story = {
           {"Body"}
         </MessageBody>
       </Message>
-    </SorbitStatic>
+    </Sorbit>
   ),
 };
 
@@ -42,12 +42,12 @@ export const BodyOnly: Story = {
     colorName: undefined,
   },
   render: (props) => (
-    <SorbitStatic>
+    <Sorbit>
       <Message {...props}>
         <MessageBody>
           {"Body"}
         </MessageBody>
       </Message>
-    </SorbitStatic>
+    </Sorbit>
   ),
 };

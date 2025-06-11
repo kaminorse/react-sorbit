@@ -1,4 +1,7 @@
-import { classNameUtility } from "../../utilities";
+"use client";
+import { useMemo } from "react";
+import classNameUtility from "../../utilities/classNameUtility";
+import emotionCssUtility from "../../utilities/emotionCssUtility";
 import classNames from "./Input.module.scss";
 import InputProps from "./InputProps";
 
@@ -11,13 +14,51 @@ export default function Input(props: InputProps) {
   delete assignedProps["border"];
   delete assignedProps["highlighter"];
   delete assignedProps["spacing"];
+  delete assignedProps["css"];
   //#endregion BaseComponentProps
 
   const assignedClassNames: string[] = [classNames["input"]];
   props.colorName &&
     assignedClassNames.push(classNames[`is-${props.colorName}`]);
-  assignedClassNames.push(...classNameUtility.getUtilityClassNames(props));
-  props.className && assignedClassNames.push(props.className);
 
-  return <input {...assignedProps} className={assignedClassNames.join(" ")} />;
+  const utilityClassNames = useMemo(() => {
+    return classNameUtility.getUtilityClassNames({
+      fore: props.fore,
+      back: props.back,
+      border: props.border,
+      highlighter: props.highlighter,
+      spacing: props.spacing,
+    });
+  }, [props.fore, props.back, props.border, props.highlighter, props.spacing]);
+  assignedClassNames.push(...utilityClassNames);
+
+  if (props.className) {
+    assignedClassNames.push(props.className);
+  }
+
+  const css = useMemo(() => {
+    return emotionCssUtility.getEmotionCss({
+      fore: props.fore,
+      back: props.back,
+      border: props.border,
+      highlighter: props.highlighter,
+      spacing: props.spacing,
+      css: props.css,
+    });
+  }, [
+    props.fore,
+    props.back,
+    props.border,
+    props.highlighter,
+    props.spacing,
+    props.css,
+  ]);
+
+  return (
+    <input
+      {...assignedProps}
+      className={assignedClassNames.join(" ")}
+      css={css}
+    />
+  );
 }

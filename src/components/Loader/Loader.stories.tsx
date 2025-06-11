@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { SorbitStatic } from "../../base/SorbitStatic";
+import Sorbit from "../../base/Sorbit";
 import Loader from "./Loader";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
@@ -21,8 +21,8 @@ export const Plain: Story = {
     colorName: undefined,
   },
   render: (props) => (
-    <SorbitStatic>
+    <Sorbit>
       <Loader {...props} />
-    </SorbitStatic>
+    </Sorbit>
   ),
 };
