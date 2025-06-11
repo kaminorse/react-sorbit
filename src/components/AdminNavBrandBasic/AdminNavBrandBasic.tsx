@@ -1,5 +1,4 @@
 "use client";
-import { useMemo } from "react";
 import classNames from "./AdminNavBrandBasic.module.scss";
 import classNameUtility from "../../utilities/classNameUtility";
 import emotionCssUtility from "../../utilities/emotionCssUtility";
@@ -18,38 +17,29 @@ export default function AdminNavBrandBasic(props: AdminNavBrandBasicProps) {
 
   const assignedClassNames = [classNames["admin-nav-brand-basic"]];
 
-  const utilityClassNames = useMemo(() => {
-    return classNameUtility.getUtilityClassNames({
-      fore: props.fore,
-      back: props.back,
-      border: props.border,
-      highlighter: props.highlighter,
-      spacing: props.spacing,
-    });
-  }, [props.fore, props.back, props.border, props.highlighter, props.spacing]);
-  assignedClassNames.push(...utilityClassNames);
+  const utilityClassNames = classNameUtility.getUtilityClassNames({
+    fore: props.fore,
+    back: props.back,
+    border: props.border,
+    highlighter: props.highlighter,
+    spacing: props.spacing,
+  });
+  if (utilityClassNames) {
+    assignedClassNames.push(...utilityClassNames);
+  }
 
   if (props.className) {
     assignedClassNames.push(props.className);
   }
 
-  const css = useMemo(() => {
-    return emotionCssUtility.getEmotionCss({
-      fore: props.fore,
-      back: props.back,
-      border: props.border,
-      highlighter: props.highlighter,
-      spacing: props.spacing,
-      css: props.css,
-    });
-  }, [
-    props.fore,
-    props.back,
-    props.border,
-    props.highlighter,
-    props.spacing,
-    props.css,
-  ]);
+  const css = emotionCssUtility.getEmotionCss({
+    fore: props.fore,
+    back: props.back,
+    border: props.border,
+    highlighter: props.highlighter,
+    spacing: props.spacing,
+    css: props.css,
+  });
 
   return (
     <div

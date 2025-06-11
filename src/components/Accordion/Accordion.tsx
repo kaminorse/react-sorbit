@@ -1,5 +1,4 @@
 "use client";
-import { useMemo } from "react";
 import classNameUtility from "../../utilities/classNameUtility";
 import emotionCssUtility from "../../utilities/emotionCssUtility";
 import AccordionProps from "./AccordionProps";
@@ -21,38 +20,29 @@ export default function Accordion(props: AccordionProps) {
   props.colorName &&
     assignedClassNames.push(classNames[`is-${props.colorName}`]);
 
-  const utilityClassNames = useMemo(() => {
-    return classNameUtility.getUtilityClassNames({
+  const utilityClassNames = classNameUtility.getUtilityClassNames({
       fore: props.fore,
       back: props.back,
       border: props.border,
       highlighter: props.highlighter,
       spacing: props.spacing,
     });
-  }, [props.fore, props.back, props.border, props.highlighter, props.spacing]);
-  assignedClassNames.push(...utilityClassNames);
+  if (utilityClassNames) {
+    assignedClassNames.push(...utilityClassNames);
+  }
 
   if (props.className) {
     assignedClassNames.push(props.className);
   }
 
-  const css = useMemo(() => {
-    return emotionCssUtility.getEmotionCss({
-      fore: props.fore,
-      back: props.back,
-      border: props.border,
-      highlighter: props.highlighter,
-      spacing: props.spacing,
-      css: props.css,
-    });
-  }, [
-    props.fore,
-    props.back,
-    props.border,
-    props.highlighter,
-    props.spacing,
-    props.css,
-  ]);
+  const css = emotionCssUtility.getEmotionCss({
+    fore: props.fore,
+    back: props.back,
+    border: props.border,
+    highlighter: props.highlighter,
+    spacing: props.spacing,
+    css: props.css,
+  });
 
   return (
     <details
