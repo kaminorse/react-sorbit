@@ -9,15 +9,17 @@ import preserveDirectives from "rollup-preserve-directives";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react({
-    jsxImportSource: "@emotion/react",
-  }), libInjectCss(), dts({ include: ["src"] })],
+  plugins: [
+    react({
+      jsxImportSource: "@emotion/react",
+    }),
+    libInjectCss(),
+    dts({ include: ["src"] }),
+  ],
   css: {
     modules: {
       globalModulePaths: [
         /.*\/src\/base\/Sorbit\/.*/,
-        /.*\/src\/base\/SorbitCssVariableStylesProvider\/.*/,
-        /.*\/src\/base\/SorbitCssVariableStylesProviderStatic\/.*/,
         /.*\/src\/base\/SorbitClient\/.*/,
       ],
     },
@@ -39,11 +41,13 @@ export default defineConfig({
     sourcemap: true,
     rollupOptions: {
       plugins: [preserveDirectives()],
-      external: ["react",
+      external: [
+        "react",
         "react/jsx-runtime",
         "@emotion/react",
         "@emotion/react/jsx-runtime",
-        "lodash",],
+        "lodash",
+      ],
       input: Object.fromEntries(
         glob
           .sync("src/**/*!(*.d).{ts,tsx}", {
