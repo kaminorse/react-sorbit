@@ -1,8 +1,9 @@
+"use client";
+import { useMemo } from "react";
 import classNameUtility from "../../utilities/classNameUtility";
 import emotionCssUtility from "../../utilities/emotionCssUtility";
 import ColumnProps from "../Column/ColumnProps";
 import classNames from "./Column.module.scss";
-import { useMemo } from "react";
 
 export default function Column(props: ColumnProps) {
   const assignedProps = { ...props };

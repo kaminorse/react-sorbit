@@ -1,3 +1,4 @@
+"use client";
 import { useMemo } from "react";
 import classNameUtility from "../../utilities/classNameUtility";
 import emotionCssUtility from "../../utilities/emotionCssUtility";

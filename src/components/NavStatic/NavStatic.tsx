@@ -1,8 +1,9 @@
+"use client";
+import { useMemo } from "react";
 import classNameUtility from "../../utilities/classNameUtility";
 import emotionCssUtility from "../../utilities/emotionCssUtility";
 import classNames from "./NavStatic.module.scss";
 import NavStaticProps from "./NavStaticProps";
-import { useMemo } from "react";
 
 export default function NavStatic(props: NavStaticProps) {
   const assignedProps = { ...props };

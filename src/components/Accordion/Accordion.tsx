@@ -1,8 +1,9 @@
+"use client";
+import { useMemo } from "react";
 import classNameUtility from "../../utilities/classNameUtility";
 import emotionCssUtility from "../../utilities/emotionCssUtility";
 import AccordionProps from "./AccordionProps";
 import classNames from "./Accordion.module.scss";
-import { useMemo } from "react";
 
 export default function Accordion(props: AccordionProps) {
   const assignedProps = { ...props };

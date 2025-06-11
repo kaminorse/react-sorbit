@@ -1,6 +1,6 @@
 
 "use client";
-import useSorbitCustomTheme from "../../hooks/useSorbitCustomTheme/useSorbitCustomTheme";
+import useSorbitCustomTheme from "../../hooks/useSorbitCustomTheme";
 import { Soroot } from "../Soroot";
 import "./Sorbit.scss";
 import SorbitProps from "./SorbitProps";

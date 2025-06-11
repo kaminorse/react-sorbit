@@ -1,8 +1,9 @@
+"use client";
+import { useMemo } from "react";
 import classNameUtility from "../../utilities/classNameUtility";
 import emotionCssUtility from "../../utilities/emotionCssUtility";
-import AdminProps from "./AdminProps";
 import classNames from "./Admin.module.scss";
-import { useMemo } from "react";
+import AdminProps from "./AdminProps";
 
 export default function Admin(props: AdminProps) {
   const assignedProps = { ...props };

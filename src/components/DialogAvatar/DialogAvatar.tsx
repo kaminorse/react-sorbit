@@ -1,8 +1,9 @@
+"use client";
+import { useMemo } from "react";
 import classNameUtility from "../../utilities/classNameUtility";
 import emotionCssUtility from "../../utilities/emotionCssUtility";
-import DialogAvatarProps from "./DialogAvatarProps";
 import classNames from "./DialogAvatar.module.scss";
-import { useMemo } from "react";
+import DialogAvatarProps from "./DialogAvatarProps";
 
 export default function DialogAvatar(
   props: DialogAvatarProps

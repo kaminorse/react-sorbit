@@ -1,8 +1,9 @@
+"use client";
+import { useMemo } from "react";
 import classNameUtility from "../../utilities/classNameUtility";
 import emotionCssUtility from "../../utilities/emotionCssUtility";
-import DialogNameProps from "./DialogNameProps";
 import classNames from "./DialogName.module.scss";
-import { useMemo } from "react";
+import DialogNameProps from "./DialogNameProps";
 
 export default function DialogName(props: DialogNameProps): React.ReactElement {
   const assignedProps = { ...props };

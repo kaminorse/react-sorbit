@@ -1,8 +1,9 @@
+"use client";
+import { useMemo } from "react";
 import classNameUtility from "../../utilities/classNameUtility";
 import emotionCssUtility from "../../utilities/emotionCssUtility";
-import DialogMessageProps from "./DialogMessageProps";
 import classNames from "./DialogMessage.module.scss";
-import { useMemo } from "react";
+import DialogMessageProps from "./DialogMessageProps";
 
 export default function DialogMessage(
   props: DialogMessageProps

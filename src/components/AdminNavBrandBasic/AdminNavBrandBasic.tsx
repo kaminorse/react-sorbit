@@ -1,8 +1,9 @@
+"use client";
+import { useMemo } from "react";
 import classNames from "./AdminNavBrandBasic.module.scss";
 import classNameUtility from "../../utilities/classNameUtility";
 import emotionCssUtility from "../../utilities/emotionCssUtility";
 import AdminNavBrandBasicProps from "./AdminNavBrandBasicProps";
-import { useMemo } from "react";
 
 export default function AdminNavBrandBasic(props: AdminNavBrandBasicProps) {
   const assignedProps = { ...props };

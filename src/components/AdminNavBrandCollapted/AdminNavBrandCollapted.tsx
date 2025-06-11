@@ -1,8 +1,9 @@
+"use client";
+import { useMemo } from "react";
 import classNames from "./AdminNavBrandCollapted.module.scss";
 import classNameUtility from "../../utilities/classNameUtility";
 import emotionCssUtility from "../../utilities/emotionCssUtility";
 import AdminNavBrandCollaptedProps from "./AdminNavBrandCollaptedProps";
-import { useMemo } from "react";
 
 export default function AdminNavBrandCollapted(
   props: AdminNavBrandCollaptedProps

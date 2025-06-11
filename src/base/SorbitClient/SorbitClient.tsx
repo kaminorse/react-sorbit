@@ -1,7 +1,8 @@
+"use client";
 import { Soroot } from "../Soroot";
 import "./SorbitClient.scss";
 import SorbitClientProps from "./SorbitClientProps";
-import useSorbitCustomTheme from "../../hooks/useSorbitCustomTheme/useSorbitCustomTheme";
+import useSorbitCustomTheme from "../../hooks/useSorbitCustomTheme";
 
 /** @deprecated */
 export default function SorbitClient(props: SorbitClientProps) {

@@ -1,8 +1,9 @@
-import ColumnsProps from "./ColumnsProps";
-import classNames from "./Columns.module.scss";
+"use client";
+import { useMemo } from "react";
 import classNameUtility from "../../utilities/classNameUtility";
 import emotionCssUtility from "../../utilities/emotionCssUtility";
-import { useMemo } from "react";
+import classNames from "./Columns.module.scss";
+import ColumnsProps from "./ColumnsProps";
 
 export default function Columns(props: ColumnsProps) {
   const assignedProps = { ...props };
