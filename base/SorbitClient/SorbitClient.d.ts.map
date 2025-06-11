@@ -1,1 +1,1 @@
-{"version":3,"file":"SorbitClient.d.ts","sourceRoot":"","sources":["../../../src/base/SorbitClient/SorbitClient.tsx"],"names":[],"mappings":"AAEA,OAAO,qBAAqB,CAAC;AAC7B,OAAO,iBAAiB,MAAM,qBAAqB,CAAC;AAGpD,kBAAkB;AAClB,MAAM,CAAC,OAAO,UAAU,YAAY,CAAC,KAAK,EAAE,iBAAiB,oDAO5D"}
+{"version":3,"file":"SorbitClient.d.ts","sourceRoot":"","sources":["../../../src/base/SorbitClient/SorbitClient.tsx"],"names":[],"mappings":"AAIA,OAAO,qBAAqB,CAAC;AAC7B,OAAO,iBAAiB,MAAM,qBAAqB,CAAC;AAEpD,kBAAkB;AAClB,MAAM,CAAC,OAAO,UAAU,YAAY,CAAC,KAAK,EAAE,iBAAiB,oDAuB5D"}

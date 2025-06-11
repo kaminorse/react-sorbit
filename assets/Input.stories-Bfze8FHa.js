@@ -1,0 +1,3897 @@
+import{c as q,e as f,j as l}from"./Soroot-C-L6Uvf_.js";import{r as v}from"./iframe-BWCPAnsA.js";import{S as m}from"./Sorbit-M2DTbUzt.js";import"./jsx-runtime-D_zvdyIk.js";const A="_input_1a3li_1",o={input:A,"input-color":"_input-color_1a3li_1","input-text":"_input-text_1a3li_1","input-checkbox":"_input-checkbox_1a3li_1","input-radio":"_input-radio_1a3li_1","is-focus":"_is-focus_1a3li_43","is-focused":"_is-focused_1a3li_43","is-disabled":"_is-disabled_1a3li_52","is-gray":"_is-gray_1a3li_56","is-red":"_is-red_1a3li_77","is-orange":"_is-orange_1a3li_98","is-yellow":"_is-yellow_1a3li_119","is-green":"_is-green_1a3li_140","is-cyan":"_is-cyan_1a3li_161","is-blue":"_is-blue_1a3li_182","is-violet":"_is-violet_1a3li_203","is-magenta":"_is-magenta_1a3li_224"};function n(e){const a={...e};delete a.colorName,delete a.fore,delete a.back,delete a.border,delete a.highlighter,delete a.spacing,delete a.css;const r=[o.input];e.colorName&&r.push(o[`is-${e.colorName}`]);const k=v.useMemo(()=>q.getUtilityClassNames({fore:e.fore,back:e.back,border:e.border,highlighter:e.highlighter,spacing:e.spacing}),[e.fore,e.back,e.border,e.highlighter,e.spacing]);r.push(...k),e.className&&r.push(e.className);const C=v.useMemo(()=>f.getEmotionCss({fore:e.fore,back:e.back,border:e.border,highlighter:e.highlighter,spacing:e.spacing,css:e.css}),[e.fore,e.back,e.border,e.highlighter,e.spacing,e.css]);return l("input",{...a,className:r.join(" "),css:C})}n.__docgenInfo={description:"",methods:[],displayName:"Input",props:{fore:{required:!1,tsType:{name:"signature",type:"object",raw:`{
+  color?: ColorProps;
+  fontSize?: FontSize;
+  fontWeight?: FontWeight;
+  isItalic?: boolean;
+}`,signature:{properties:[{key:"color",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+  light?: {
+    default?: ColorAttributes;
+    hover?: ColorAttributes;
+    focus?: ColorAttributes;
+    active?: ColorAttributes;
+    disabled?: ColorAttributes;
+  };
+  dark?: {
+    default?: ColorAttributes;
+    hover?: ColorAttributes;
+    focus?: ColorAttributes;
+    active?: ColorAttributes;
+    disabled?: ColorAttributes;
+  };
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"light",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}}]},required:!1}},{key:"dark",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}}]},required:!1}}]},required:!1}},{key:"fontSize",value:{name:"union",raw:`| "small"
+| "normal"
+| "medium"
+| "large"
+| "xlarge"
+| "xxlarge"
+| "xxxlarge"
+| "xxxxlarge"
+| "xxxxxlarge"`,elements:[{name:"literal",value:'"small"'},{name:"literal",value:'"normal"'},{name:"literal",value:'"medium"'},{name:"literal",value:'"large"'},{name:"literal",value:'"xlarge"'},{name:"literal",value:'"xxlarge"'},{name:"literal",value:'"xxxlarge"'},{name:"literal",value:'"xxxxlarge"'},{name:"literal",value:'"xxxxxlarge"'}],required:!1}},{key:"fontWeight",value:{name:"union",raw:'"light" | "normal" | "medium" | "semibold" | "bold"',elements:[{name:"literal",value:'"light"'},{name:"literal",value:'"normal"'},{name:"literal",value:'"medium"'},{name:"literal",value:'"semibold"'},{name:"literal",value:'"bold"'}],required:!1}},{key:"isItalic",value:{name:"boolean",required:!1}}]}},description:""},back:{required:!1,tsType:{name:"signature",type:"object",raw:`{
+  color?: ColorProps;
+}`,signature:{properties:[{key:"color",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+  light?: {
+    default?: ColorAttributes;
+    hover?: ColorAttributes;
+    focus?: ColorAttributes;
+    active?: ColorAttributes;
+    disabled?: ColorAttributes;
+  };
+  dark?: {
+    default?: ColorAttributes;
+    hover?: ColorAttributes;
+    focus?: ColorAttributes;
+    active?: ColorAttributes;
+    disabled?: ColorAttributes;
+  };
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"light",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}}]},required:!1}},{key:"dark",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}}]},required:!1}}]},required:!1}}]}},description:""},highlighter:{required:!1,tsType:{name:"signature",type:"object",raw:`{
+  color?: ColorProps;
+}`,signature:{properties:[{key:"color",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+  light?: {
+    default?: ColorAttributes;
+    hover?: ColorAttributes;
+    focus?: ColorAttributes;
+    active?: ColorAttributes;
+    disabled?: ColorAttributes;
+  };
+  dark?: {
+    default?: ColorAttributes;
+    hover?: ColorAttributes;
+    focus?: ColorAttributes;
+    active?: ColorAttributes;
+    disabled?: ColorAttributes;
+  };
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"light",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}}]},required:!1}},{key:"dark",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}}]},required:!1}}]},required:!1}}]}},description:""},border:{required:!1,tsType:{name:"signature",type:"object",raw:`{
+  color?: ColorProps;
+  collapse?: BorderCollapse;
+  radius?: BorderRadius;
+  style: BorderStyle;
+  width?: BorderWidth;
+  top?: BorderDetailProps;
+  bottom?: BorderDetailProps;
+  left?: BorderDetailProps;
+  right?: BorderDetailProps;
+}`,signature:{properties:[{key:"color",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+  light?: {
+    default?: ColorAttributes;
+    hover?: ColorAttributes;
+    focus?: ColorAttributes;
+    active?: ColorAttributes;
+    disabled?: ColorAttributes;
+  };
+  dark?: {
+    default?: ColorAttributes;
+    hover?: ColorAttributes;
+    focus?: ColorAttributes;
+    active?: ColorAttributes;
+    disabled?: ColorAttributes;
+  };
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"light",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}}]},required:!1}},{key:"dark",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}}]},required:!1}}]},required:!1}},{key:"collapse",value:{name:"union",raw:'"collapted" | "sepalated"',elements:[{name:"literal",value:'"collapted"'},{name:"literal",value:'"sepalated"'}],required:!1}},{key:"radius",value:{name:"union",raw:'"small" | "circle" | "large" | "medium" | "pill"',elements:[{name:"literal",value:'"small"'},{name:"literal",value:'"circle"'},{name:"literal",value:'"large"'},{name:"literal",value:'"medium"'},{name:"literal",value:'"pill"'}],required:!1}},{key:"style",value:{name:"union",raw:`| "dashed"
+| "dotted"
+| "solid"`,elements:[{name:"literal",value:'"dashed"'},{name:"literal",value:'"dotted"'},{name:"literal",value:'"solid"'}],required:!0}},{key:"width",value:{name:"union",raw:`| "thick"
+| "thin"
+| "medium"
+| "xthick"
+| "xthin"`,elements:[{name:"literal",value:'"thick"'},{name:"literal",value:'"thin"'},{name:"literal",value:'"medium"'},{name:"literal",value:'"xthick"'},{name:"literal",value:'"xthin"'}],required:!1}},{key:"top",value:{name:"signature",type:"object",raw:`{
+  color?: ColorProps;
+  style: BorderStyle;
+  width?: BorderWidth;
+}`,signature:{properties:[{key:"color",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+  light?: {
+    default?: ColorAttributes;
+    hover?: ColorAttributes;
+    focus?: ColorAttributes;
+    active?: ColorAttributes;
+    disabled?: ColorAttributes;
+  };
+  dark?: {
+    default?: ColorAttributes;
+    hover?: ColorAttributes;
+    focus?: ColorAttributes;
+    active?: ColorAttributes;
+    disabled?: ColorAttributes;
+  };
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"light",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}}]},required:!1}},{key:"dark",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}}]},required:!1}}]},required:!1}},{key:"style",value:{name:"union",raw:`| "dashed"
+| "dotted"
+| "solid"`,elements:[{name:"literal",value:'"dashed"'},{name:"literal",value:'"dotted"'},{name:"literal",value:'"solid"'}],required:!0}},{key:"width",value:{name:"union",raw:`| "thick"
+| "thin"
+| "medium"
+| "xthick"
+| "xthin"`,elements:[{name:"literal",value:'"thick"'},{name:"literal",value:'"thin"'},{name:"literal",value:'"medium"'},{name:"literal",value:'"xthick"'},{name:"literal",value:'"xthin"'}],required:!1}}]},required:!1}},{key:"bottom",value:{name:"signature",type:"object",raw:`{
+  color?: ColorProps;
+  style: BorderStyle;
+  width?: BorderWidth;
+}`,signature:{properties:[{key:"color",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+  light?: {
+    default?: ColorAttributes;
+    hover?: ColorAttributes;
+    focus?: ColorAttributes;
+    active?: ColorAttributes;
+    disabled?: ColorAttributes;
+  };
+  dark?: {
+    default?: ColorAttributes;
+    hover?: ColorAttributes;
+    focus?: ColorAttributes;
+    active?: ColorAttributes;
+    disabled?: ColorAttributes;
+  };
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"light",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}}]},required:!1}},{key:"dark",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}}]},required:!1}}]},required:!1}},{key:"style",value:{name:"union",raw:`| "dashed"
+| "dotted"
+| "solid"`,elements:[{name:"literal",value:'"dashed"'},{name:"literal",value:'"dotted"'},{name:"literal",value:'"solid"'}],required:!0}},{key:"width",value:{name:"union",raw:`| "thick"
+| "thin"
+| "medium"
+| "xthick"
+| "xthin"`,elements:[{name:"literal",value:'"thick"'},{name:"literal",value:'"thin"'},{name:"literal",value:'"medium"'},{name:"literal",value:'"xthick"'},{name:"literal",value:'"xthin"'}],required:!1}}]},required:!1}},{key:"left",value:{name:"signature",type:"object",raw:`{
+  color?: ColorProps;
+  style: BorderStyle;
+  width?: BorderWidth;
+}`,signature:{properties:[{key:"color",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+  light?: {
+    default?: ColorAttributes;
+    hover?: ColorAttributes;
+    focus?: ColorAttributes;
+    active?: ColorAttributes;
+    disabled?: ColorAttributes;
+  };
+  dark?: {
+    default?: ColorAttributes;
+    hover?: ColorAttributes;
+    focus?: ColorAttributes;
+    active?: ColorAttributes;
+    disabled?: ColorAttributes;
+  };
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"light",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}}]},required:!1}},{key:"dark",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}}]},required:!1}}]},required:!1}},{key:"style",value:{name:"union",raw:`| "dashed"
+| "dotted"
+| "solid"`,elements:[{name:"literal",value:'"dashed"'},{name:"literal",value:'"dotted"'},{name:"literal",value:'"solid"'}],required:!0}},{key:"width",value:{name:"union",raw:`| "thick"
+| "thin"
+| "medium"
+| "xthick"
+| "xthin"`,elements:[{name:"literal",value:'"thick"'},{name:"literal",value:'"thin"'},{name:"literal",value:'"medium"'},{name:"literal",value:'"xthick"'},{name:"literal",value:'"xthin"'}],required:!1}}]},required:!1}},{key:"right",value:{name:"signature",type:"object",raw:`{
+  color?: ColorProps;
+  style: BorderStyle;
+  width?: BorderWidth;
+}`,signature:{properties:[{key:"color",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+  light?: {
+    default?: ColorAttributes;
+    hover?: ColorAttributes;
+    focus?: ColorAttributes;
+    active?: ColorAttributes;
+    disabled?: ColorAttributes;
+  };
+  dark?: {
+    default?: ColorAttributes;
+    hover?: ColorAttributes;
+    focus?: ColorAttributes;
+    active?: ColorAttributes;
+    disabled?: ColorAttributes;
+  };
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"light",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}}]},required:!1}},{key:"dark",value:{name:"signature",type:"object",raw:`{
+  default?: ColorAttributes;
+  hover?: ColorAttributes;
+  focus?: ColorAttributes;
+  active?: ColorAttributes;
+  disabled?: ColorAttributes;
+}`,signature:{properties:[{key:"default",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"hover",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"focus",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"active",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}},{key:"disabled",value:{name:"signature",type:"object",raw:`{
+  name: ColorName;
+  lightness: ColorLightness;
+}`,signature:{properties:[{key:"name",value:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}],required:!0}},{key:"lightness",value:{name:"union",raw:`| 50
+| 100
+| 150
+| 200
+| 250
+| 300
+| 350
+| 400
+| 450
+| 500
+| 550
+| 600
+| 650
+| 700
+| 750
+| 800
+| 850
+| 900
+| 950`,elements:[{name:"literal",value:"50"},{name:"literal",value:"100"},{name:"literal",value:"150"},{name:"literal",value:"200"},{name:"literal",value:"250"},{name:"literal",value:"300"},{name:"literal",value:"350"},{name:"literal",value:"400"},{name:"literal",value:"450"},{name:"literal",value:"500"},{name:"literal",value:"550"},{name:"literal",value:"600"},{name:"literal",value:"650"},{name:"literal",value:"700"},{name:"literal",value:"750"},{name:"literal",value:"800"},{name:"literal",value:"850"},{name:"literal",value:"900"},{name:"literal",value:"950"}],required:!0}}]},required:!1}}]},required:!1}}]},required:!1}},{key:"style",value:{name:"union",raw:`| "dashed"
+| "dotted"
+| "solid"`,elements:[{name:"literal",value:'"dashed"'},{name:"literal",value:'"dotted"'},{name:"literal",value:'"solid"'}],required:!0}},{key:"width",value:{name:"union",raw:`| "thick"
+| "thin"
+| "medium"
+| "xthick"
+| "xthin"`,elements:[{name:"literal",value:'"thick"'},{name:"literal",value:'"thin"'},{name:"literal",value:'"medium"'},{name:"literal",value:'"xthick"'},{name:"literal",value:'"xthin"'}],required:!1}}]},required:!1}}]}},description:""},spacing:{required:!1,tsType:{name:"signature",type:"object",raw:`{
+  margin?:
+    | {
+        x?: number | string;
+        y?: number | string;
+        top?: number | string;
+        left?: number | string;
+        bottom?: number | string;
+        right?: number | string;
+      }
+    | number
+    | string;
+  padding?:
+    | {
+        x?: number | string;
+        y?: number | string;
+        top?: number | string;
+        left?: number | string;
+        bottom?: number | string;
+        right?: number | string;
+      }
+    | number
+    | string;
+}`,signature:{properties:[{key:"margin",value:{name:"union",raw:`| {
+    x?: number | string;
+    y?: number | string;
+    top?: number | string;
+    left?: number | string;
+    bottom?: number | string;
+    right?: number | string;
+  }
+| number
+| string`,elements:[{name:"signature",type:"object",raw:`{
+  x?: number | string;
+  y?: number | string;
+  top?: number | string;
+  left?: number | string;
+  bottom?: number | string;
+  right?: number | string;
+}`,signature:{properties:[{key:"x",value:{name:"union",raw:"number | string",elements:[{name:"number"},{name:"string"}],required:!1}},{key:"y",value:{name:"union",raw:"number | string",elements:[{name:"number"},{name:"string"}],required:!1}},{key:"top",value:{name:"union",raw:"number | string",elements:[{name:"number"},{name:"string"}],required:!1}},{key:"left",value:{name:"union",raw:"number | string",elements:[{name:"number"},{name:"string"}],required:!1}},{key:"bottom",value:{name:"union",raw:"number | string",elements:[{name:"number"},{name:"string"}],required:!1}},{key:"right",value:{name:"union",raw:"number | string",elements:[{name:"number"},{name:"string"}],required:!1}}]}},{name:"number"},{name:"string"}],required:!1}},{key:"padding",value:{name:"union",raw:`| {
+    x?: number | string;
+    y?: number | string;
+    top?: number | string;
+    left?: number | string;
+    bottom?: number | string;
+    right?: number | string;
+  }
+| number
+| string`,elements:[{name:"signature",type:"object",raw:`{
+  x?: number | string;
+  y?: number | string;
+  top?: number | string;
+  left?: number | string;
+  bottom?: number | string;
+  right?: number | string;
+}`,signature:{properties:[{key:"x",value:{name:"union",raw:"number | string",elements:[{name:"number"},{name:"string"}],required:!1}},{key:"y",value:{name:"union",raw:"number | string",elements:[{name:"number"},{name:"string"}],required:!1}},{key:"top",value:{name:"union",raw:"number | string",elements:[{name:"number"},{name:"string"}],required:!1}},{key:"left",value:{name:"union",raw:"number | string",elements:[{name:"number"},{name:"string"}],required:!1}},{key:"bottom",value:{name:"union",raw:"number | string",elements:[{name:"number"},{name:"string"}],required:!1}},{key:"right",value:{name:"union",raw:"number | string",elements:[{name:"number"},{name:"string"}],required:!1}}]}},{name:"number"},{name:"string"}],required:!1}}]}},description:""},css:{required:!1,tsType:{name:"Interpolation",elements:[{name:"Theme"}],raw:"Interpolation<Theme>"},description:""},colorName:{required:!1,tsType:{name:"union",raw:`| "gray"
+| "red"
+| "orange"
+| "yellow"
+| "green"
+| "cyan"
+| "blue"
+| "violet"
+| "magenta"`,elements:[{name:"literal",value:'"gray"'},{name:"literal",value:'"red"'},{name:"literal",value:'"orange"'},{name:"literal",value:'"yellow"'},{name:"literal",value:'"green"'},{name:"literal",value:'"cyan"'},{name:"literal",value:'"blue"'},{name:"literal",value:'"violet"'},{name:"literal",value:'"magenta"'}]},description:""}}};const _={title:"Components/Input",component:n,tags:["autodocs"],argTypes:{disabled:{type:"boolean"}}},t={args:{colorName:void 0,type:"text"},render:e=>l(m,{children:l(n,{...e})})},i={args:{colorName:void 0,type:"checkbox"},render:e=>l(m,{children:l(n,{...e})})},u={args:{colorName:void 0,type:"radio"},render:e=>l(m,{children:l(n,{...e})})};var s,g,y;t.parameters={...t.parameters,docs:{...(s=t.parameters)==null?void 0:s.docs,source:{originalSource:`{
+  args: {
+    colorName: undefined,
+    type: "text"
+  },
+  render: props => <Sorbit>
+      <Input {...props} />
+    </Sorbit>
+}`,...(y=(g=t.parameters)==null?void 0:g.docs)==null?void 0:y.source}}};var d,b,w;i.parameters={...i.parameters,docs:{...(d=i.parameters)==null?void 0:d.docs,source:{originalSource:`{
+  args: {
+    colorName: undefined,
+    type: "checkbox"
+  },
+  render: props => <Sorbit>
+      <Input {...props} />
+    </Sorbit>
+}`,...(w=(b=i.parameters)==null?void 0:b.docs)==null?void 0:w.source}}};var c,h,p;u.parameters={...u.parameters,docs:{...(c=u.parameters)==null?void 0:c.docs,source:{originalSource:`{
+  args: {
+    colorName: undefined,
+    type: "radio"
+  },
+  render: props => <Sorbit>
+      <Input {...props} />
+    </Sorbit>
+}`,...(p=(h=u.parameters)==null?void 0:h.docs)==null?void 0:p.source}}};const S=["PlainText","PlainCheckbox","PlainRadio"];export{i as PlainCheckbox,u as PlainRadio,t as PlainText,S as __namedExportsOrder,_ as default};
