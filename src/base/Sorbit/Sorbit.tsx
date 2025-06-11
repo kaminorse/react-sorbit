@@ -1,19 +1,20 @@
-import SorbitCssVariableStylesProvider from "../SorbitCssVariableStylesProvider/SorbitCssVariableStylesProvider";
+
+"use client";
+import useSorbitCustomTheme from "../../hooks/useSorbitCustomTheme/useSorbitCustomTheme";
 import { Soroot } from "../Soroot";
 import "./Sorbit.scss";
 import SorbitProps from "./SorbitProps";
 
+/**
+ *
+ * @param props
+ * @returns
+ */
 export default function Sorbit(props: SorbitProps) {
   const assignedProps = { ...props };
   delete assignedProps["cssVariableSetting"];
 
-  return (
-    <>
-      <SorbitCssVariableStylesProvider
-        cssVariableSetting={props.cssVariableSetting}
-      >
-        <Soroot {...assignedProps} />
-      </SorbitCssVariableStylesProvider>
-    </>
-  );
+  useSorbitCustomTheme(props.cssVariableSetting);
+
+  return <Soroot {...assignedProps} />;
 }

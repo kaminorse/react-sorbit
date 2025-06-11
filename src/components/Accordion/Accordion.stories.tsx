@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import Accordion from "./Accordion";
-import { SorbitStatic } from "../../base/SorbitStatic";
-import AccordionSummary from "./AccordionSummary";
-import AccordionDetails from "./AccordionDetails";
+import Sorbit from "../../base/Sorbit";
+import AccordionSummary from "../AccordionSummary/AccordionSummary";
+import AccordionDetails from "../AccordionDetails/AccordionDetails";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -22,7 +22,7 @@ export const Plain: Story = {
   args: {
   },
   render: (props) => (
-    <SorbitStatic>
+    <Sorbit>
       <Accordion {...props}>
         <AccordionSummary>
           {"AccordionSummary"}
@@ -31,6 +31,6 @@ export const Plain: Story = {
           {"AccordionDetails"}
         </AccordionDetails>
       </Accordion>
-    </SorbitStatic>
+    </Sorbit>
   ),
 };

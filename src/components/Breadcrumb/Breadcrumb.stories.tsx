@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { SorbitStatic } from "../../base/SorbitStatic";
+import Sorbit from "../../base/Sorbit";
 import Breadcrumb from "./Breadcrumb";
-import BreadcrumbItem from "./BreadcrumbItem";
-import BreadcrumbWrapper from "./BreadcrumbWrapper";
+import BreadcrumbItem from "../BreadcrumbItem";
+import BreadcrumbWrapper from "../BreadcrumbWrapper";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -20,7 +20,7 @@ type Story = StoryObj<typeof meta>;
 export const Plain: Story = {
   args: {},
   render: (props) => (
-    <SorbitStatic>
+    <Sorbit>
       <BreadcrumbWrapper>
         <Breadcrumb {...props}>
           <BreadcrumbItem>{"sorbit"}</BreadcrumbItem>
@@ -28,6 +28,6 @@ export const Plain: Story = {
           <BreadcrumbItem>{"storybook"}</BreadcrumbItem>
         </Breadcrumb>
       </BreadcrumbWrapper>
-    </SorbitStatic>
+    </Sorbit>
   ),
 };

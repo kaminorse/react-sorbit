@@ -1,16 +1,16 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
+import Sorbit from "../../base/Sorbit";
+import Hamburger from "../Hamburger";
+import NavAccordion from "../NavAccordion";
+import NavBrand from "../NavBrand";
+import NavBrandCenter from "../NavBrandCenter";
+import NavBrandLeft from "../NavBrandLeft";
+import NavBrandRight from "../NavBrandRight";
+import NavMenu from "../NavMenu";
+import NavMenuItem from "../NavMenuItem";
+import NavStatic from "../NavStatic";
 import Nav from "./Nav";
-import { SorbitStatic } from "../../base/SorbitStatic";
-import NavBrand from "./NavBrand";
-import NavMenu from "./NavMenu";
-import NavBrandLeft from "./NavBrandLeft";
-import NavBrandCenter from "./NavBrandCenter";
-import NavBrandRight from "./NavBrandRight";
-import NavMenuItem from "./NavMenuItem";
-import { Hamburger } from "../Hamburger";
-import NavAccordion from "./NavAccordion";
-import NavStatic from "./NavStatic";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -37,7 +37,7 @@ const navMenuItems = (
 export const Plain: Story = {
   args: {},
   render: (props) => (
-    <SorbitStatic>
+    <Sorbit>
       <Nav {...props}>
         <NavAccordion isTabletOrLess>
           <NavBrand>
@@ -58,6 +58,6 @@ export const Plain: Story = {
           <NavMenu >{navMenuItems}</NavMenu>
         </NavStatic>
       </Nav>
-    </SorbitStatic>
+    </Sorbit>
   ),
 };
