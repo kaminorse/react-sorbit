@@ -1,15 +1,17 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { SorbitStatic } from "../../base/SorbitStatic";
+import Sorbit from "../../base/Sorbit";
 import AdminNav from "./AdminNav";
-import { Admin, AdminMain, AdminSidebar } from "../../layouts/Admin";
-import AdminNavBrand from "./AdminNavBrand";
-import AdminNavMenu from "./AdminNavMenu";
-import AdminNavMenuItem from "./AdminNavMenuItem";
-import AdminNavMenuItemBasic from "./AdminNavMenuItemBasic";
-import AdminNavBrandCollapted from "./AdminNavBrandCollapted";
-import AdminNavBrandBasic from "./AdminNavBrandBasic";
-import AdminNavMenuItemCollapted from "./AdminNavMenuItemCollapted";
+import Admin from "../../layouts/Admin";
+import AdminSidebar from "../../layouts/AdminSidebar";
+import AdminMain from "../../layouts/AdminMain";
+import AdminNavBrand from "../AdminNavBrand";
+import AdminNavMenu from "../AdminNavMenu";
+import AdminNavMenuItem from "../AdminNavMenuItem";
+import AdminNavMenuItemBasic from "../AdminNavMenuItemBasic";
+import AdminNavBrandCollapted from "../AdminNavBrandCollapted";
+import AdminNavBrandBasic from "../AdminNavBrandBasic";
+import AdminNavMenuItemCollapted from "../AdminNavMenuItemCollapted";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -26,7 +28,7 @@ type Story = StoryObj<typeof meta>;
 export const Plain: Story = {
   args: {},
   render: (props) => (
-    <SorbitStatic>
+    <Sorbit>
       <Admin>
         <AdminSidebar>
           <AdminNav {...props}>
@@ -56,14 +58,14 @@ export const Plain: Story = {
         </AdminSidebar>
         <AdminMain></AdminMain>
       </Admin>
-    </SorbitStatic>
+    </Sorbit>
   ),
 };
 
 export const IsSidebarCollapted: Story = {
   args: {},
   render: (props) => (
-    <SorbitStatic>
+    <Sorbit>
       <Admin isSidebarCollapse={true}>
         <AdminSidebar>
           <AdminNav {...props}>
@@ -93,6 +95,6 @@ export const IsSidebarCollapted: Story = {
         </AdminSidebar>
         <AdminMain></AdminMain>
       </Admin>
-    </SorbitStatic>
+    </Sorbit>
   ),
 };

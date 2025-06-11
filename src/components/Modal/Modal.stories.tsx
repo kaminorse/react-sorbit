@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import Modal from "./Modal";
-import { SorbitStatic } from "../../base/SorbitStatic";
-import ModalContent from "./ModalContent";
+import Sorbit from "../../base/Sorbit";
+import ModalContent from "../ModalContent/ModalContent";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -21,11 +21,11 @@ export const Plain: Story = {
     isActive: true,
   },
   render: (props) => (
-    <SorbitStatic>
+    <Sorbit>
       {"Body"}
       <Modal {...props}>
         <ModalContent>{"Modal"}</ModalContent>
       </Modal>
-    </SorbitStatic>
+    </Sorbit>
   ),
 };

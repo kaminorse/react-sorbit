@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import Heading from "./Heading";
-import { SorbitStatic } from "../../base/SorbitStatic";
+import Sorbit from "../../base/Sorbit";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -21,11 +21,11 @@ export const Level1: Story = {
     level: 1,
   },
   render: (props) => (
-    <SorbitStatic>
+    <Sorbit>
       <Heading {...props}>
         {"Level 1"}
       </Heading>
-    </SorbitStatic>
+    </Sorbit>
   ),
 };
 
@@ -34,11 +34,11 @@ export const Level2: Story = {
     level: 2,
   },
   render: (props) => (
-    <SorbitStatic>
+    <Sorbit>
       <Heading {...props}>
         {"Level 2"}
       </Heading>
-    </SorbitStatic>
+    </Sorbit>
   ),
 };
 export const Level3: Story = {
@@ -46,11 +46,11 @@ export const Level3: Story = {
     level: 3,
   },
   render: (props) => (
-    <SorbitStatic>
+    <Sorbit>
       <Heading {...props}>
         {"Level 3"}
       </Heading>
-    </SorbitStatic>
+    </Sorbit>
   ),
 };
 
@@ -59,11 +59,11 @@ export const Level4: Story = {
     level: 4,
   },
   render: (props) => (
-    <SorbitStatic>
+    <Sorbit>
       <Heading {...props}>
         {"Level 4"}
       </Heading>
-    </SorbitStatic>
+    </Sorbit>
   ),
 };
 
@@ -72,11 +72,11 @@ export const Level5: Story = {
     level: 5,
   },
   render: (props) => (
-    <SorbitStatic>
+    <Sorbit>
       <Heading {...props}>
         {"Level 5"}
       </Heading>
-    </SorbitStatic>
+    </Sorbit>
   ),
 };
 
@@ -85,10 +85,10 @@ export const Level6: Story = {
     level: 6,
   },
   render: (props) => (
-    <SorbitStatic>
+    <Sorbit>
       <Heading {...props}>
         {"Level 6"}
       </Heading>
-    </SorbitStatic>
+    </Sorbit>
   ),
 };

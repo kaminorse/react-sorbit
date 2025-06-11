@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import Admin from "./Admin";
-import { SorbitStatic } from "../../base/SorbitStatic";
-import AdminSidebar from "./AdminSidebar";
-import AdminMain from "./AdminMain";
+import Sorbit from "../../base/Sorbit";
+import AdminSidebar from "../AdminSidebar";
+import AdminMain from "../AdminMain";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -20,7 +20,7 @@ type Story = StoryObj<typeof meta>;
 export const Plain: Story = {
   args: {},
   render: (props) => (
-    <SorbitStatic>
+    <Sorbit>
       <Admin {...props}>
         <AdminSidebar
           back={{ color: { default: { name: "blue", lightness: 500 } } }}
@@ -29,6 +29,6 @@ export const Plain: Story = {
         </AdminSidebar>
         <AdminMain>{"AdminMain"}</AdminMain>
       </Admin>
-    </SorbitStatic>
+    </Sorbit>
   ),
 };

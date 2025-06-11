@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import Hamburger from "./Hamburger";
-import { SorbitStatic } from "../../base/SorbitStatic";
+import Sorbit from "../../base/Sorbit";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -24,8 +24,8 @@ export const Plain: Story = {
     isActive: undefined,
   },
   render: (props) => (
-    <SorbitStatic>
+    <Sorbit>
       <Hamburger {...props} />
-    </SorbitStatic>
+    </Sorbit>
   ),
 };

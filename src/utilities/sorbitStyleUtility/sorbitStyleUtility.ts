@@ -147,7 +147,7 @@ function getColorVariables(
 
 function getSorbitCssVariableStyles(
   cssVariableSetting?: SorbitCssVariable
-): string[] {
+): string {
   const sorbitStyles: string[] = [];
 
   const rootStyles = getRootStyles(cssVariableSetting);
@@ -166,7 +166,7 @@ function getSorbitCssVariableStyles(
       `[data-color-scheme="dark"]{${darkSchemeStyles.join(``)}}`
     );
 
-  return sorbitStyles;
+  return sorbitStyles.join(``);
 }
 
 function getRootStyles(cssVariableSetting?: SorbitCssVariable): string[] {
