@@ -1,4 +1,4 @@
-import { StoryObj } from '@storybook/react';
+import { StoryObj } from '@storybook/react-vite';
 import { default as Columns } from './Columns';
 declare const meta: {
     title: string;

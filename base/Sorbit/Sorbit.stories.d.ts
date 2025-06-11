@@ -1,4 +1,4 @@
-import { StoryObj } from '@storybook/react';
+import { StoryObj } from '@storybook/react-vite';
 import { default as Sorbit } from './Sorbit';
 declare const meta: {
     title: string;

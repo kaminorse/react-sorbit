@@ -1,4 +1,4 @@
-import { StoryObj } from '@storybook/react';
+import { StoryObj } from '@storybook/react-vite';
 import { default as Gingham } from './Gingham';
 declare const meta: {
     title: string;

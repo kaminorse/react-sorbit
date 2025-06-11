@@ -1,4 +1,4 @@
-import { StoryObj } from '@storybook/react';
+import { StoryObj } from '@storybook/react-vite';
 import { default as Checkbox } from './Checkbox';
 declare const meta: {
     title: string;

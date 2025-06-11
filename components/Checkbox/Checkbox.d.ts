@@ -1,3 +1,4 @@
 import { default as CheckboxProps } from './CheckboxProps';
-export default function Checkbox(props: CheckboxProps): JSX.Element;
+/** @deprecated */
+export default function Checkbox(props: CheckboxProps): import("@emotion/react/jsx-runtime").JSX.Element;
 //# sourceMappingURL=Checkbox.d.ts.map

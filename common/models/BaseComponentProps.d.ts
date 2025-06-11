@@ -1,3 +1,4 @@
+import { Interpolation, Theme } from '@emotion/react';
 import { BorderCollapse, BorderDetailProps, BorderRadius, BorderStyle, BorderWidth, ColorProps, FontSize, FontWeight } from '../literalTypes';
 export default interface BaseComponentProps {
     fore?: {
@@ -25,21 +26,22 @@ export default interface BaseComponentProps {
     };
     spacing?: {
         margin?: {
-            x?: number | "auto";
-            y?: number | "auto";
-            top?: number | "auto";
-            left?: number | "auto";
-            bottom?: number | "auto";
-            right?: number | "auto";
-        } | number | "auto";
+            x?: number | string;
+            y?: number | string;
+            top?: number | string;
+            left?: number | string;
+            bottom?: number | string;
+            right?: number | string;
+        } | number | string;
         padding?: {
-            x?: number | "auto";
-            y?: number | "auto";
-            top?: number | "auto";
-            left?: number | "auto";
-            bottom?: number | "auto";
-            right?: number | "auto";
-        } | number | "auto";
+            x?: number | string;
+            y?: number | string;
+            top?: number | string;
+            left?: number | string;
+            bottom?: number | string;
+            right?: number | string;
+        } | number | string;
     };
+    css?: Interpolation<Theme>;
 }
 //# sourceMappingURL=BaseComponentProps.d.ts.map
