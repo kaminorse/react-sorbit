@@ -17,7 +17,7 @@ export default function Sorbit(props: SorbitProps) {
   );
 
   useInsertionEffect(() => {
-    const currentSorbitStyleElement = document.getElementById(elementId);
+    const currentSorbitStyleElement = document.head.querySelector(`#${elementId}`);
     if (currentSorbitStyleElement) {
       currentSorbitStyleElement.remove();
     }

@@ -48,22 +48,14 @@ export default function Stripe(props: StripeProps) {
     assignedClassNames.push(props.className);
   }
 
-  const css = useMemo(() => {
-    return emotionCssUtility.getEmotionCss({
-      fore: props.fore,
-      back: props.back,
-      border: props.border,
-      highlighter: props.highlighter,
-      spacing: props.spacing,
-      css: props.css,
-    });
-  }, [
-    props.fore,
-    props.back,
-    props.border,
-    props.highlighter,
-    props.spacing,
-  ]);
+  const css = emotionCssUtility.getEmotionCss({
+    fore: props.fore,
+    back: props.back,
+    border: props.border,
+    highlighter: props.highlighter,
+    spacing: props.spacing,
+    css: props.css,
+  });
 
   return props.as ? (
     <props.as
