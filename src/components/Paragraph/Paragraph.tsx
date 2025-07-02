@@ -1,4 +1,6 @@
 "use client";
+import { useContext } from "react";
+import { SorbitColorSchemeContext } from "../../contexts";
 import classNameUtility from "../../utilities/classNameUtility";
 import emotionCssUtility from "../../utilities/emotionCssUtility";
 import classNames from "./Paragraph.module.scss";
@@ -32,14 +34,19 @@ export default function Paragraph(props: ParagraphProps) {
     assignedClassNames.push(props.className);
   }
 
-  const css = emotionCssUtility.getEmotionCss({
-    fore: props.fore,
-    back: props.back,
-    border: props.border,
-    highlighter: props.highlighter,
-    spacing: props.spacing,
-    css: props.css,
-  });
+  const colorScheme = useContext(SorbitColorSchemeContext);
+
+  const css = emotionCssUtility.getEmotionCss(
+    {
+      fore: props.fore,
+      back: props.back,
+      border: props.border,
+      highlighter: props.highlighter,
+      spacing: props.spacing,
+      css: props.css,
+    },
+    colorScheme
+  );
 
   return (
     <p {...assignedProps} className={assignedClassNames.join(" ")} css={css} />

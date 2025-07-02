@@ -34,14 +34,17 @@ export default function Soroot(props: SorootProps) {
     assignedClassNames.push(props.className);
   }
 
-  const css = emotionCssUtility.getEmotionCss({
-    fore: props.fore,
-    back: props.back,
-    border: props.border,
-    highlighter: props.highlighter,
-    spacing: props.spacing,
-    css: props.css,
-  });
+  const css = emotionCssUtility.getEmotionCss(
+    {
+      fore: props.fore,
+      back: props.back,
+      border: props.border,
+      highlighter: props.highlighter,
+      spacing: props.spacing,
+      css: props.css,
+    },
+    props.colorScheme
+  );
 
   return props.as ? (
     <props.as

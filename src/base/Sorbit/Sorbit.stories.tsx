@@ -166,6 +166,19 @@ const elem = (
       >
         {"color light blue 500, dark red 500"}
       </Div>
+      <Div
+        fore={{
+          color: {
+            light: { default: { name: "blue", lightness: 500 } },
+            dark: { default: { name: "red", lightness: 500 } },
+          },
+        }}
+        css={{
+          fontSize: "2rem",
+        }}
+      >
+        {"css props"}
+      </Div>
     </Div>
   </>
 );
@@ -178,6 +191,7 @@ export const LightTheme: Story = {
   },
   render: (props) => <Sorbit {...props}>{elem}</Sorbit>,
 };
+
 export const DarkTheme: Story = {
   args: {
     colorScheme: "dark",

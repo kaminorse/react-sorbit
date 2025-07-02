@@ -1,5 +1,7 @@
 "use client";
 import classNames from "./AdminNavBrandBasic.module.scss";
+import { useContext } from "react";
+import { SorbitColorSchemeContext } from "../../contexts";
 import classNameUtility from "../../utilities/classNameUtility";
 import emotionCssUtility from "../../utilities/emotionCssUtility";
 import AdminNavBrandBasicProps from "./AdminNavBrandBasicProps";
@@ -32,14 +34,19 @@ export default function AdminNavBrandBasic(props: AdminNavBrandBasicProps) {
     assignedClassNames.push(props.className);
   }
 
-  const css = emotionCssUtility.getEmotionCss({
-    fore: props.fore,
-    back: props.back,
-    border: props.border,
-    highlighter: props.highlighter,
-    spacing: props.spacing,
-    css: props.css,
-  });
+  const colorScheme = useContext(SorbitColorSchemeContext);
+
+  const css = emotionCssUtility.getEmotionCss(
+    {
+      fore: props.fore,
+      back: props.back,
+      border: props.border,
+      highlighter: props.highlighter,
+      spacing: props.spacing,
+      css: props.css,
+    },
+    colorScheme
+  );
 
   return (
     <div

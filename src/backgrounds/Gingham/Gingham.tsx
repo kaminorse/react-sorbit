@@ -1,4 +1,6 @@
 "use client";
+import { useContext } from "react";
+import { SorbitColorSchemeContext } from "../../contexts";
 import classNameUtility from "../../utilities/classNameUtility";
 import emotionCssUtility from "../../utilities/emotionCssUtility";
 import classNames from "./Gingham.module.scss";
@@ -48,14 +50,19 @@ export default function Gingham(props: GinghamProps) {
     assignedClassNames.push(props.className);
   }
 
-  const css = emotionCssUtility.getEmotionCss({
-    fore: props.fore,
-    back: props.back,
-    border: props.border,
-    highlighter: props.highlighter,
-    spacing: props.spacing,
-    css: props.css,
-  });
+  const colorScheme = useContext(SorbitColorSchemeContext);
+
+  const css = emotionCssUtility.getEmotionCss(
+    {
+      fore: props.fore,
+      back: props.back,
+      border: props.border,
+      highlighter: props.highlighter,
+      spacing: props.spacing,
+      css: props.css,
+    },
+    colorScheme
+  );
 
   return props.as ? (
     <props.as

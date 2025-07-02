@@ -1,5 +1,6 @@
 "use client";
 import { useInsertionEffect, useMemo } from "react";
+import SorbitColorSchemeContext from "../../contexts/SorbitColorSchemeContext";
 import sorbitStyleUtility from "../../utilities/sorbitStyleUtility";
 import { Soroot } from "../Soroot";
 import "./SorbitClient.scss";
@@ -13,7 +14,8 @@ export default function SorbitClient(props: SorbitClientProps) {
   const elementId = "sorbit-css-variable-style";
 
   const sorbitStyles = useMemo(
-    () => sorbitStyleUtility.getSorbitCssVariableStyles(props.cssVariableSetting),
+    () =>
+      sorbitStyleUtility.getSorbitCssVariableStyles(props.cssVariableSetting),
     [props.cssVariableSetting]
   );
 
@@ -28,5 +30,11 @@ export default function SorbitClient(props: SorbitClientProps) {
     document.head.appendChild(styleElement);
   }, [sorbitStyles]);
 
-  return <Soroot {...assignedProps} />;
+  return (
+    <SorbitColorSchemeContext.Provider
+      value={assignedProps.colorScheme ? assignedProps.colorScheme : "light"}
+    >
+      <Soroot {...assignedProps} />
+    </SorbitColorSchemeContext.Provider>
+  );
 }

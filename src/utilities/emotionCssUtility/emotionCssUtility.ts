@@ -1,8 +1,8 @@
 "use client";
-import { BaseComponentProps } from "../../common/models";
 import { css, CSSObject, Interpolation, Theme } from "@emotion/react";
-import { ColorAttributes } from "../../react-sorbit";
-import { merge } from "lodash";
+import type { CSSInterpolation } from "@emotion/serialize";
+import { ColorAttributes, ColorScheme } from "../../common/literalTypes";
+import { BaseComponentProps } from "../../common/models";
 
 const cssVariablePrefix = "sorbit-";
 
@@ -185,7 +185,10 @@ function getSchemeCssObject({
   );
 }
 
-function getEmotionCss(props: BaseComponentProps): Interpolation<Theme> {
+function getEmotionCss(
+  props: BaseComponentProps,
+  colorScheme?: ColorScheme
+): Interpolation<Theme> {
   const keys = Object.keys(props);
 
   const baseComponentPropsKeys = keys.filter(
@@ -392,13 +395,11 @@ function getEmotionCss(props: BaseComponentProps): Interpolation<Theme> {
     borderLeftColor: borderLeftColorDark,
   });
 
-  const minolithUtilityStyles = css({
-    color: foreColorBase && foreColorBase.default,
+  const cssArray: CSSInterpolation[] = [];
+
+  const baseCss: CSSInterpolation = {
     fontSize: fontSize,
     fontWeight: fontWeight,
-    backgroundColor: backColorBase && backColorBase.default,
-    backgroundImage: highlighterColorBase && highlighterColorBase.default,
-    borderColor: borderColorBase && borderColorBase.default,
     borderCollapse:
       props.border && props.border.collapse
         ? props.border.collapse === "collapted"
@@ -415,7 +416,6 @@ function getEmotionCss(props: BaseComponentProps): Interpolation<Theme> {
       props.border && props.border.width
         ? `var(--${cssVariablePrefix}border-width-${props.border.width})`
         : undefined,
-    borderTopColor: borderTopColorBase && borderTopColorBase.default,
     borderTopStyle:
       props.border && props.border.top && props.border.top.style
         ? props.border.top.style
@@ -424,7 +424,6 @@ function getEmotionCss(props: BaseComponentProps): Interpolation<Theme> {
       props.border && props.border.top && props.border.top.width
         ? `var(--${cssVariablePrefix}border-width-${props.border.top.width})`
         : undefined,
-    borderRightColor: borderRightColorBase && borderRightColorBase.default,
     borderRightStyle:
       props.border && props.border.right && props.border.right.style
         ? props.border.right.style
@@ -433,7 +432,6 @@ function getEmotionCss(props: BaseComponentProps): Interpolation<Theme> {
       props.border && props.border.right && props.border.right.width
         ? `var(--${cssVariablePrefix}border-width-${props.border.right.width})`
         : undefined,
-    borderBottomColor: borderBottomColorBase && borderBottomColorBase.default,
     borderBottomStyle:
       props.border && props.border.bottom && props.border.bottom.style
         ? props.border.bottom.style
@@ -442,7 +440,6 @@ function getEmotionCss(props: BaseComponentProps): Interpolation<Theme> {
       props.border && props.border.bottom && props.border.bottom.width
         ? `var(--${cssVariablePrefix}border-width-${props.border.bottom.width})`
         : undefined,
-    borderLeftColor: borderLeftColorBase && borderLeftColorBase.default,
     borderLeftStyle:
       props.border && props.border.left && props.border.left.style
         ? props.border.left.style
@@ -595,16 +592,37 @@ function getEmotionCss(props: BaseComponentProps): Interpolation<Theme> {
           ? `${props.spacing.padding.x}rem`
           : props.spacing.padding.x
         : undefined,
+  };
+  cssArray.push(baseCss);
+
+  const defaultColorCss = {
+    color: foreColorBase && foreColorBase.default,
+    backgroundColor: backColorBase && backColorBase.default,
+    backgroundImage: highlighterColorBase && highlighterColorBase.default,
+    borderColor: borderColorBase && borderColorBase.default,
+    borderTopColor: borderTopColorBase && borderTopColorBase.default,
+    borderRightColor: borderRightColorBase && borderRightColorBase.default,
+    borderBottomColor: borderBottomColorBase && borderBottomColorBase.default,
+    borderLeftColor: borderLeftColorBase && borderLeftColorBase.default,
     ":hover": hover,
     ":focus": focus,
     ":active": active,
     "[disabled]": disabled,
-    "@media (prefers-color-scheme: light)": light,
-    "@media (prefers-color-scheme: dark)": dark,
-  });
+  };
+  cssArray.push(defaultColorCss);
+
+  if (colorScheme === "light" && light) {
+    cssArray.push(light);
+  }
+
+  if (colorScheme === "dark" && dark) {
+    cssArray.push(dark);
+  }
+
+  const minolithUtilityStyles = css(cssArray);
 
   if (props.css) {
-    return merge(minolithUtilityStyles, props.css);
+    return [minolithUtilityStyles, props.css];
   }
 
   return minolithUtilityStyles;

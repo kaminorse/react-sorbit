@@ -1,8 +1,10 @@
 "use client";
+import { useContext } from "react";
+import { SorbitColorSchemeContext } from "../../contexts";
 import classNameUtility from "../../utilities/classNameUtility";
 import emotionCssUtility from "../../utilities/emotionCssUtility";
-import AccordionProps from "./AccordionProps";
 import classNames from "./Accordion.module.scss";
+import AccordionProps from "./AccordionProps";
 
 export default function Accordion(props: AccordionProps) {
   const assignedProps = { ...props };
@@ -21,12 +23,12 @@ export default function Accordion(props: AccordionProps) {
     assignedClassNames.push(classNames[`is-${props.colorName}`]);
 
   const utilityClassNames = classNameUtility.getUtilityClassNames({
-      fore: props.fore,
-      back: props.back,
-      border: props.border,
-      highlighter: props.highlighter,
-      spacing: props.spacing,
-    });
+    fore: props.fore,
+    back: props.back,
+    border: props.border,
+    highlighter: props.highlighter,
+    spacing: props.spacing,
+  });
   if (utilityClassNames) {
     assignedClassNames.push(...utilityClassNames);
   }
@@ -35,14 +37,19 @@ export default function Accordion(props: AccordionProps) {
     assignedClassNames.push(props.className);
   }
 
-  const css = emotionCssUtility.getEmotionCss({
-    fore: props.fore,
-    back: props.back,
-    border: props.border,
-    highlighter: props.highlighter,
-    spacing: props.spacing,
-    css: props.css,
-  });
+  const colorScheme = useContext(SorbitColorSchemeContext);
+
+  const css = emotionCssUtility.getEmotionCss(
+    {
+      fore: props.fore,
+      back: props.back,
+      border: props.border,
+      highlighter: props.highlighter,
+      spacing: props.spacing,
+      css: props.css,
+    },
+    colorScheme
+  );
 
   return (
     <details

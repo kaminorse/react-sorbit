@@ -46,7 +46,6 @@ export default defineConfig({
         "react/jsx-runtime",
         "@emotion/react",
         "@emotion/react/jsx-runtime",
-        "lodash",
       ],
       input: Object.fromEntries(
         glob
