@@ -56,7 +56,7 @@ export default function Footer(props: FooterProps) {
   );
 
   return (
-    <Footer
+    <footer
       {...assignedProps}
       className={assignedClassNames.join(" ")}
       css={css}
