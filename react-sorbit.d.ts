@@ -4,6 +4,7 @@ export * from './common/models';
 export * from './base/Sorbit';
 export * from './base/SorbitClient';
 export * from './base/Soroot';
+export * from './backgrounds/Dot';
 export * from './backgrounds/Gingham';
 export * from './backgrounds/Stripe';
 export * from './components/Accordion';
