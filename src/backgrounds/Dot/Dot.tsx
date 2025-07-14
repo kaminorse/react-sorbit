@@ -3,13 +3,12 @@ import { useContext } from "react";
 import { SorbitColorSchemeContext } from "../../contexts";
 import classNameUtility from "../../utilities/classNameUtility";
 import emotionCssUtility from "../../utilities/emotionCssUtility";
-import classNames from "./Gingham.module.scss";
-import GinghamProps from "./GinghamProps";
+import classNames from "./Dot.module.scss";
+import DotProps from "./DotProps";
 
-export default function Gingham(props: GinghamProps) {
+export default function Dot(props: DotProps) {
   const assignedProps = { ...props };
   delete assignedProps["colorName"];
-  delete assignedProps["degree"];
   delete assignedProps["as"];
   //#region BaseComponentProps
   delete assignedProps["fore"];
@@ -20,14 +19,10 @@ export default function Gingham(props: GinghamProps) {
   delete assignedProps["css"];
   //#endregion BaseComponentProps
 
-  const assignedClassNames = [classNames["gingham"]];
+  const assignedClassNames = [classNames["dot"]];
 
   if (props.colorName) {
     assignedClassNames.push(classNames[`is-${props.colorName}`]);
-  }
-
-  if (props.degree) {
-    assignedClassNames.push(classNames[`is-${props.degree}deg`]);
   }
 
   const utilityClassNames = classNameUtility.getUtilityClassNames({

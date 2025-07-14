@@ -24,6 +24,8 @@ export * from "./base/Soroot";
 
 //#region backgrounds
 
+export * from "./backgrounds/Dot";
+
 export * from "./backgrounds/Gingham";
 
 export * from "./backgrounds/Stripe";

@@ -8,7 +8,7 @@ import StripeProps from "./StripeProps";
 
 export default function Stripe(props: StripeProps) {
   const assignedProps = { ...props };
-  delete assignedProps["patternColor"];
+  delete assignedProps["colorName"];
   delete assignedProps["degree"];
   delete assignedProps["as"];
   //#region BaseComponentProps
@@ -21,14 +21,9 @@ export default function Stripe(props: StripeProps) {
   //#endregion BaseComponentProps
 
   const assignedClassNames = [classNames["stripe"]];
-  if (props.patternColor) {
-    const lightness =
-      props.patternColor.lightness < 100
-        ? `0${props.patternColor.lightness}`
-        : props.patternColor.lightness;
-    assignedClassNames.push(
-      classNames[`is-${props.patternColor.name}-${lightness}`]
-    );
+
+  if (props.colorName) {
+    assignedClassNames.push(classNames[`is-${props.colorName}`]);
   }
 
   if (props.degree) {
