@@ -60,6 +60,12 @@ function getColorVariable(
     return undefined;
   }
 
+  if (colorAttributes.alpha) {
+    return `oklch(var(--${cssVariablePrefix}color-${colorAttributes.name}-${
+      colorAttributes.lightness === 50 ? "050" : colorAttributes.lightness
+    }-oklch) / ${colorAttributes.alpha}) !important`;
+  }
+
   return `var(--${cssVariablePrefix}color-${colorAttributes.name}-${
     colorAttributes.lightness === 50 ? "050" : colorAttributes.lightness
   }) !important`;
@@ -72,10 +78,17 @@ function getHighlighterBackgroundVariable(
     return undefined;
   }
 
+  if (colorAttributes.alpha) {
+    return `linear-gradient(
+    transparent 66.66%,
+    oklch(var(--${cssVariablePrefix}color-${colorAttributes.name}-${
+      colorAttributes.lightness === 50 ? "050" : colorAttributes.lightness
+    }-oklch) / ${colorAttributes.alpha}) 33.33%)`;
+  }
+
   return `linear-gradient(
     transparent 66.66%,
-    var(--${cssVariablePrefix}color-${colorAttributes.name}-${colorAttributes.lightness}) 33.33%
-  )`;
+    var(--${cssVariablePrefix}color-${colorAttributes.name}-${colorAttributes.lightness}) 33.33%)`;
 }
 
 function getCssObject(props: {
@@ -619,13 +632,13 @@ function getEmotionCss(
     cssArray.push(dark);
   }
 
-  const minolithUtilityStyles = css(cssArray);
+  const sorbitUtilityStyles = css(cssArray);
 
   if (props.css) {
-    return [minolithUtilityStyles, props.css];
+    return [sorbitUtilityStyles, props.css];
   }
 
-  return minolithUtilityStyles;
+  return sorbitUtilityStyles;
 }
 
 const emotionStyleUtility = {
